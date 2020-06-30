@@ -32,5 +32,6 @@ export class AppComponent {
         this.show.push(product);
       }
     });
+    this.busqueda = "";
   }
 }
