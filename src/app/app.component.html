@@ -4,14 +4,14 @@
 
 <div [hidden] = "searching == true">
   <div *ngFor = "let product of products">
-    <li>{{product.title | json}}</li>
+    <li>{{product.title}}</li>
   </div>
 </div>
 
 <div [hidden] = "searching == false">
   <div *ngIf = "show != ''">
     <div *ngFor = "let item of show">
-      <li>{{item.title | json}}</li>
+      <li>{{item.title}}</li>
     </div>
   </div>
   <div *ngIf = "show == ''">
