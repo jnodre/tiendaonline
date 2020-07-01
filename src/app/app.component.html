@@ -1,23 +1,19 @@
-<header>
-  <nav>
-    <ul>
-      <li>Ordenadores</li>
-          <ul>
-              <li>Portátiles</li>
-              <li>Sobremesa</li>
-              <li>Componentes</li>
-          </ul>
-      <li>Telefonía</li>
-          <ul>
-              <li>Smartphones</li>
-              <li>Accesorios</li>
-          </ul>
-      <li>Televisión y Audio</li>
-          <ul>
-              <li>Televisores</li>
-              <li>Altavoces</li>
-              <li>Auriculares</li>
-          </ul>
-    </ul>
-  </nav>
-</header>
+<button (click)= "getProducts()">Home</button>
+<input placeholder="Búsqueda" [(ngModel)]="busqueda" (keyup.enter)="searchItem()"> <button (click)="searchItem()"><fa-icon [icon]="faSearch"></fa-icon></button>
+
+<div [hidden] = "searching == true">
+  <div *ngFor = "let product of products">
+    <li>{{product.title}}</li>
+  </div>
+</div>
+
+<div [hidden] = "searching == false">
+  <div *ngIf = "show != ''">
+    <div *ngFor = "let item of show">
+      <li>{{item.title}}</li>
+    </div>
+  </div>
+  <div *ngIf = "show == ''">
+    <p>Su búsqueda no coincide con ningún producto.</p>
+  </div>
+</div>
