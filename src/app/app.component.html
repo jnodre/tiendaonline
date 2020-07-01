@@ -5,13 +5,17 @@
 <div [hidden] = "searching == true">
   <div *ngFor = "let product of products">
     <li>{{product.title}}</li>
+    <li><img [src]="product.thumbnailURL"></li>
+    <li>{{product.priceHR}}</li>
   </div>
 </div>
 
 <div [hidden] = "searching == false">
   <div *ngIf = "show != ''">
     <div *ngFor = "let item of show">
-      <li>{{item.title}}</li>
+        <li>{{item.title}}</li>
+        <li><img [src]="item.thumbnailURL"></li>
+        <li>{{item.priceHR}}</li>
     </div>
   </div>
   <div *ngIf = "show == ''">
