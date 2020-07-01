@@ -1,2 +1,31 @@
+<<<<<<< HEAD
 <router-outlet></router-outlet>
 <h1>Funciona la rama khushbu2</h1>
+=======
+
+<div class="search">
+    <button (click)= "getProducts()">Inicio</button>
+    <input placeholder="Búsqueda" [(ngModel)]="busqueda" (keyup.enter)="searchItem()"> <button (click)="searchItem()"><fa-icon [icon]="faSearch"></fa-icon></button>
+</div>
+
+<div  fxLayout="row wrap" fxLayoutAlign="center center" *ngIf = "searching == false">
+  <div  fxLayout="column wrap" fxLayoutAlign="center center" class="products" *ngFor = "let product of products">
+    <li >{{product.title}}</li>
+    <li><img [src]="product.thumbnailURL"></li>
+    <li>{{product.priceHR}}</li>
+  </div>
+</div>
+
+<div *ngIf = "searching == true">
+  <div fxLayout="row wrap" fxLayoutAlign="center center" *ngIf = "show != ''">
+    <div fxLayout="column wrap" fxLayoutAlign="center center" class="products" *ngFor = "let item of show">
+        <li>{{item.title}}</li>
+        <li><img [src]="item.thumbnailURL"></li>
+        <li>{{item.priceHR}}</li>
+    </div>
+  </div>
+  <div *ngIf = "show == ''">
+    <p>Su búsqueda no coincide con ningún producto.</p>
+  </div>
+</div>
+>>>>>>> master
