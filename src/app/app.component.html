@@ -1,18 +1,20 @@
 
-<button (click)= "getProducts()">Home</button>
-<input placeholder="Búsqueda" [(ngModel)]="busqueda" (keyup.enter)="searchItem()"> <button (click)="searchItem()"><fa-icon [icon]="faSearch"></fa-icon></button>
+<div class="search">
+    <button (click)= "getProducts()">Inicio</button>
+    <input placeholder="Búsqueda" [(ngModel)]="busqueda" (keyup.enter)="searchItem()"> <button (click)="searchItem()"><fa-icon [icon]="faSearch"></fa-icon></button>
+</div>
 
-<div [hidden] = "searching == true">
-  <div *ngFor = "let product of products">
-    <li>{{product.title}}</li>
+<div  fxLayout="row wrap" fxLayoutAlign="center center" *ngIf = "searching == false">
+  <div  fxLayout="column wrap" fxLayoutAlign="center center" class="products" *ngFor = "let product of products">
+    <li >{{product.title}}</li>
     <li><img [src]="product.thumbnailURL"></li>
     <li>{{product.priceHR}}</li>
   </div>
 </div>
 
-<div [hidden] = "searching == false">
-  <div *ngIf = "show != ''">
-    <div *ngFor = "let item of show">
+<div *ngIf = "searching == true">
+  <div fxLayout="row wrap" fxLayoutAlign="center center" *ngIf = "show != ''">
+    <div fxLayout="column wrap" fxLayoutAlign="center center" class="products" *ngFor = "let item of show">
         <li>{{item.title}}</li>
         <li><img [src]="item.thumbnailURL"></li>
         <li>{{item.priceHR}}</li>
