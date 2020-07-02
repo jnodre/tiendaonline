@@ -1,26 +1,43 @@
+<header class="header">
+        <img class="logo" src="/assets/Images/logo_1.png">
+        <div class="we">
+        <nav class="topmenu">
+            <ul>
+                <li class="button" (click)= "getProducts()" routerLink="">Inicio</li>
+                <li class="button">Categorías</li>
+                <li class="button">Últimos productos</li>
+                <li class="button">Login</li>
+            </ul>
+        </nav>
+        <div class="search">
+            <input  class="searchbar" placeholder="Búsqueda" [(ngModel)]="busqueda"  (keyup.enter)="searchItem()"> <button class="button" routerLink="products" (click)="searchItem()"><fa-icon [icon]="faSearch"></fa-icon></button>
+            <button class="button"><fa-icon [icon]="faShoppingCart"></fa-icon></button>
+        </div>
+    </div>
+</header>
+    <div class="components">
+        <app-filters class="filters" *ngIf="router.url.includes('products')"></app-filters>
+        <router-outlet>
 
-<div class="search">
-    <button (click)= "getProducts()">Inicio</button>
-    <input placeholder="Búsqueda" [(ngModel)]="busqueda" (keyup.enter)="searchItem()"> <button (click)="searchItem()"><fa-icon [icon]="faSearch"></fa-icon></button>
-</div>
-
+        </router-outlet> 
+    </div>
 <div  fxLayout="row wrap" fxLayoutAlign="center center" *ngIf = "searching == false">
-  <div  fxLayout="column wrap" fxLayoutAlign="center center" class="products" *ngFor = "let product of products">
+    <div  fxLayout="column wrap" fxLayoutAlign="center center" class="products" *ngFor = "let product of products">
     <li >{{product.title}}</li>
     <li><img [src]="product.thumbnailURL"></li>
     <li>{{product.priceHR}}</li>
-  </div>
+    </div>
 </div>
 
 <div *ngIf = "searching == true">
-  <div fxLayout="row wrap" fxLayoutAlign="center center" *ngIf = "show != ''">
+    <div fxLayout="row wrap" fxLayoutAlign="center center" *ngIf = "show != ''">
     <div fxLayout="column wrap" fxLayoutAlign="center center" class="products" *ngFor = "let item of show">
         <li>{{item.title}}</li>
         <li><img [src]="item.thumbnailURL"></li>
         <li>{{item.priceHR}}</li>
     </div>
-  </div>
-  <div *ngIf = "show == ''">
+    </div>
+    <div *ngIf = "show == ''">
     <p>Su búsqueda no coincide con ningún producto.</p>
-  </div>
+    </div>
 </div>
