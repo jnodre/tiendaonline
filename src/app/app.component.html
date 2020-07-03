@@ -1,10 +1,14 @@
 <header class="header">
         <img class="logo" src="/assets/Images/logo_1.png">
         <div class="we">
-        <nav class="topmenu">
+        <nav class="topmenu" >
             <ul>
                 <li class="button" (click)= "getProducts()" routerLink="">Inicio</li>
-                <li class="button">Categorías</li>
+                <li class="button" (click)= "getCategory(); getProductByCategory()"> Categorías
+                <select [(ngModel)]= "selectedCategory">
+                    <option *ngFor = "let opcion of categorias" value ={{opcion}}>{{opcion}}</option>
+                </select> 
+                </li>
                 <li class="button">Últimos productos</li>
                 <li class="button">Login</li>
             </ul>
@@ -21,7 +25,7 @@
 
         </router-outlet> 
     </div>
-<div  fxLayout="row wrap" fxLayoutAlign="center center" *ngIf = "searching == false">
+<div  fxLayout="row wrap" fxLayoutAlign="center center" *ngIf = "searching == false && category == false">
     <div  fxLayout="column wrap" fxLayoutAlign="center center" class="products" *ngFor = "let product of products">
     <li >{{product.title}}</li>
     <li><img [src]="product.thumbnailURL"></li>
@@ -39,5 +43,17 @@
     </div>
     <div *ngIf = "show == ''">
     <p>Su búsqueda no coincide con ningún producto.</p>
+    </div>
+</div>
+
+<div *ngIf="category == true">
+    <h1>{{selectedCategory}}</h1>
+    <div fxLayout="row wrap" fxLayoutAlign="center center">
+    <div div fxLayout="column wrap" fxLayoutAlign="center center" class="products" *ngFor ="let item of productsCategory"> 
+        
+        <li>{{item.title}} </li>
+        <li><img [src]="item.thumbnailURL"></li>
+        <li>{{item.priceHR}}</li>
+    </div>
     </div>
 </div>
