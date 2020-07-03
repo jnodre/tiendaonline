@@ -8,23 +8,25 @@
                 <select [(ngModel)]= "selectedCategory">
                     <option *ngFor = "let opcion of categorias" value ={{opcion}}>{{opcion}}</option>
                 </select> 
-                </li>
+                </li><!--
                 <li class="button">Últimos productos</li>
-                <li class="button">Login</li>
+                <li class="button">Login</li>-->
             </ul>
         </nav>
         <div class="search">
             <input  class="searchbar" placeholder="Búsqueda" [(ngModel)]="busqueda"  (keyup.enter)="searchItem()"> <button class="button" routerLink="products" (click)="searchItem()"><fa-icon [icon]="faSearch"></fa-icon></button>
-            <button class="button"><fa-icon [icon]="faShoppingCart"></fa-icon></button>
+            <!--<button class="button"><fa-icon [icon]="faShoppingCart"></fa-icon></button>-->
         </div>
     </div>
 </header>
+<!--
     <div class="components">
         <app-filters class="filters" *ngIf="router.url.includes('products')"></app-filters>
         <router-outlet>
 
         </router-outlet> 
     </div>
+-->
 <div  fxLayout="row wrap" fxLayoutAlign="center center" *ngIf = "searching == false && category == false">
     <div  fxLayout="column wrap" fxLayoutAlign="center center" class="products" *ngFor = "let product of products">
     <li >{{product.title}}</li>
