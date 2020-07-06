@@ -6,7 +6,7 @@
                 <li class="button" (click)= "getProducts()" routerLink="">Inicio</li>
                 <li class="button" (mouseenter)="getCategory()"> Categorías
                 <ul>
-                    <li *ngFor = "let opcion of categorias"><span (click)= "getProductByCategory()">{{opcion}}</span></li>
+                    <li *ngFor = "let opcion of categorias"><span (click)= "getProductByCategory(opcion)">{{opcion}}</span></li>
                 </ul> 
                 </li>
                 <!--

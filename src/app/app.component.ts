@@ -36,9 +36,9 @@ export class AppComponent {
       if(this.categorias.includes(product.category) == false)
         this.categorias.push(product.category)
       })
-      console.log(this.categorias)
   }
-  getProductByCategory(){
+  getProductByCategory(opcion){
+    this.selectedCategory = opcion;
     this.show =[];
     this.productsCategory =[];
     this.category = true;
