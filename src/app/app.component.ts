@@ -14,11 +14,35 @@ export class AppComponent {
   busqueda: string = "";
   products: any = [];
   show: any = [];
+  showCopy: any = [];
+  showFiltered: any = [];
   searching: boolean = false;
   productsCategory: any []; 
   category : boolean = false;
   categorias : string[] =["Todo"];
   selectedCategory: string = "";
+  filtro: {
+    value: number,
+    highValue: number,
+    searching: boolean,
+    filtering: boolean,
+    showCategoria: boolean,
+    showNewCategoria: boolean,
+    showPrecio: boolean,
+    checkSobremesas: boolean,
+    checkPortatiles: boolean,
+    checkTelevisores: boolean,
+    seleccionado: string
+  };
+  filtering: boolean = false;
+  bycategory: {
+    categoriasFiltrar : any,
+    searching: boolean,
+    filtering: boolean,
+    showCategoria: boolean,
+    showPrecio: boolean,
+  }
+  categoriaFilter = []
 
   constructor ( private ProductService: ProductApiService, public router: Router){
     this.getProducts();
@@ -56,7 +80,56 @@ export class AppComponent {
       if (product.title.toLowerCase().includes(this.busqueda.toLocaleLowerCase()) === true){
         this.show.push(product);
       }
+      
     });
     this.busqueda = "";
   }
+
+  filtrarPrecioPadre(data) {
+    this.filtro = data;
+    if(data.showPrecio == true) {
+      this.showCopy = this.show.filter(i => i.price >= this.filtro.value && i.price <= this.filtro.highValue)
+    } else {
+      this.showCopy = JSON.parse(JSON.stringify(this.show));
+    }
+    if(data.showCategoria == true) {
+      if (data.checkSobremesas == true) {
+        this.showCopy = this.showCopy.filter(i => i.category == "Sobremesas")    
+      }
+      if (data.checkPortatiles == true) {
+        this.showCopy = this.showCopy.filter(i => i.category == "Portátiles")       
+      } 
+      if (data.checkTelevisores == true) {
+        this.showCopy = this.showCopy.filter(i => i.category == "Televisores")       
+      } 
+    } else {
+      this.showCopy = JSON.parse(JSON.stringify(this.show));
+    }
+    if(data.showNewCategoria == true) {
+      this.showCopy = this.showCopy.filter(i => i.category == data.seleccionado )
+    }  else {
+      this.showCopy = JSON.parse(JSON.stringify(this.show));
+    }
+    console.log(this.filtro);
+    this.searching = this.filtro.searching;
+    this.filtering = this.filtro.filtering;
+  }
+
+  sobremesasPadre(data) {
+    this.bycategory = data;
+    console.log(this.bycategory);
+    if (data.checkSobremesas == false) {
+      this.categoriaFilter.push("Sobremesas")      
+    } 
+    if (data.checkSobremesas == true) {
+      this.categoriaFilter = this.categoriaFilter.filter(i => i !== "Sobremesas")
+    }
+    console.log(this.categoriaFilter);
+    this.categoriaFilter.forEach(cat => {
+      this.showCopy = this.show.filter(i => i.category == cat)
+      console.log(this.showCopy)
+    } )
+    
+  }
+
 }

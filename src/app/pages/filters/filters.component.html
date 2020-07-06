@@ -1,1 +1,25 @@
 <p>Lista de filtros</p>
+
+
+<div>
+    <div (click)="MostrarFiltroCategoria()" ><h2>Categoria</h2></div>
+    <div *ngIf="showCategoria == true">
+        <input type="checkbox" [(ngModel)]="checkSobremesas"/> <label>Sobremesas </label>
+        <input type="checkbox" [(ngModel)]="checkPortatiles"/> <label>Portátiles </label>
+        <input type="checkbox" [(ngModel)]="checkTelevisores"/> <label>Televisores </label>
+    </div>
+    <div (click)="MostrarFiltroPrecio()" ><h2>Precio (€)</h2></div>
+    <div *ngIf="showPrecio == true">
+        <ng5-slider [(value)]="value" [(highValue)]="highValue" [options]="options" ></ng5-slider>
+    </div>
+    <div (click)="MostrarFiltroNewCategoria()" ><h2>Categoria</h2></div>
+    <div *ngIf="showNewCategoria == true">
+            <select name="miselect" [(ngModel)]="seleccionado">
+            <option [value]="item" *ngFor="let item of listaCategorias">{{item}}</option>
+            </select>
+            {{seleccionado}}
+    </div>
+
+
+    <button (click)="filtrarPrecio()">Filtrar</button>
+</div>

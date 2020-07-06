@@ -6,6 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
+  @Input() showCopyChild: any;
 
   constructor() { 
     
