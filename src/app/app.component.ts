@@ -21,21 +21,6 @@ export class AppComponent {
   category : boolean = false;
   categorias : string[] =["Todo"];
   selectedCategory: string = "";
-  filtro: {
-    value: number,
-    highValue: number,
-    searching: boolean,
-    filtering: boolean,
-    showCategoria: boolean,
-    showNewCategoria: boolean,
-    showPrecio: boolean,
-    checkSobremesas: boolean,
-    checkPortatiles: boolean,
-    checkTelevisores: boolean,
-    seleccionado: string
-  };
-  filtering: boolean = false;
-  categoriaFilter = []
 
   constructor ( private ProductService: ProductApiService, public router: Router){
     this.getProducts();
@@ -76,34 +61,6 @@ export class AppComponent {
       
     });
     this.busqueda = "";
-  }
-
-  filtrarPrecioPadre(data) {
-    this.filtro = data;
-    if(data.showPrecio == true) {
-      this.showCopy = this.show.filter(i => i.price >= this.filtro.value && i.price <= this.filtro.highValue)
-    } else {
-      this.showCopy = JSON.parse(JSON.stringify(this.show));
-    }
-    
-    if(data.showCategoria == true) {
-      if (data.checkSobremesas == true) {
-        this.showCopy = this.showCopy.filter(i => i.category == "Sobremesas");
-        console.log(this.showCopy)   
-      }
-      if (data.checkPortatiles == true) {
-        this.showCopy = this.showCopy.filter(i => i.category == "Portátiles");     
-      } 
-      if (data.checkTelevisores == true) {
-        this.showCopy = this.showCopy.filter(i => i.category == "Televisores");      
-      } 
-    } 
-    if(data.showNewCategoria == true) {
-      this.showCopy = this.showCopy.filter(i => i.category == data.seleccionado )
-    } 
-    console.log(this.filtro);
-    this.searching = this.filtro.searching;
-    this.filtering = this.filtro.filtering;
   }
 
 }

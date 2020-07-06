@@ -14,6 +14,12 @@ const routes: Routes = [
    ] },
   { path: ''
   , component: FeaturedComponent 
+  },
+  { path: 'searching/:categoria/:subcategoria'
+  , component: FeaturedComponent 
+  },
+  { path: 'searching/:categoria'
+  , component: FeaturedComponent 
   }
 ];
 
