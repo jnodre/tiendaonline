@@ -8,7 +8,6 @@ import { Options } from 'ng5-slider';
 })
 export class FiltersComponent implements OnInit {
   @Output() event = new EventEmitter<any>();
-  @Output() sobremesas= new EventEmitter<any>();
   showCategoria: boolean = false;
   showNewCategoria: boolean = false;
   showPrecio: boolean = false;
@@ -56,11 +55,6 @@ export class FiltersComponent implements OnInit {
                     checkPortatiles: this.checkPortatiles,
                     checkTelevisores: this.checkTelevisores,
                     seleccionado: this.seleccionado});
-  }
-
-  filtrarSobremesas() {
-    this.sobremesas.emit({checkSobremesas: this.checkSobremesas, searching: false, filtering: true, showCategoria: this.showCategoria,
-      showPrecio: this.showPrecio})
   }
 
   MostrarFiltroPrecio() {

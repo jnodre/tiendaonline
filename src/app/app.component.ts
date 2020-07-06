@@ -35,13 +35,6 @@ export class AppComponent {
     seleccionado: string
   };
   filtering: boolean = false;
-  bycategory: {
-    categoriasFiltrar : any,
-    searching: boolean,
-    filtering: boolean,
-    showCategoria: boolean,
-    showPrecio: boolean,
-  }
   categoriaFilter = []
 
   constructor ( private ProductService: ProductApiService, public router: Router){
@@ -92,44 +85,25 @@ export class AppComponent {
     } else {
       this.showCopy = JSON.parse(JSON.stringify(this.show));
     }
+    
     if(data.showCategoria == true) {
       if (data.checkSobremesas == true) {
-        this.showCopy = this.showCopy.filter(i => i.category == "Sobremesas")    
+        this.showCopy = this.showCopy.filter(i => i.category == "Sobremesas");
+        console.log(this.showCopy)   
       }
       if (data.checkPortatiles == true) {
-        this.showCopy = this.showCopy.filter(i => i.category == "Portátiles")       
+        this.showCopy = this.showCopy.filter(i => i.category == "Portátiles");     
       } 
       if (data.checkTelevisores == true) {
-        this.showCopy = this.showCopy.filter(i => i.category == "Televisores")       
+        this.showCopy = this.showCopy.filter(i => i.category == "Televisores");      
       } 
-    } else {
-      this.showCopy = JSON.parse(JSON.stringify(this.show));
-    }
+    } 
     if(data.showNewCategoria == true) {
       this.showCopy = this.showCopy.filter(i => i.category == data.seleccionado )
-    }  else {
-      this.showCopy = JSON.parse(JSON.stringify(this.show));
-    }
+    } 
     console.log(this.filtro);
     this.searching = this.filtro.searching;
     this.filtering = this.filtro.filtering;
-  }
-
-  sobremesasPadre(data) {
-    this.bycategory = data;
-    console.log(this.bycategory);
-    if (data.checkSobremesas == false) {
-      this.categoriaFilter.push("Sobremesas")      
-    } 
-    if (data.checkSobremesas == true) {
-      this.categoriaFilter = this.categoriaFilter.filter(i => i !== "Sobremesas")
-    }
-    console.log(this.categoriaFilter);
-    this.categoriaFilter.forEach(cat => {
-      this.showCopy = this.show.filter(i => i.category == cat)
-      console.log(this.showCopy)
-    } )
-    
   }
 
 }

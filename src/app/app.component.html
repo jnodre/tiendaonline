@@ -22,8 +22,7 @@
 </header>
 
 <div class="components">
-        <app-filters class="filters" *ngIf="searching == true || filtering == true" (event)="filtrarPrecioPadre($event)"
-        (sobremesas)="sobremesasPadre($event)"></app-filters>
+        <app-filters class="filters" *ngIf="searching == true || filtering == true" (event)="filtrarPrecioPadre($event)"></app-filters>
         <router-outlet>
 
         </router-outlet> 
