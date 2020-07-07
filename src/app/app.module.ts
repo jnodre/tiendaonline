@@ -8,6 +8,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FiltersComponent } from './pages/filters/filters.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { FeaturedComponent } from './pages/featured/featured.component';
+import { Ng5SliderModule } from 'ng5-slider';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { FeaturedComponent } from './pages/featured/featured.component';
     FormsModule,
     AppRoutingModule,
     FontAwesomeModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    Ng5SliderModule,
+    BrowserAnimationsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

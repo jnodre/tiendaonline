@@ -1,2 +1,34 @@
 <p>Lista de productos</p>
 
+<div class="components" *ngIf="searchingChild == true || filteringChild == true">
+    <app-filters class="filters" (event)="filtrarPrecioPadre($event)"></app-filters>
+</div>
+
+<div>
+    <div  fxLayout="column wrap" fxLayoutAlign="center center" class="products" *ngFor = "let product of showCopyChild">
+        <li >{{product.title}}</li>
+        <li><img [src]="product.thumbnailURL"></li>
+        <li>{{product.priceHR}}</li>
+    </div>
+<div>
+
+<div  fxLayout="row wrap" fxLayoutAlign="center center" *ngIf = "searchingChild == false && categoryChild == false && filteringChild == false">
+    <div  fxLayout="column wrap" fxLayoutAlign="center center" class="products" *ngFor = "let product of productsChild">
+    <li >{{product.title}}</li>
+    <li><img [src]="product.thumbnailURL"></li>
+    <li>{{product.priceHR}}</li>
+    </div>
+</div>
+
+<div *ngIf = "searchingChild == true">
+    <div fxLayout="row wrap" fxLayoutAlign="center center" *ngIf = "showChild != ''">
+        <div fxLayout="column wrap" fxLayoutAlign="center center" class="products" *ngFor = "let item of showChild">
+            <li>{{item.title}}</li>
+            <li><img [src]="item.thumbnailURL"></li>
+            <li>{{item.priceHR}}</li>
+        </div>
+    </div>
+    <div *ngIf = "showChild == ''">
+        <p>Su búsqueda no coincide con ningún producto.</p>
+    </div>
+</div>

@@ -18,4 +18,19 @@ export class ProductApiService {
         console.log("Se ha producido el error" ,error);
       })
   }
+
+  getApiProductsSearch(busqueda:string){
+    let url = 'http://localhost:3000/products?'
+    if (busqueda) {
+      url += 'title_like=' + busqueda;
+    }
+    return axios.get(url)
+      .then (response => {
+        return response.data;
+      })
+      .catch (error => {
+        console.log("Se ha producido el error", error);
+      })
+  }
+
 }
