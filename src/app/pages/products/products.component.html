@@ -32,3 +32,16 @@
         <p>Su búsqueda no coincide con ningún producto.</p>
     </div>
 </div>
+
+
+<div *ngIf="categoryChild == true">
+    <h1 class="productCategory">{{selectedCategoryChild}}</h1>
+    <div fxLayout="row wrap" fxLayoutAlign="center center">
+    <div div fxLayout="column wrap" fxLayoutAlign="center center" class="products" *ngFor ="let item of productsCategoryChild"> 
+        
+        <li>{{item.title}} </li>
+        <li><img [src]="item.thumbnailURL"></li>
+        <li>{{item.priceHR}}</li>
+    </div>
+    </div>
+</div>

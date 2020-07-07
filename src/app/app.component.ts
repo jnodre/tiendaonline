@@ -47,7 +47,8 @@ export class AppComponent {
     if(this.selectedCategory == "Todo"){
       this.productsCategory= this.products;
     }else{
-      this.products.filter(product => product.category == this.selectedCategory).forEach(item => this.productsCategory.push(item))
+      this.products.filter(product => product.category == this.selectedCategory).forEach(item => this.productsCategory.push(item));
+      this.productsCategory = JSON.parse(JSON.stringify(this.products));
     }
   }
 

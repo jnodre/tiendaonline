@@ -11,6 +11,8 @@ export class ProductsComponent implements OnInit {
   @Input() searchingChild: any;
   @Input() showChild: any;
   @Input() categoryChild: any;
+  @Input() selectedCategoryChild: string;
+  @Input() productsCategoryChild: any []; 
   filteringChild: boolean = false;
   filtro: {
     value: number,
