@@ -12,6 +12,10 @@
     </div>
 <div>
 
+<div *ngIf="lengthShowCopy == 0">
+    <p> No articulos con estas especificaciones</p>
+</div>
+
 <div  fxLayout="row wrap" fxLayoutAlign="center center" *ngIf = "searchingChild == false && categoryChild == false && filteringChild == false">
     <div  fxLayout="column wrap" fxLayoutAlign="center center" class="products" *ngFor = "let product of productsChild">
     <li >{{product.title}}</li>

@@ -28,6 +28,7 @@ export class ProductsComponent implements OnInit {
     seleccionado: string
   };
   categoriaFilter = [];
+  lengthShowCopy: any;
   
 
  
@@ -63,6 +64,7 @@ export class ProductsComponent implements OnInit {
       this.showCopyChild = this.showCopyChild.filter(i => i.category == data.seleccionado )
     } 
     console.log(this.filtro);
+    this.lengthShowCopy = this.showCopyChild.length;
     this.searchingChild = this.filtro.searching;
     this.filteringChild = this.filtro.filtering;
   }  
