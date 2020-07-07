@@ -19,10 +19,16 @@ export class ProductApiService {
       })
   }
 
-  getApiProductsSearch(busqueda:string){
+  getApiProductsSearch(busqueda:string, value: number, highValue: number){
     let url = 'http://localhost:3000/products?'
     if (busqueda) {
       url += 'title_like=' + busqueda;
+    }
+    if (value) {
+      url += '&price_gte=' + value;
+    }
+    if (highValue) {
+      url += '&price_lte=' + highValue;
     }
     return axios.get(url)
       .then (response => {
@@ -33,4 +39,17 @@ export class ProductApiService {
       })
   }
 
+  getApiProductsCategory(selectedCategory:string){
+    let url = 'http://localhost:3000/products?'
+    if (selectedCategory) {
+      url += 'category=' + selectedCategory;
+    }
+    return axios.get(url)
+      .then (response => {
+        return response.data;
+      })
+      .catch (error => {
+        console.log("Se ha producido el error", error);
+      })
+  }
 }

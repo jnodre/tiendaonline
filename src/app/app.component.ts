@@ -12,6 +12,7 @@ export class AppComponent {
   faSearch = faSearch;
   faShoppingCart = faShoppingCart;
   busqueda: string = "";
+  busquedaSave: string;
   products: any = [];
   show: any = [];
   showCopy: any = [];
@@ -46,10 +47,19 @@ export class AppComponent {
     this.category = true;
     if(this.selectedCategory == "Todo"){
       this.productsCategory= this.products;
-    }else{
-      this.products.filter(product => product.category == this.selectedCategory).forEach(item => this.productsCategory.push(item));
-      this.productsCategory = JSON.parse(JSON.stringify(this.products));
+    }else {
+      this.ProductService.getApiProductsCategory(this.selectedCategory)
+      .then (data => {
+        this.productsCategory =data;
+        console.log(this.productsCategory);
+      })
     }
+    // if(this.selectedCategory == "Todo"){
+    //   this.productsCategory= this.products;
+    // }else{
+    //   this.products.filter(product => product.category == this.selectedCategory).forEach(item => this.productsCategory.push(item));
+    //   this.productsCategory = JSON.parse(JSON.stringify(this.products));
+    // }
   }
 
   searchItem (){
@@ -61,11 +71,12 @@ export class AppComponent {
     //   }
       
     // });
-    this.ProductService.getApiProductsSearch(this.busqueda)
+    this.ProductService.getApiProductsSearch(this.busqueda, null, null)
       .then (data => {
         this.show =data;
         console.log(this.show)
       })
+    this.busquedaSave = JSON.parse(JSON.stringify(this.busqueda));
     this.busqueda = "";
   }
 
