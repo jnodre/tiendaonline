@@ -54,12 +54,17 @@ export class AppComponent {
   searchItem (){
     this.show = [];
     this.searching = true;
-    this.products.forEach(product => {
-      if (product.title.toLowerCase().includes(this.busqueda.toLocaleLowerCase()) === true){
-        this.show.push(product);
-      }
+    // this.products.forEach(product => {
+    //   if (product.title.toLowerCase().includes(this.busqueda.toLocaleLowerCase()) === true){
+    //     this.show.push(product);
+    //   }
       
-    });
+    // });
+    this.ProductService.getApiProductsSearch(this.busqueda)
+      .then (data => {
+        this.show =data;
+        console.log(this.show)
+      })
     this.busqueda = "";
   }
 
