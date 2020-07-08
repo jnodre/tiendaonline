@@ -1,21 +1,10 @@
 
-<div class="components" *ngIf="searchingChild == true || filteringChild == true">
-    <app-filters class="filters" (event)="filtrarPrecioPadre($event)"></app-filters>
-</div>
-
-<div>
-    <div  fxLayout="column wrap"  fxLayoutAlign="center center" class="products" *ngFor = "let product of showCopyChild">
-        <li>{{product.title}}</li>
-        <li><img [src]="product.thumbnailURL"></li>
-        <li>{{product.priceHR}}</li>
-    </div>
-<div>
-
-<div *ngIf="lengthShowCopy == 0">
+<div *ngIf="productsChild.length == 0">
     <p> No articulos con estas especificaciones</p>
 </div>
-<h2 class="title">Lista de productos</h2>
-<div  fxLayout="row wrap" fxLayoutAlign="center center" *ngIf = "searchingChild == false && categoryChild == false && filteringChild == false">
+
+<h2 *ngIf="productsChild.length > 0" class="title">Lista de productos</h2>
+<div  fxLayout="row wrap" fxLayoutAlign="center center">
     <div  fxLayout="column wrap" fxLayoutAlign="space-between center" class="products" *ngFor = "let product of productsChild">
     <li >{{product.title}}</li>
     <li><img [src]="product.thumbnailURL"></li>
@@ -26,8 +15,7 @@
         <option [value]="item" *ngFor="let item of listaPaginas">{{item}}</option>
     </select>
 </div>
-
-<div *ngIf = "searchingChild == true">
+<!-- <div *ngIf = "searchingChild == true">
     <div fxLayout="row wrap" fxLayoutAlign="center center" *ngIf = "showChild != ''">
         <div fxLayout="column wrap" fxLayoutAlign="space-between center" class="products" *ngFor = "let item of showChild">
             <li>{{item.title}}</li>
@@ -51,4 +39,4 @@
         <li class="price">{{item.priceHR}}</li>
     </div>
     </div>
-</div>
+</div> -->

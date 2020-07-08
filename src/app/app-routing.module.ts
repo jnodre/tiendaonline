@@ -13,13 +13,13 @@ const routes: Routes = [
      { path: 'filters', component: FiltersComponent, outlet: "sidebar" }
    ] },
   { path: ''
-  , component: FeaturedComponent 
+  , component: ProductsComponent 
   },
-  { path: 'searching/:categoria/:subcategoria'
-  , component: FeaturedComponent 
-  },
+  // { path: 'searching/:categoria/:subcategoria'
+  // , component: ProductsComponent 
+  // },
   { path: 'searching/:categoria'
-  , component: FeaturedComponent 
+  , component: ProductsComponent 
   }
 ];
 
