@@ -22,6 +22,10 @@
     <li><img [src]="product.thumbnailURL"></li>
     <li>{{product.priceHR}}</li>
     </div>
+    <button (click)="getFirstPage()">Primera</button>
+    <select name="miselectPages" [(ngModel)]="seleccionadoPage" (click)="getPage()">
+        <option [value]="item" *ngFor="let item of listaPaginas">{{item}}</option>
+    </select>
 </div>
 
 <div *ngIf = "searchingChild == true">

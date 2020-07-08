@@ -31,6 +31,9 @@ export class ProductsComponent implements OnInit {
   };
   categoriaFilter = [];
   lengthShowCopy: any;
+  countPage : number = 1;
+  listaPaginas: number[] = [1, 2, 3, 4];
+  seleccionadoPage: number;
   
 
  
@@ -43,45 +46,61 @@ export class ProductsComponent implements OnInit {
   }
 
   filtrarPrecioPadre(data) {
-    console.log(this.showChild)
-    this.filtro = data;
-    if(data.showPrecio == true) {
-      this.ProductService.getApiProductsSearch(this.busquedaChild, data.value, data.highValue)
-        .then (response => {
-          console.log(data.value);
-          this.showCopyChild =response;
-          console.log(this.showCopyChild)
-          this.lengthShowCopy = this.showCopyChild.length;
-          console.log(this.lengthShowCopy);
-        })
-    } else {
-      this.showCopyChild = JSON.parse(JSON.stringify(this.showChild));
-    }    
-    
+    // console.log(this.showChild)
+     this.filtro = data;
     // if(data.showPrecio == true) {
-    //   this.showCopyChild = this.showChild.filter(i => i.price >= this.filtro.value && i.price <= this.filtro.highValue)
+    //   this.ProductService.getApiProductsSearch(this.busquedaChild, data.value, data.highValue)
+    //     .then (response => {
+    //       console.log(data.value);
+    //       this.showCopyChild =response;
+    //       console.log(this.showCopyChild)
+    //       this.lengthShowCopy = this.showCopyChild.length;
+    //       console.log(this.lengthShowCopy);
+    //     })
     // } else {
     //   this.showCopyChild = JSON.parse(JSON.stringify(this.showChild));
-    // }
-    // if(data.showCategoria == true) {
-    //   if (data.checkSobremesas == true) {
-    //     this.showCopyChild = this.showCopyChild.filter(i => i.category == "Sobremesas");
-    //     console.log(this.showCopyChild)   
-    //   }
-    //   if (data.checkPortatiles == true) {
-    //     this.showCopyChild = this.showCopyChild.filter(i => i.category == "Portátiles");     
-    //   } 
-    //   if (data.checkTelevisores == true) {
-    //     this.showCopyChild = this.showCopyChild.filter(i => i.category == "Televisores");      
-    //   } 
-    // } 
-    // if(data.showNewCategoria == true) {
-    //   this.showCopyChild = this.showCopyChild.filter(i => i.category == data.seleccionado )
-    // } 
+    // }    
+    
+    if(data.showPrecio == true) {
+       this.showCopyChild = this.showChild.filter(i => i.price >= this.filtro.value && i.price <= this.filtro.highValue)
+     } else {
+       this.showCopyChild = JSON.parse(JSON.stringify(this.showChild));
+     }
+     if(data.showCategoria == true) {
+       if (data.checkSobremesas == true) {
+         this.showCopyChild = this.showCopyChild.filter(i => i.category == "Sobremesas");
+         console.log(this.showCopyChild)   
+       }
+       if (data.checkPortatiles == true) {
+         this.showCopyChild = this.showCopyChild.filter(i => i.category == "Portátiles");     
+       } 
+       if (data.checkTelevisores == true) {
+         this.showCopyChild = this.showCopyChild.filter(i => i.category == "Televisores");      
+       } 
+     } 
+     if(data.showNewCategoria == true) {
+       this.showCopyChild = this.showCopyChild.filter(i => i.category == data.seleccionado )
+     } 
     console.log(this.filtro);
     this.searchingChild = this.filtro.searching;
     this.filteringChild = this.filtro.filtering;
   }  
+
+  getFirstPage() {
+    this.ProductService.getApiProductsPaginateFirst()
+         .then (response => {
+           this.productsChild = response;
+         })   
+  }
+
+  getPage() {
+    this.ProductService.getApiProductsPaginate(this.seleccionadoPage)
+      .then (data => {
+        this.productsChild = data;
+      })
+  }
+
+
 
   
 

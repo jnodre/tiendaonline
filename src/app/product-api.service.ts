@@ -52,4 +52,30 @@ export class ProductApiService {
         console.log("Se ha producido el error", error);
       })
   }
+
+  getApiProductsPaginateFirst(){
+    let url = 'http://localhost:3000/products?_page=1&_limit=10'
+    return axios.get(url)
+      .then (response => {
+        return response.data;
+      })
+      .catch (error => {
+        console.log("Se ha producido el error", error);
+      })
+  }
+
+  getApiProductsPaginate(seleccionadoPage: number){
+    let url = 'http://localhost:3000/products?'
+    if (seleccionadoPage) {
+      url += '_page=' + seleccionadoPage + '&_limit=10';
+    }
+    return axios.get(url)
+      .then (response => {
+        return response.data;
+      })
+      .catch (error => {
+        console.log("Se ha producido el error", error);
+      })
+  }
+
 }
