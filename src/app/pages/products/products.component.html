@@ -1,22 +1,24 @@
-<p>Lista de productos</p>
+<h2 class="title">Lista de productos</h2>
 
 <div class="components" *ngIf="searchingChild == true || filteringChild == true">
     <app-filters class="filters" (event)="filtrarPrecioPadre($event)"></app-filters>
 </div>
 
 <div>
-    <div  fxLayout="column wrap" fxLayoutAlign="center center" class="products" *ngFor = "let product of showCopyChild">
+    <div  fxLayout="column wrap"  fxLayoutAlign="center center" class="products" *ngFor = "let product of showCopyChild">
         <li >{{product.title}}</li>
         <li><img [src]="product.thumbnailURL"></li>
         <li>{{product.priceHR}}</li>
     </div>
 <div>
 
-<div  fxLayout="row wrap" fxLayoutAlign="center center" *ngIf = "searchingChild == false && categoryChild == false && filteringChild == false">
-    <div  fxLayout="column wrap" fxLayoutAlign="center center" class="products" *ngFor = "let product of productsChild">
-    <li >{{product.title}}</li>
+<div  fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center center" *ngIf = "searchingChild == false && categoryChild == false && filteringChild == false">
+    <div  fxLayout="column wrap" fxLayoutAlign="space-between center" class="products" *ngFor = "let product of productsChild">
+    <li class="name">{{product.title}}</li>
     <li><img [src]="product.thumbnailURL"></li>
-    <li>{{product.priceHR}}</li>
+    <li class="price">{{product.priceHR}}</li>
+    <li class="description">{{product.description}}</li>
+    <li><button class="show">Mostrar más</button></li>
     </div>
 </div>
 

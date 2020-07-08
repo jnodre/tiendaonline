@@ -1,26 +1,26 @@
 <header class="header">
         <img class="logo" src="/assets/Images/logo_1.png">
-        <div class="we">
-        <nav class="topmenu" >
-            <ul>
-                <li class="button" (click)= "getProducts()" routerLink="">Inicio</li>
-                <li class="button" (mouseenter)="getCategory()"> Categorías
+        <div class="menuSearchContainer">
+            <nav class="topmenu" >
                 <ul>
-                    <li *ngFor = "let opcion of categorias"><span (click)= "getProductByCategory(opcion)">{{opcion}}</span></li>
-                </ul> 
-                </li>
-                <!--
-                <li class="button">Últimos productos</li>
-                <li class="button">Login</li>-->
-            </ul>
-        </nav>
+                    <li class="button" (click)= "getProducts()" routerLink="">Inicio</li>
+                    <li class="button" (mouseenter)="getCategory()"> Categorías
+                    <ul>
+                        <li *ngFor = "let opcion of categorias"><span (click)= "getProductByCategory(opcion)">{{opcion}}</span></li>
+                    </ul> 
+                    </li>
+                    <!--
+                    <li class="button">Últimos productos</li>
+                    <li class="button">Login</li>-->
+                </ul>
+            </nav>
 
-        <div class="searchContainer ">
-            <input  class="searchbar" placeholder="Escribe lo que quieres buscar..." [(ngModel)]="busqueda"  (keyup.enter)="searchItem()"> 
-            <button class="searchButton" routerLink="products" (click)="searchItem()"><fa-icon [icon]="faSearch"></fa-icon></button>
-            <!--<button class="button"><fa-icon [icon]="faShoppingCart"></fa-icon></button>-->
-        </div>
-    </div>
+            <div class="searchContainer ">
+                <input  class="searchbar" placeholder="Escribe lo que quieres buscar..." [(ngModel)]="busqueda"  (keyup.enter)="searchItem()"> 
+                <button class="searchButton" routerLink="products" (click)="searchItem()"><fa-icon [icon]="faSearch"></fa-icon></button>
+                <!--<button class="button"><fa-icon [icon]="faShoppingCart"></fa-icon></button>-->
+            </div>
+         </div>
 </header>
 
 <div>
