@@ -24,6 +24,10 @@
     <li class="description">{{product.description}}</li>
     <li><button class="show">Mostrar más</button></li>
     </div>
+    <button (click)="getFirstPage()">Primera</button>
+    <select name="miselectPages" [(ngModel)]="seleccionadoPage" (click)="getPage()">
+        <option [value]="item" *ngFor="let item of listaPaginas">{{item}}</option>
+    </select>
 </div>
 
 <div *ngIf = "searchingChild == true">
