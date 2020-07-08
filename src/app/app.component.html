@@ -14,7 +14,6 @@
                     <li class="button">Login</li>-->
                 </ul>
             </nav>
-
             <div class="searchContainer ">
                 <input  class="searchbar" placeholder="Escribe lo que quieres buscar..." [(ngModel)]="busqueda"  (keyup.enter)="searchItem()"> 
                 <button class="searchButton" routerLink="products" (click)="searchItem()"><fa-icon [icon]="faSearch"></fa-icon></button>
@@ -24,7 +23,7 @@
 </header>
 
 <div>
-    <app-products [showCopyChild]="showCopy" [productsChild]="products" [searchingChild]="searching" [showChild]="show" [categoryChild]="category" [selectedCategoryChild]="selectedCategory" [productsCategoryChild]="productsCategory" [busquedaChild]="busquedaSave"></app-products>
+    <app-products fxLayout="row nowrap" [showCopyChild]="showCopy" [productsChild]="products" [searchingChild]="searching" [showChild]="show" [categoryChild]="category" [selectedCategoryChild]="selectedCategory" [productsCategoryChild]="productsCategory" [busquedaChild]="busquedaSave"></app-products>
     <router-outlet>
 
     </router-outlet> 
