@@ -24,12 +24,12 @@
 </header>
 
 <div>
-    <app-products [showCopyChild]="showCopy" [productsChild]="products" [searchingChild]="searching" [showChild]="show" [categoryChild]="category"></app-products>
+    <app-products [showCopyChild]="showCopy" [productsChild]="products" [searchingChild]="searching" [showChild]="show" [categoryChild]="category" [selectedCategoryChild]="selectedCategory" [productsCategoryChild]="productsCategory"></app-products>
     <router-outlet>
 
     </router-outlet> 
 </div>
-
+<!-- 
 <div *ngIf="category == true">
     <h1 class="productCategory">{{selectedCategory}}</h1>
     <div fxLayout="row wrap" fxLayoutAlign="center center">
@@ -40,4 +40,4 @@
         <li>{{item.priceHR}}</li>
     </div>
     </div>
-</div>
+</div> -->

@@ -12,9 +12,13 @@
     </div>
 <div>
 
-<div  fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center center" *ngIf = "searchingChild == false && categoryChild == false && filteringChild == false">
+<div *ngIf="lengthShowCopy == 0">
+    <p> No articulos con estas especificaciones</p>
+</div>
+
+<div  fxLayout="row wrap" fxLayoutAlign="center center" *ngIf = "searchingChild == false && categoryChild == false && filteringChild == false">
     <div  fxLayout="column wrap" fxLayoutAlign="space-between center" class="products" *ngFor = "let product of productsChild">
-    <li class="name">{{product.title}}</li>
+    <li >{{product.title}}</li>
     <li><img [src]="product.thumbnailURL"></li>
     <li class="price">{{product.priceHR}}</li>
     <li class="description">{{product.description}}</li>
@@ -32,5 +36,18 @@
     </div>
     <div *ngIf = "showChild == ''">
         <p>Su búsqueda no coincide con ningún producto.</p>
+    </div>
+</div>
+
+
+<div *ngIf="categoryChild == true">
+    <h1 class="productCategory">{{selectedCategoryChild}}</h1>
+    <div fxLayout="row wrap" fxLayoutAlign="center center">
+    <div div fxLayout="column wrap" fxLayoutAlign="center center" class="products" *ngFor ="let item of productsCategoryChild"> 
+        
+        <li>{{item.title}} </li>
+        <li><img [src]="item.thumbnailURL"></li>
+        <li>{{item.priceHR}}</li>
+    </div>
     </div>
 </div>

@@ -11,6 +11,8 @@ export class ProductsComponent implements OnInit {
   @Input() searchingChild: any;
   @Input() showChild: any;
   @Input() categoryChild: any;
+  @Input() selectedCategoryChild: string;
+  @Input() productsCategoryChild: any []; 
   filteringChild: boolean = false;
   filtro: {
     value: number,
@@ -26,6 +28,7 @@ export class ProductsComponent implements OnInit {
     seleccionado: string
   };
   categoriaFilter = [];
+  lengthShowCopy: any;
   
 
  
@@ -61,6 +64,7 @@ export class ProductsComponent implements OnInit {
       this.showCopyChild = this.showCopyChild.filter(i => i.category == data.seleccionado )
     } 
     console.log(this.filtro);
+    this.lengthShowCopy = this.showCopyChild.length;
     this.searchingChild = this.filtro.searching;
     this.filteringChild = this.filtro.filtering;
   }  
