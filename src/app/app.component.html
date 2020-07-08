@@ -1,25 +1,26 @@
 <header class="header">
         <img class="logo" src="/assets/Images/logo_1.png">
-        <div class="menuSearchContainer">
-            <nav class="topmenu" >
+        <div class="we">
+        <nav class="topmenu" >
+            <ul>
+                <li class="button" (click)= "getProducts()" routerLink="">Inicio</li>
+                <li class="button" (mouseenter)="getCategory()"> Categorías
                 <ul>
-                    <li class="button" (click)= "getProducts()" routerLink="">Inicio</li>
-                    <li class="button" (mouseenter)="getCategory()"> Categorías
-                    <ul>
-                        <li [routerLink]="['searching' , opcion]"      *ngFor = "let opcion of categorias"><span (click)= "getProductByCategory(opcion)">{{opcion}}</span></li>
-                    </ul> 
-                    </li>
-                    <!--
-                    <li class="button">Últimos productos</li>
-                    <li class="button">Login</li>-->
-                </ul>
-            </nav>
-            <div class="searchContainer ">
-                <input  class="searchbar" placeholder="Escribe lo que quieres buscar..." [(ngModel)]="busqueda"  (keyup.enter)="searchItem()"> 
-                <button class="searchButton" routerLink="products" (click)="searchItem()"><fa-icon [icon]="faSearch"></fa-icon></button>
-                <!--<button class="button"><fa-icon [icon]="faShoppingCart"></fa-icon></button>-->
-            </div>
-         </div>
+                    <li *ngFor = "let opcion of categorias"><span [routerLink]="['/categoria', opcion]" (click)= "getProductByCategory(opcion)">{{opcion}}</span></li>
+                </ul> 
+                </li>
+                <!--
+                <li class="button">Últimos productos</li>
+                <li class="button">Login</li>-->
+            </ul>
+        </nav>
+
+        <div class="searchContainer ">
+            <input  class="searchbar" placeholder="Escribe lo que quieres buscar..." [(ngModel)]="busqueda"  (keyup.enter)="searchItem()"> 
+            <button class="searchButton" routerLink="products" (click)="searchItem()"><fa-icon [icon]="faSearch"></fa-icon></button>
+            <!--<button class="button"><fa-icon [icon]="faShoppingCart"></fa-icon></button>-->
+        </div>
+    </div>
 </header>
 
 <div>
@@ -27,3 +28,15 @@
 
     </router-outlet> 
 </div>
+<!-- 
+<div *ngIf="category == true">
+    <h1 class="productCategory">{{selectedCategory}}</h1>
+    <div fxLayout="row wrap" fxLayoutAlign="center center">
+    <div div fxLayout="column wrap" fxLayoutAlign="center center" class="products" *ngFor ="let item of productsCategory"> 
+        
+        <li>{{item.title}} </li>
+        <li><img [src]="item.thumbnailURL"></li>
+        <li>{{item.priceHR}}</li>
+    </div>
+    </div>
+</div> -->

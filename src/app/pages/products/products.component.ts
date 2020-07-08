@@ -17,6 +17,12 @@ export class ProductsComponent implements OnInit {
   @Input() productsCategoryChild: any [];
   @Input() busquedaChild: string ; 
 
+  
+  selectedCategory: string = "";
+  show: any = [];
+  productsCategory: any [] = [];
+  category : boolean = false;
+   
 
   productsChild: any;
   filteringChild: boolean = false;
@@ -42,40 +48,56 @@ export class ProductsComponent implements OnInit {
 
  
   // FUTURE : Detectar si estoy en una url con subcategoría puesta
-  constructor(private ProductService: ProductApiService, private route : ActivatedRoute) { 
+  constructor(private ProductService: ProductApiService, private route : ActivatedRoute) {
     // Detectar si estoy en una url con categoria puesta
     // Detectar si estoy con queryParams de filtrado puestos  
     // Buscar los productos que toquen en base a lo de arriba
     // No hay nada en la url y estoy en localhost:4200 a pelo 
   }
 
-  ngOnInit(): void {
-    this.selectedCategoryChild = this.route.snapshot.paramMap.get("categoria")
-    this.selectedCategoryChild = this.route.snapshot.queryParams.get("price")
-    if (this.selectedCategoryChild) {
-      alert('Estas filtrando por la categoria ' + this.selectedCategoryChild)
-      this.getProductsFromThisCategory(this.selectedCategoryChild)
-      
-    }else{
-
-      // Si quisiera en el home simplemente mostrar sin filtrar la primera pagina
-      console.log('buscar todos');
-      this.getProducts();
-
-
+  getProductByCategory(opcion){
+    this.selectedCategory = opcion;
+    if(this.selectedCategory == "Todo"){
+      this.ProductService.getApiProducts()
+        .then(response=> {
+          this.productsCategory = response;
+        })
+    }else {
+      this.ProductService.getApiProductsCategory(this.selectedCategory)
+      .then (data => {
+        this.productsCategory =data;
+        console.log(this.productsCategory);
+      })
     }
+  }
+
+  ngOnInit(): void {
+    // this.selectedCategoryChild = this.route.snapshot.paramMap.get("categoria")
+    // this.selectedCategoryChild = this.route.snapshot.queryParams.get("price")
+    // if (this.selectedCategoryChild) {
+    //   alert('Estas filtrando por la categoria ' + this.selectedCategoryChild)
+    //   this.getProductsFromThisCategory(this.selectedCategoryChild)
+      
+    // }else{
+
+    //   // Si quisiera en el home simplemente mostrar sin filtrar la primera pagina
+    //   console.log('buscar todos');
+    //   this.getProducts();
+
+
+    // }
 
   }
 
 
 
-  async getProductsFromThisCategory (category){
-    this.productsChild = await this.ProductService.getApiProductsCategory(category);
-  }
+  // async getProductsFromThisCategory (category){
+  //   this.productsChild = await this.ProductService.getApiProductsCategory(category);
+  // }
 
-  async getProducts (){
-    this.productsChild = await this.ProductService.getApiProducts();
-  }
+  // async getProducts (){
+  //   this.productsChild = await this.ProductService.getApiProducts();
+  // }
 
 
 

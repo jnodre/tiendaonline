@@ -1,19 +1,14 @@
-
-<div *ngIf="productsChild.length == 0">
-    <p> No articulos con estas especificaciones</p>
-</div>
-
-<h2 *ngIf="productsChild.length > 0" class="title">Lista de productos</h2>
+<h2 class="title">Lista de productos</h2>
 <div  fxLayout="row wrap" fxLayoutAlign="center center">
-    <div  fxLayout="column wrap" fxLayoutAlign="space-between center" class="products" *ngFor = "let product of productsChild">
+    <div  fxLayout="column wrap" fxLayoutAlign="space-between center" class="products" *ngFor = "let product of productsCategory">
     <li >{{product.title}}</li>
     <li><img [src]="product.thumbnailURL"></li>
     <li class="price">{{product.priceHR}}</li>
     </div>
-    <button (click)="getFirstPage()">Primera</button>
+    <!-- <button (click)="getFirstPage()">Primera</button>
     <select name="miselectPages" [(ngModel)]="seleccionadoPage" (click)="getPage()">
         <option [value]="item" *ngFor="let item of listaPaginas">{{item}}</option>
-    </select>
+    </select> -->
 </div>
 <!-- <div *ngIf = "searchingChild == true">
     <div fxLayout="row wrap" fxLayoutAlign="center center" *ngIf = "showChild != ''">

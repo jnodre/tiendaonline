@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductApiService } from '../../product-api.service';
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-main',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
+  products: any = [];
 
-  constructor() { }
+  constructor(private ProductService: ProductApiService, private route : ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.getProducts();
   }
 
+  async getProducts (){
+    this.products = await this.ProductService.getApiProducts();
+  }
 }
