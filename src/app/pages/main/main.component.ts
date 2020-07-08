@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductApiService } from '../../product-api.service';
-import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-main',
@@ -10,13 +9,13 @@ import { ActivatedRoute } from "@angular/router";
 export class MainComponent implements OnInit {
   products: any = [];
 
-  constructor(private ProductService: ProductApiService, private route : ActivatedRoute) { }
+  constructor(private ProductService: ProductApiService) { }
 
   ngOnInit(): void {
-    this.getProducts();
+    this.getProducts(30);
   }
 
-  async getProducts (){
-    this.products = await this.ProductService.getApiProducts();
+  async getProducts (limit : number){
+    this.products = await this.ProductService.getApiProducts(9);
   }
 }

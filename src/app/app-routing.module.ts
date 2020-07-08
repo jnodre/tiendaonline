@@ -3,28 +3,20 @@ import { Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 import { MainComponent} from './pages/main/main.component'
-import { FiltersComponent } from './pages/filters/filters.component';
 import { ProductsComponent } from './pages/products/products.component';
-import { FeaturedComponent } from './pages/featured/featured.component';
 
 const routes: Routes = [
-  // { path: 'products',
-  //  component: ProductsComponent,
-  //  children: [
-  //    { path: 'filters', component: FiltersComponent, outlet: "sidebar" }
-  //  ] },
-  { path: 'categoria/:opcion'
-  , component: ProductsComponent 
+  // lo que hay en los :algo es el nombre con el que recogo el parametro de la url
+  // en este caso paramMap.get('categoria')  está en el products.components.ts
+  { path: 'categoria/:categoria'
+  , component: ProductsComponent
+  },
+  { path: 'categoria/:opcion/:subOpcion'
+  , component: ProductsComponent
   },
   { path: ''
-  , component: MainComponent 
-  },
-  // { path: 'searching/:categoria/:subcategoria'
-  // , component: ProductsComponent 
-  // },
-  // { path: 'searching/:categoria'
-  // , component: ProductsComponent 
-  // }
+  , component: MainComponent
+  }
 ];
 
 @NgModule({
