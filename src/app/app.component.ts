@@ -32,6 +32,7 @@ export class AppComponent {
     this.products = await this.ProductService.getApiProducts();
     this.searching = false;
     this.category = false;
+    
   }
 
   getCategory(){
