@@ -15,10 +15,16 @@
             <button (click)="searchFilter()">Filtrar</button>
     </div>
     <div *ngIf="inFiltering == true">
-        <div fxLayout="column wrap" fxLayoutAlign="space-between center" class="products" *ngFor = "let item of filteringPrice">
+        <div fxLayout="column wrap" fxLayoutAlign="space-between center" class="products" *ngFor = "let item of filtering">
             <li>{{item.title}}</li>
             <li><img [src]="item.thumbnailURL"></li>
             <li class="price">{{item.priceHR}}</li>
+        </div>
+    </div>
+    <div *ngIf = "filtering == []" class="searchError">
+        <div>
+            <p>Ups... Su búsqueda no coincide con ninguno de nuestros productos😅</p>
+            <p routerLink="" class="errorLink">◀ ¿Quiere volver al inicio?</p>
         </div>
     </div>
     <div fxLayout="row wrap" fxLayoutAlign="center center" *ngIf = "show != '' && inFiltering == false">

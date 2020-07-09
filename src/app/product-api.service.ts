@@ -20,7 +20,7 @@ export class ProductApiService {
 
   getSearchFilter(busquedaSave:any, value:number, highValue:number, selectedCategory: any){
     let url = `http://localhost:3000/products/?title_like=${busquedaSave}&price_gte=${value}&price_lte=${highValue}`;
-    if (selectedCategory.length != null){
+    if (selectedCategory.length > 0){
       for (let i=0; i <= selectedCategory.length; i++){
         url += `&category=${selectedCategory[i]}`
       }

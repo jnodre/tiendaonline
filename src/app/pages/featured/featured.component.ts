@@ -28,6 +28,7 @@ export class FeaturedComponent implements OnInit {
   checkboxSmartphone  :boolean = false;
   checkboxAccesorio :boolean = false;
   selectedCategory: any = [];
+
   constructor(private ProductService: ProductApiService, private route : ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -72,6 +73,7 @@ export class FeaturedComponent implements OnInit {
 
   async searchFilter(){
     this.inFiltering = true;
+    this.filtering = [];
     if (this.checkboxAccesorio == true){
       this.selectedCategory.push("Accesorios Smartphones");
     } 
@@ -91,7 +93,8 @@ export class FeaturedComponent implements OnInit {
       this.selectedCategory.push("Componentes");
     }
     this.filtering = await this.ProductService.getSearchFilter(this.busquedaSave.busqueda, this.value, this.highValue, this.selectedCategory);
-    //this.selectedCategory=[];
+    console.log(this.filtering);
+    this.selectedCategory=[];
   }
 
 }
