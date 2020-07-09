@@ -60,7 +60,7 @@ export class ProductsComponent implements OnInit {
   getProductByCategory(opcion, filterOption?) {
     this.selectedCategory = opcion;
     console.log(this.selectedCategory)
-    if(this.selectedCategory == "Todo"){
+    if(this.selectedCategory.categoria == "Todo"){
       this.ProductService.getApiProducts()
         .then(response => {
           this.productsCategory = response;
