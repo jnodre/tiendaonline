@@ -1,8 +1,10 @@
 <h2 class="title">Lista de productos</h2>
 <div class="filter">
-
+    <h3>Precio</h3>
+    <ng5-slider [(value)]="value" [(highValue)]="highValue" [options]="options" ></ng5-slider>
+    <button (click)="categoryFilter()">Filtrar</button>
 </div>
-<div  fxLayout="row wrap" fxLayoutAlign="center center">
+<div  *ngIf="inFiltering == false" fxLayout="row wrap" fxLayoutAlign="center center">
     <div  fxLayout="column wrap" fxLayoutAlign="space-between center" class="products" *ngFor = "let product of productsCategory">
     <li >{{product.title}}</li>
     <li><img [src]="product.thumbnailURL"></li>
@@ -12,6 +14,19 @@
     <select name="miselectPages" [(ngModel)]="seleccionadoPage" (click)="getPage()">
         <option [value]="item" *ngFor="let item of listaPaginas">{{item}}</option>
     </select> -->
+</div>
+<div *ngIf="inFiltering == true">
+    <div fxLayout="column wrap" fxLayoutAlign="space-between center" class="products" *ngFor = "let item of filtering">
+        <li>{{item.title}}</li>
+        <li><img [src]="item.thumbnailURL"></li>
+        <li class="price">{{item.priceHR}}</li>
+    </div>
+</div>
+<div *ngIf = "filtering.length == 0 && inFiltering == true" class="searchError">
+    <div>
+        <p>Ups... Su búsqueda no coincide con ninguno de nuestros productos😅</p>
+        <p routerLink="" class="errorLink">◀ ¿Quiere volver al inicio?</p>
+    </div>
 </div>
 <!-- <div *ngIf = "searchingChild == true">
     <div fxLayout="row wrap" fxLayoutAlign="center center" *ngIf = "showChild != ''">

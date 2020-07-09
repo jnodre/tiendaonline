@@ -11,6 +11,9 @@
                 <label><input type="checkbox" id="cbox" [(ngModel)]="checkboxComponente">Componentes</label><br>
                 <label><input type="checkbox" id="cbox" [(ngModel)]="checkboxSmartphone">Smartphones</label><br>
                 <label><input type="checkbox" id="cbox" [(ngModel)]="checkboxAccesorio">Accesorios Smartphones</label><br>
+                <label><input type="checkbox" id="cbox" [(ngModel)]="checkboxAuricular">Auriculares</label><br>
+                <label><input type="checkbox" id="cbox" [(ngModel)]="checkboxAltavoz">Altavoces</label><br>
+                
             </div>
             <button (click)="searchFilter()">Filtrar</button>
     </div>
@@ -21,7 +24,7 @@
             <li class="price">{{item.priceHR}}</li>
         </div>
     </div>
-    <div *ngIf = "filtering == []" class="searchError">
+    <div *ngIf = "filtering.length == 0 && inFiltering == true" class="searchError">
         <div>
             <p>Ups... Su búsqueda no coincide con ninguno de nuestros productos😅</p>
             <p routerLink="" class="errorLink">◀ ¿Quiere volver al inicio?</p>
@@ -32,9 +35,9 @@
             <li>{{item.title}}</li>
             <li><img [src]="item.thumbnailURL"></li>
             <li class="price">{{item.priceHR}}</li>
-        </div>
+        </div>s
     </div>
-    <div *ngIf = "show == ''" class="searchError">
+    <div *ngIf = "show == '' && inFiltering == false" class="searchError">
         <div>
             <p>Ups... Su búsqueda no coincide con ninguno de nuestros productos😅</p>
             <p routerLink="" class="errorLink">◀ ¿Quiere volver al inicio?</p>

@@ -40,3 +40,13 @@
     overflow:hidden;
     white-space:nowrap;
 }
+
+.searchError{
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6em;
+    font-weight: 500;
+}

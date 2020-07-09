@@ -3,6 +3,7 @@ import { ProductApiService } from '../../product-api.service';
 import { ActivatedRoute } from "@angular/router";
 import { merge } from 'rxjs/operators';
 import { combineLatest } from 'rxjs';
+import { Options } from 'ng5-slider';
 
 
 @Component({
@@ -24,10 +25,16 @@ export class ProductsComponent implements OnInit {
   show: any = [];
   productsCategory: any[] = [];
   category: boolean = false;
-   
-
+  filtering: any = [""];
+  inFiltering: boolean = false;
+  value: number = 0;
+  highValue: number = 3000;
+  options: Options = {
+    floor: 0,
+    ceil: 3000
+  };
   productsChild: any;
-  filteringChild: boolean = false;
+  /*filteringChild: boolean = false;
   filtro: {
     value: number,
     highValue: number,
@@ -41,7 +48,7 @@ export class ProductsComponent implements OnInit {
     checkTelevisores: boolean,
     seleccionado: string
   };
-  categoriaFilter = [];
+  categoriaFilter = [];*/
   lengthShowCopy: any;
   countPage : number = 1;
   listaPaginas: number[] = [1, 2, 3, 4];
@@ -59,6 +66,7 @@ export class ProductsComponent implements OnInit {
 
   getProductByCategory(opcion, filterOption?) {
     this.selectedCategory = opcion;
+    this.inFiltering = false;
     console.log(this.selectedCategory)
     if(this.selectedCategory.categoria == "Todo"){
       this.ProductService.getApiProducts()
@@ -79,6 +87,12 @@ export class ProductsComponent implements OnInit {
     //   this.products.filter(product => product.category == this.selectedCategory).forEach(item => this.productsCategory.push(item));
     //   this.productsCategory = JSON.parse(JSON.stringify(this.products));
     // }
+  }
+
+  async categoryFilter(){
+    this.inFiltering = true;
+    this.filtering = [];
+    this.filtering = await this.ProductService.getApiProductsCategory(this.selectedCategory, this.value, this.highValue);
   }
 
   ngOnInit(): void {
@@ -157,8 +171,6 @@ export class ProductsComponent implements OnInit {
 
   }
 
-
-
   // async getProductsFromThisCategory (category){
   //   this.productsChild = await this.ProductService.getApiProductsCategory(category);
   // }
@@ -169,7 +181,7 @@ export class ProductsComponent implements OnInit {
 
 
 
-  filtrarPrecioPadre(data) {
+  /*filtrarPrecioPadre(data) {
     // console.log(this.showChild)
      this.filtro = data;
     // if(data.showPrecio == true) {
@@ -208,7 +220,7 @@ export class ProductsComponent implements OnInit {
     console.log(this.filtro);
     this.searchingChild = this.filtro.searching;
     this.filteringChild = this.filtro.filtering;
-  }  
+  }  */
 
   getFirstPage() {
     this.ProductService.getApiProductsPaginateFirst()

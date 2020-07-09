@@ -37,7 +37,7 @@ export class AppComponent {
   getCategory(){
     this.products.forEach(product => {
       if(this.categorias.includes(product.category) == false)
-        this.categorias.push(product.category)
+        this.categorias.push(product.category);
       })
   }
 

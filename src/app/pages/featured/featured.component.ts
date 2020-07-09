@@ -19,7 +19,7 @@ export class FeaturedComponent implements OnInit {
     floor: 0,
     ceil: 3000
   };
-  filtering: any = [];
+  filtering: any = [""];
   inFiltering: boolean = false;
   checkboxSobremesa :boolean = false;
   checkboxPortatil  :boolean = false;
@@ -27,6 +27,9 @@ export class FeaturedComponent implements OnInit {
   checkboxComponente  :boolean = false;
   checkboxSmartphone  :boolean = false;
   checkboxAccesorio :boolean = false;
+  checkboxAuricular :boolean = false;
+  checkboxAltavoz :boolean = false;
+
   selectedCategory: any = [];
 
   constructor(private ProductService: ProductApiService, private route : ActivatedRoute) { }
@@ -52,6 +55,14 @@ export class FeaturedComponent implements OnInit {
 
   searchItem (busqueda){
     this.inFiltering = false;
+    this.checkboxSobremesa = false;
+    this.checkboxPortatil  = false;
+    this.checkboxTelevisor = false;
+    this.checkboxComponente  = false;
+    this.checkboxSmartphone  = false;
+    this.checkboxAccesorio = false;
+    this.checkboxAuricular = false;
+    this.checkboxAltavoz = false;
     this.busquedaSave = JSON.parse(JSON.stringify(busqueda));
     console.log(busqueda)
     console.log(busqueda.busqueda)
@@ -74,6 +85,7 @@ export class FeaturedComponent implements OnInit {
   async searchFilter(){
     this.inFiltering = true;
     this.filtering = [];
+    this.selectedCategory=[];
     if (this.checkboxAccesorio == true){
       this.selectedCategory.push("Accesorios Smartphones");
     } 
@@ -92,9 +104,13 @@ export class FeaturedComponent implements OnInit {
     if (this.checkboxComponente == true){
       this.selectedCategory.push("Componentes");
     }
-    this.filtering = await this.ProductService.getSearchFilter(this.busquedaSave.busqueda, this.value, this.highValue, this.selectedCategory);
-    console.log(this.filtering);
-    this.selectedCategory=[];
+    if (this.checkboxAuricular == true){
+      this.selectedCategory.push("Auriculares");
+    }
+    if (this.checkboxAltavoz == true){
+      this.selectedCategory.push("Altavoces");
+    }
+    this.filtering = await this.ProductService.getApiProductsSearch(this.busquedaSave.busqueda, this.value, this.highValue, this.selectedCategory);
   }
 
 }
