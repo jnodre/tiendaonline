@@ -9,10 +9,14 @@
                     <li *ngFor = "let opcion of categorias"><span [routerLink]="['/categoria', opcion]">{{opcion}}</span></li>
                 </ul>
                 </li>
+                <li class="button">
+                    <input type="file" class ="upload" (change)= "onFileChange($event)">
+                </li>
                 <!--
                 <li class="button">Últimos productos</li>
                 <li class="button">Login</li>-->
             </ul>
+
         </nav>
 
         <div class="searchContainer ">
@@ -22,6 +26,7 @@
         </div>
     </div>
 </header>
+
 
 <div>
     <router-outlet>

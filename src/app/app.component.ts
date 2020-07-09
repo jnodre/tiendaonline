@@ -3,6 +3,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { ProductApiService } from './product-api.service';
 import { Router } from '@angular/router'
+import * as XLSX from 'xlsx';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -41,22 +42,24 @@ export class AppComponent {
       })
   }
 
-  // searchItem (){
-  //   this.show = [];
-  //   this.searching = true;
-  //   // this.products.forEach(product => {
-  //   //   if (product.title.toLowerCase().includes(this.busqueda.toLocaleLowerCase()) === true){
-  //   //     this.show.push(product);
-  //   //   }
-      
-  //   // });
-  //   this.ProductService.getApiProductsSearch(this.busqueda, null, null)
-  //     .then (data => {
-  //       this.show =data;
-  //       console.log(this.show)
-  //     })
-  //   this.busquedaSave = JSON.parse(JSON.stringify(this.busqueda));
-  //   this.busqueda = "";
-  // }
-
+  public onFileChange(event){
+    let workBook = null;
+    let jsonData = null;
+    const reader = new FileReader();
+    const file = event.target.files[0];
+    console.log(file)
+    reader.readAsBinaryString(file);
+    reader.onload = (event) => {
+      const data = reader.result;
+      workBook = XLSX.read(data, { type: 'binary' });
+      jsonData = workBook.SheetNames.reduce((initial, name) => {
+        const sheet = workBook.Sheets[name];
+        initial[name] = XLSX.utils.sheet_to_json(sheet);
+        return initial;
+      }, {});
+      const dataString = JSON.stringify(jsonData);
+      console.log("Entras macho")
+      console.log(dataString.slice(0, 300).concat("..."))
+    }
+  }
 }
