@@ -67,7 +67,6 @@ export class ProductsComponent implements OnInit {
   getProductByCategory(opcion, filterOption?) {
     this.selectedCategory = opcion;
     this.inFiltering = false;
-    console.log(this.selectedCategory)
     if(this.selectedCategory.categoria == "Todo"){
       this.ProductService.getApiProducts()
         .then(response => {
@@ -75,10 +74,9 @@ export class ProductsComponent implements OnInit {
         })
       } else {
         console.log("hola")
-        this.ProductService.getApiProductsCategory(this.selectedCategory.categoria, filterOption)
+        this.ProductService.getApiProductsCategory(this.selectedCategory.categoria)
           .then(data => {
             this.productsCategory = data;
-            console.log(this.productsCategory);
           })
     }
     // if(this.selectedCategory == "Todo"){
@@ -92,7 +90,12 @@ export class ProductsComponent implements OnInit {
   async categoryFilter(){
     this.inFiltering = true;
     this.filtering = [];
-    this.filtering = await this.ProductService.getApiProductsCategory(this.selectedCategory, this.value, this.highValue);
+    this.filtering = await this.ProductService.getApiProductsCategory(this.selectedCategory.categoria, this.value, this.highValue);
+    console.log(this.inFiltering);
+    console.log(this.filtering);
+    console.log(this.value);
+    console.log(this.highValue);
+    console.log(this.selectedCategory);
   }
 
   ngOnInit(): void {

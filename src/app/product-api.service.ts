@@ -29,11 +29,12 @@ export class ProductApiService {
     if (highValue) {
       url += `&price_lte=${highValue}`;
     }
-    if (selectedCategory)
+    if (selectedCategory){
     if (selectedCategory.length > 0){
       for (let i=0; i <= selectedCategory.length; i++){
         url += `&category=${selectedCategory[i]}`
       }
+    }
     }
     return axios.get(url)
       .then (response => {
@@ -45,9 +46,9 @@ export class ProductApiService {
   }
 
   getApiProductsCategory(selectedCategory:string, value? : number, highValue?: number ){
-    let url = 'http://localhost:3000/products?'
+    let url = `http://localhost:3000/products?`;
     if (selectedCategory) {
-      url += 'category=' + selectedCategory;
+      url += `category=${selectedCategory}`;
     }
     if (value) {
       url += `&price_gte=${value}`;
