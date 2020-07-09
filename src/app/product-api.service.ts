@@ -7,19 +7,18 @@ import axios from "axios";
 export class ProductApiService {
 
   constructor() { }
-   
-  getApiProducts(){
-    return axios.get("http://localhost:3000/products")
+
+  getApiProducts(limit = 20) {
+    return axios.get(`http://localhost:3000/products?_limit=${limit}`)
       .then (response => {
         return response.data;
       })
-
       .catch (error => {
         console.log("Se ha producido el error" ,error);
       })
   }
 
-  getApiProductsSearch(busqueda:string, value: number, highValue: number){
+  getApiProductsSearch(busqueda:string, value?: number, highValue?: number){
     let url = 'http://localhost:3000/products?'
     if (busqueda) {
       url += 'title_like=' + busqueda;
@@ -39,10 +38,15 @@ export class ProductApiService {
       })
   }
 
-  getApiProductsCategory(selectedCategory:string){
+
+
+  getApiProductsCategory(selectedCategory:string, filterOptions? : {minPrice? : number}  ){
     let url = 'http://localhost:3000/products?'
     if (selectedCategory) {
       url += 'category=' + selectedCategory;
+    }
+    if (filterOptions?.minPrice) {
+      url += '&price_lte=' + filterOptions.minPrice;
     }
     return axios.get(url)
       .then (response => {

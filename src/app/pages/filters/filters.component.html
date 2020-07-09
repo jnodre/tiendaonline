@@ -6,9 +6,10 @@
         </div>
         <div (click)="MostrarFiltroCategoria()" ><h2>Categoria</h2></div>
         <div *ngIf="showCategoria == true">
-            <input type="checkbox" [(ngModel)]="checkSobremesas"/> <label>Sobremesas </label>
-            <input type="checkbox" [(ngModel)]="checkPortatiles"/> <label>Portátiles </label>
-            <input type="checkbox" [(ngModel)]="checkTelevisores"/> <label>Televisores </label>
+          <!-- Investigar como hacer que este input simplemente haga un routerLink a donde ya estamos pero con un queryParam nuevo -->
+            <input [routerLink]="" [queryParams]="{}" type="checkbox"/> <label >Sobremesas </label>
+            <input type="checkbox" [(ngModel)]="checkPortatiles"/> <label routerLink="/searching/Portátiles"  >Portátiles </label>
+            <input type="checkbox" [(ngModel)]="checkTelevisores"/> <label routerLink="/searching/Televisores"  >Televisores </label>
         </div>
         <div (click)="MostrarFiltroNewCategoria()" ><h2>Categoria</h2></div>
         <div *ngIf="showNewCategoria == true">
