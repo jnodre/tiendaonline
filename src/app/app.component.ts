@@ -23,7 +23,7 @@ export class AppComponent {
   category : boolean = false;
   categorias : string[] =["Todo"];
   selectedCategory: string = "";
-  jsonData: any =  null;
+  updated: boolean = false;
 
 
   constructor ( private ProductService: ProductApiService, public router: Router){
@@ -47,7 +47,7 @@ export class AppComponent {
 
   public onFileChange(event){
     let workBook = null;
-
+    let jsonData = null;
     const reader = new FileReader();
     const file = event.target.files[0];
     console.log(file)
@@ -56,31 +56,19 @@ export class AppComponent {
       const data = reader.result;
       workBook = XLSX.read(data, { type: 'binary'});
 
-      this.jsonData = workBook.SheetNames.reduce((initial, name) => {
+      jsonData = workBook.SheetNames.reduce((initial, name) => {
         const sheet = workBook.Sheets[name];
         initial[name] = XLSX.utils.sheet_to_json(sheet);
         return initial;
       }, {});
 
-      console.log(this.jsonData);
-    }
-  }
-
-  public actualizarProduct(){
-    const itemsToModify = this.jsonData.Sheet1;
+    console.log(jsonData);
+    const itemsToModify = jsonData.Sheet1;
+      
     itemsToModify.forEach(product => {
       this.ProductService.updateProduct(product);
     });
-    console.log("its done")
+      console.log("its updated")
+    }
   }
-
-  public addProducts(){
-    const itemsToModify = this.jsonData.Sheet1;
-    itemsToModify.forEach(product => {
-      this.ProductService.putProduct(product);
-    });
-    console.log("its done 2")
-  }
-
-
 }
