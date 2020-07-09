@@ -3,6 +3,7 @@ import { ProductApiService } from '../../product-api.service';
 import { ActivatedRoute } from "@angular/router";
 import { merge } from 'rxjs/operators';
 import { combineLatest } from 'rxjs';
+import { Options } from 'ng5-slider';
 
 @Component({
   selector: 'app-featured',
@@ -12,7 +13,21 @@ import { combineLatest } from 'rxjs';
 export class FeaturedComponent implements OnInit {
   show: any = [];
   busquedaSave: any;
-
+  value: number = 0;
+  highValue: number = 3000;
+  options: Options = {
+    floor: 0,
+    ceil: 3000
+  };
+  filtering: any = [];
+  inFiltering: boolean = false;
+  checkboxSobremesa :boolean = false;
+  checkboxPortatil  :boolean = false;
+  checkboxTelevisor :boolean = false;
+  checkboxComponente  :boolean = false;
+  checkboxSmartphone  :boolean = false;
+  checkboxAccesorio :boolean = false;
+  selectedCategory: any = [];
   constructor(private ProductService: ProductApiService, private route : ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -35,6 +50,7 @@ export class FeaturedComponent implements OnInit {
   }
 
   searchItem (busqueda){
+    this.inFiltering = false;
     this.busquedaSave = JSON.parse(JSON.stringify(busqueda));
     console.log(busqueda)
     console.log(busqueda.busqueda)
@@ -52,6 +68,30 @@ export class FeaturedComponent implements OnInit {
       })
     busqueda.busqueda = "";
     console.log(busqueda.busqueda)
+  }
+
+  async searchFilter(){
+    this.inFiltering = true;
+    if (this.checkboxAccesorio == true){
+      this.selectedCategory.push("Accesorios Smartphones");
+    } 
+    if (this.checkboxSobremesa == true){
+      this.selectedCategory.push("Sobremesas");
+    } 
+    if (this.checkboxTelevisor == true){
+      this.selectedCategory.push("Televisores");
+    } 
+    if (this.checkboxPortatil == true){
+      this.selectedCategory.push("Portátiles");
+    } 
+    if (this.checkboxSmartphone == true){
+      this.selectedCategory.push("Smartphones");
+    } 
+    if (this.checkboxComponente == true){
+      this.selectedCategory.push("Componentes");
+    }
+    this.filtering = await this.ProductService.getSearchFilter(this.busquedaSave.busqueda, this.value, this.highValue, this.selectedCategory);
+    //this.selectedCategory=[];
   }
 
 }

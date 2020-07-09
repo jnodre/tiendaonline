@@ -18,9 +18,26 @@ export class ProductApiService {
       })
   }
 
+  getSearchFilter(busquedaSave:any, value:number, highValue:number, selectedCategory: any){
+    let url = `http://localhost:3000/products/?title_like=${busquedaSave}&price_gte=${value}&price_lte=${highValue}`;
+    if (selectedCategory.length != null){
+      for (let i=0; i <= selectedCategory.length; i++){
+        url += `&category=${selectedCategory[i]}`
+      }
+    }
+    return axios.get(url)
+      .then (response => {
+        return response.data;
+      })
+
+      .catch (error => {
+        console.log("Ha ocurrido el siguiente error: ", error);
+      })
+  }
+
   getApiProductsSearch(busqueda:string, value?: number, highValue?: number){
-    let url = 'http://localhost:3000/products?'
-    if (busqueda) {
+    let url = `http://localhost:3000/products?title_like=${busqueda}`;
+  /* if (busqueda) {
       url += 'title_like=' + busqueda;
     }
     if (value) {
@@ -28,7 +45,7 @@ export class ProductApiService {
     }
     if (highValue) {
       url += '&price_lte=' + highValue;
-    }
+    }*/
     return axios.get(url)
       .then (response => {
         return response.data;
@@ -42,12 +59,12 @@ export class ProductApiService {
 
   getApiProductsCategory(selectedCategory:string, filterOptions? : {minPrice? : number}  ){
     let url = 'http://localhost:3000/products?'
-    if (selectedCategory) {
+    /*if (selectedCategory) {
       url += 'category=' + selectedCategory;
     }
     if (filterOptions?.minPrice) {
       url += '&price_lte=' + filterOptions.minPrice;
-    }
+    }*/
     return axios.get(url)
       .then (response => {
         return response.data;
