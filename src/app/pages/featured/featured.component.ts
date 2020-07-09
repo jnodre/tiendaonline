@@ -50,8 +50,8 @@ export class FeaturedComponent implements OnInit {
         this.show =data;
         console.log(this.show)
       })
-    busqueda = "";
-    console.log(busqueda)
+    busqueda.busqueda = "";
+    console.log(busqueda.busqueda)
   }
 
 }

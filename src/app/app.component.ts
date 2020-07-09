@@ -20,7 +20,7 @@ export class AppComponent {
   searching: boolean = false;
   productsCategory: any []; 
   category : boolean = false;
-  categorias : string[] =["Todo"];
+  categorias : string[] =[];
   selectedCategory: string = "";
 
   constructor ( private ProductService: ProductApiService, public router: Router){
