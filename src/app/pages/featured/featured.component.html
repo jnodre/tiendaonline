@@ -1,3 +1,4 @@
+<h2  class="title">Resultados de la busqueda</h2>
 <div>
     <div fxLayout="row wrap" fxLayoutAlign="center center" *ngIf = "show != ''">
         <div fxLayout="column wrap" fxLayoutAlign="space-between center" class="products" *ngFor = "let item of show">
@@ -6,7 +7,10 @@
             <li class="price">{{item.priceHR}}</li>
         </div>
     </div>
-    <div *ngIf = "show == ''">
-        <p>Su búsqueda no coincide con ningún producto.</p>
+    <div *ngIf = "show == ''" class="searchError">
+        <div>
+            <p>Ups... Su búsqueda no coincide con ninguno de nuestros productos😅</p>
+            <p routerLink="" class="errorLink">◀ ¿Quiere volver al inicio?</p>
+        </div>
     </div>
 </div>

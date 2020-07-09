@@ -1,7 +1,7 @@
 <h2  class="title">Lista de productos</h2>
 <div  fxLayout="row wrap" fxLayoutAlign="center center">
-    <div  fxLayout="column wrap" fxLayoutAlign="space-between center" class="p0roducts" *ngFor = "let product of products">
-    <li >{{product.title}}</li>
+    <div  fxLayout="column wrap" fxLayoutAlign="space-between center" class="products" *ngFor = "let product of products">
+    <li class="name">{{product.title}}</li>
     <li><img [src]="product.thumbnailURL"></li>
     <li class="price">{{product.priceHR}}</li>
     </div>

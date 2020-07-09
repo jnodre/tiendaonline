@@ -6,7 +6,7 @@
                 <li class="button"  routerLink="">Inicio</li>
                 <li class="button" (mouseenter)="getCategory()"> Categorías
                 <ul>
-                    <li *ngFor = "let opcion of categorias"><span [routerLink]="['/categoria', opcion]">{{opcion}}</span></li>
+                    <li *ngFor = "let opcion of categorias"[routerLink]="['/categoria', opcion]"><span >{{opcion}}</span></li>
                 </ul>
                 </li>
                 <!--

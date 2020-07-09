@@ -1,9 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
+*{
+    outline: 0px;
+}
 body{
     margin:0px;
     font-family: 'Roboto', sans-serif;
+
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+:root{
+    --shadow: 0px 0px 10px rgba(51, 51, 51, 0.116) ;
+    --main-color:#0742AD;
+    --gray: rgb(233, 233, 233);
+    --border-gray: rgb(201, 201, 201);
+    --darker-border-gray: rgb(177, 177, 177);
+}

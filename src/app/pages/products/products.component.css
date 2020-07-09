@@ -4,16 +4,17 @@
     padding: 2vw;
     width: 19vw;
     margin: 0px 20px 20px 20px;
-    border: 1px solid rgb(202, 202, 202);
+    border: 1px solid var(--border-gray);
     min-width: 300px;
     transition: 0.5s linear;
     height: 400px;
     box-sizing: content-box;
+    border-radius: 5px;
 }
 .products:hover{
-    transition: 0.5s linear;
-    box-shadow: 0px 0px 20px rgb(224, 224, 224);
-    border: 1px solid rgb(190, 190, 190);
+    transition: 0.3s linear;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--darker-border-gray);
 }
 
 .products img{
@@ -23,8 +24,8 @@
     text-align: center;
 }
 .name{
-    font-size: 1.7em;
-    font-weight: bold;
+    font-size: 1.4em;
+    font-weight: 500;
     margin-bottom: 20px;
 }
 .price{
