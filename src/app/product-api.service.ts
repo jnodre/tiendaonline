@@ -19,6 +19,7 @@ export class ProductApiService {
   }
 
   getApiProductsSearch(busqueda:string, value?: number, highValue?: number, selectedCategory?: any){
+    console.log(busqueda);
     let url = `http://localhost:3000/products?`;
     if (busqueda) {
       url += `title_like=${busqueda}`;
