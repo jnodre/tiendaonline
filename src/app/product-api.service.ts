@@ -92,7 +92,13 @@ export class ProductApiService {
           `http://localhost:3000/products/${product.id}`,
           product
       ).then(res => res.data)
-      // Machaco totalmente el objeto anterior en product.id
+    } else {
+      return;
+    }
+  }
+  putProduct(product) {
+    // Machaco totalmente el objeto anterior en product.id
+    if (product && typeof product.id != 'undefined') {
       return axios
       .put(
         `http://localhost:3000/products/${product.id}`,

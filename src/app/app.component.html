@@ -11,8 +11,14 @@
                 </li>
                 <li class="button">
                     <input type="file" class ="upload" (change)= "onFileChange($event)">
-                    <button type="button"><i class="fa fa-save fa-fw"></i> Upload File</button>
                 </li>
+                <li class ="button">
+                    <button type="button"><i class="fa fa-save fa-fw" (click)="actualizarProduct()"></i> Actualizar Productos</button>
+                </li>  
+                <li class ="button">
+                    <button type="button"><i class="fa fa-save fa-fw" (click)="addProducts()"></i> Añadir Productos</button>
+                </li>                
+                
                 <!--
                 <li class="button">Últimos productos</li>
                 <li class="button">Login</li>-->
@@ -23,7 +29,7 @@
         <div class="searchContainer ">
             <input   class="searchbar" placeholder="Escribe lo que quieres buscar..." [(ngModel)]="busqueda">
             <!--  TODO : Este routerlink es lo único que deberíamos de cambiar. para que no navegue a ningún lado nuevo -->
-            <button class="searchButton" [routerLink]="['../']" [queryParams]="{search: busqueda}"    ><fa-icon [icon]="faSearch"></fa-icon></button>
+            <button class="searchButton" [routerLink]="['/.']" [queryParams]="{search: busqueda}"    ><fa-icon [icon]="faSearch"></fa-icon></button>
             <!--<button class="button"><fa-icon [icon]="faShoppingCart"></fa-icon></button>-->
         </div>
     </div>
