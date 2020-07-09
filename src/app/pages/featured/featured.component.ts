@@ -73,6 +73,16 @@ export class FeaturedComponent implements OnInit {
     //   }
       
     // });
+    this.busquedaSave.busqueda = this.busquedaSave.busqueda.replace("á", "a")
+      .replace("É", "E")
+      .replace("Í", "I")
+      .replace("Ó", "O") 
+      .replace("Ú", "U")
+      .replace("á", "a")
+      .replace("é", "e")
+      .replace("í", "i")
+      .replace("ó", "o")
+      .replace("ú", "u");
     this.ProductService.getApiProductsSearch(this.busquedaSave.busqueda)
       .then (data => {
         this.show =data;
