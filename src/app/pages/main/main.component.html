@@ -6,8 +6,7 @@
     </div>
     
     <!-- TODO: Preparando el paginado, trabajar después  -->
-    <!-- <button (click)="getFirstPage()">Primera</button>
-    <select name="miselectPages" [(ngModel)]="seleccionadoPage" (click)="getPage()">
-        <option [value]="item" *ngFor="let item of listaPaginas">{{item}}</option>
-    </select> -->
+    <select name="miselectPages" [(ngModel)]="seleccionadoPage" [routerLink]="['']" [queryParams]="{Page: seleccionadoPage}">
+        <option [value]="item" *ngFor="let item of pages">{{item}}</option>
+    </select> 
 </div>

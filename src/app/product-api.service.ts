@@ -8,8 +8,27 @@ export class ProductApiService {
 
   constructor() { }
 
-  getApiProducts(limit = 20) {
-    return axios.get(`http://localhost:3000/products`)
+  getApiProducts(seleccionadoPage: number = 1) {
+    let url = 'http://localhost:3000/products?'
+    if (seleccionadoPage) {
+      url += '_page=' + seleccionadoPage + '&_limit=10';
+    }
+    return axios.get(url)
+      .then (response => {
+        return response.data;
+      })
+      .catch (error => {
+        console.log("Se ha producido el error" ,error);
+      })
+  }
+
+  getApiProducts2(seleccionadoPage?: number) {
+    let url = 'http://localhost:3000/products?'
+    if (seleccionadoPage) {
+      url += '_page=' + seleccionadoPage + '&_limit=10';
+    }
+    return axios.get(url)
+
       .then (response => {
         return response.data;
       })
@@ -46,16 +65,23 @@ export class ProductApiService {
       })
   }
 
-  getApiProductsCategory(selectedCategory:string, value? : number, highValue?: number ){
-    let url = `http://localhost:3000/products?`;
+
+
+  getApiProductsCategory(selectedCategory:string, minPrice : number= 0, maxPrice: number = 2500  ){
+    let url = 'http://localhost:3000/products?'
+
     if (selectedCategory) {
       url += `category=${selectedCategory}`;
     }
     if (value) {
       url += `&price_gte=${value}`;
     }
-    if (highValue) {
-      url += `&price_lte=${highValue}`;
+    if (minPrice) {
+      url += '&price_gte=' + minPrice;
+    }
+    if (maxPrice) {
+      url += '&price_lte=' + maxPrice;
+
     }
     return axios.get(url)
       .then (response => {

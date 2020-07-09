@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductApiService } from '../../product-api.service';
+import { ActivatedRoute } from "@angular/router";
+import { combineLatest } from 'rxjs';
 
 @Component({
   selector: 'app-main',
@@ -8,14 +10,23 @@ import { ProductApiService } from '../../product-api.service';
 })
 export class MainComponent implements OnInit {
   products: any = [];
+  pages: number[] = [1, 2, 3, 4];
+  seleccionadoPage: number = 1;
 
-  constructor(private ProductService: ProductApiService) { }
+  constructor(private ProductService: ProductApiService,  private route : ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.getProducts(30);
+    this.route.queryParams
+       .subscribe(queryParams => {
+         console.log('Esto significa que cambiaron los queryParams')
+         this.seleccionadoPage = queryParams['Page'];
+         this.getProducts(this.seleccionadoPage);
+     });
+
   }
 
-  async getProducts (limit : number){
-    this.products = await this.ProductService.getApiProducts(9);
+  async getProducts (seleccionadoPage: number){
+    this.products = await this.ProductService.getApiProducts(this.seleccionadoPage);
   }
+  
 }

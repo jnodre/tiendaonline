@@ -13,7 +13,7 @@ export class AppComponent {
   faShoppingCart = faShoppingCart;
   busqueda: string = "";
   busquedaSave: string;
-  products: any = [];
+  products2: any = [];
   show: any = [];
   showCopy: any = [];
   showFiltered: any = [];
@@ -24,19 +24,19 @@ export class AppComponent {
   selectedCategory: string = "";
 
   constructor ( private ProductService: ProductApiService, public router: Router){
-    this.getProducts();
+    this.getProducts2();
     this.getCategory();
   }
   
-  async getProducts (){
-    this.products = await this.ProductService.getApiProducts();
+  async getProducts2 (){
+    this.products2 = await this.ProductService.getApiProducts2();
     this.searching = false;
     this.category = false;
     
   }
 
   getCategory(){
-    this.products.forEach(product => {
+    this.products2.forEach(product => {
       if(this.categorias.includes(product.category) == false)
         this.categorias.push(product.category);
       })

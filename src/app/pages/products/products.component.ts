@@ -12,45 +12,19 @@ import { Options } from 'ng5-slider';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-  @Input() showCopyChild: any;
-  @Input() searchingChild: any;
-  @Input() showChild: any;
-  @Input() categoryChild: any;
-  @Input() selectedCategoryChild: string;
-  @Input() productsCategoryChild: any [];
-  @Input() busquedaChild: string ; 
-
-  
   selectedCategory: any;
   show: any = [];
   productsCategory: any[] = [];
   category: boolean = false;
-  filtering: any = [""];
-  inFiltering: boolean = false;
   value: number = 0;
   highValue: number = 3000;
+  value2: number ;
+  highValue2: number ;
   options: Options = {
     floor: 0,
     ceil: 3000
   };
-  productsChild: any;
-  /*filteringChild: boolean = false;
-  filtro: {
-    value: number,
-    highValue: number,
-    searching: boolean,
-    filtering: boolean,
-    showCategoria: boolean,
-    showNewCategoria: boolean,
-    showPrecio: boolean,
-    checkSobremesas: boolean,
-    checkPortatiles: boolean,
-    checkTelevisores: boolean,
-    seleccionado: string
-  };
-  categoriaFilter = [];*/
-  lengthShowCopy: any;
-  countPage : number = 1;
+
   listaPaginas: number[] = [1, 2, 3, 4];
   seleccionadoPage: number;
   
@@ -64,9 +38,14 @@ export class ProductsComponent implements OnInit {
     // No hay nada en la url y estoy en localhost:4200 a pelo 
   }
 
-  getProductByCategory(opcion, filterOption?) {
+  getProductByCategory(opcion) {
     this.selectedCategory = opcion;
-    this.inFiltering = false;
+    console.log(this.selectedCategory);
+    const minPrice = parseInt(this.selectedCategory.minPrice, 10);
+    const maxPrice = parseInt(this.selectedCategory.maxPrice, 10);
+    console.log(minPrice);
+    console.log(maxPrice)
+
     if(this.selectedCategory.categoria == "Todo"){
       this.ProductService.getApiProducts()
         .then(response => {
@@ -74,7 +53,8 @@ export class ProductsComponent implements OnInit {
         })
       } else {
         console.log("hola")
-        this.ProductService.getApiProductsCategory(this.selectedCategory.categoria)
+        this.ProductService.getApiProductsCategory(this.selectedCategory.categoria, minPrice, maxPrice)
+
           .then(data => {
             this.productsCategory = data;
           })
@@ -125,14 +105,17 @@ export class ProductsComponent implements OnInit {
         const params = results[0]; // esto es el resultado de this.route.params
         const queryParams = results[1];  // esto es el resultado de this.route.queryParams
         const categoria = params['categoria'];
-        const minPrice = queryParams['minPrice'];
-        const maxPrice = queryParams['maxPrice'];
+        this.value2 = this.value
+        this.value2 = queryParams['minPrice'];
+        this.highValue2 = this.highValue
+        console.log(this.value)
+        this.highValue2 = queryParams['maxPrice'];
         // this.getProductByCategory(this.categoriaFilter, { minPrice: minPrice })
         this.getProductByCategory(
           {
             categoria: categoria,
-            minPrice: minPrice,
-            maxPrice: maxPrice
+            minPrice: this.value2,
+            maxPrice: this.highValue2
           })
       })
 
@@ -181,64 +164,6 @@ export class ProductsComponent implements OnInit {
   // async getProducts (){
   //   this.productsChild = await this.ProductService.getApiProducts();
   // }
-
-
-
-  /*filtrarPrecioPadre(data) {
-    // console.log(this.showChild)
-     this.filtro = data;
-    // if(data.showPrecio == true) {
-    //   this.ProductService.getApiProductsSearch(this.busquedaChild, data.value, data.highValue)
-    //     .then (response => {
-    //       console.log(data.value);
-    //       this.showCopyChild =response;
-    //       console.log(this.showCopyChild)
-    //       this.lengthShowCopy = this.showCopyChild.length;
-    //       console.log(this.lengthShowCopy);
-    //     })
-    // } else {
-    //   this.showCopyChild = JSON.parse(JSON.stringify(this.showChild));
-    // }    
-    
-    if(data.showPrecio == true) {
-       this.showCopyChild = this.showChild.filter(i => i.price >= this.filtro.value && i.price <= this.filtro.highValue)
-     } else {
-       this.showCopyChild = JSON.parse(JSON.stringify(this.showChild));
-     }
-     if(data.showCategoria == true) {
-       if (data.checkSobremesas == true) {
-         this.showCopyChild = this.showCopyChild.filter(i => i.category == "Sobremesas");
-         console.log(this.showCopyChild)   
-       }
-       if (data.checkPortatiles == true) {
-         this.showCopyChild = this.showCopyChild.filter(i => i.category == "Portátiles");     
-       } 
-       if (data.checkTelevisores == true) {
-         this.showCopyChild = this.showCopyChild.filter(i => i.category == "Televisores");      
-       } 
-     } 
-     if(data.showNewCategoria == true) {
-       this.showCopyChild = this.showCopyChild.filter(i => i.category == data.seleccionado )
-     } 
-    console.log(this.filtro);
-    this.searchingChild = this.filtro.searching;
-    this.filteringChild = this.filtro.filtering;
-  }  */
-
-  getFirstPage() {
-    this.ProductService.getApiProductsPaginateFirst()
-         .then (response => {
-           this.productsChild = response;
-         })   
-  }
-
-  getPage() {
-    this.ProductService.getApiProductsPaginate(this.seleccionadoPage)
-      .then (data => {
-        this.productsChild = data;
-      })
-  }
-
 
 
   

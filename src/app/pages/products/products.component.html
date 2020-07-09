@@ -1,55 +1,24 @@
 <h2 class="title">Lista de productos</h2>
-<div class="filter">
-    <h3>Precio</h3>
-    <ng5-slider [(value)]="value" [(highValue)]="highValue" [options]="options" ></ng5-slider>
-    <button (click)="categoryFilter()">Filtrar</button>
+
+<div class="container">
+    <div>
+        <div><h2>Precio (€)</h2></div>
+        <div>
+            <ng5-slider [(value)]="value" [(highValue)]="highValue" [options]="options" [routerLink]="['/categoria', selectedCategory.categoria]" [queryParams]="{minPrice: value, maxPrice: highValue}"></ng5-slider>
+        </div>
+    </div>
 </div>
-<div  *ngIf="inFiltering == false" fxLayout="row wrap" fxLayoutAlign="center center">
+<div  fxLayout="row wrap" fxLayoutAlign="center center">
+
     <div  fxLayout="column wrap" fxLayoutAlign="space-between center" class="products" *ngFor = "let product of productsCategory">
     <li >{{product.title}}</li>
     <li><img [src]="product.thumbnailURL"></li>
     <li class="price">{{product.priceHR}}</li>
     </div>
-    <!-- <button (click)="getFirstPage()">Primera</button>
-    <select name="miselectPages" [(ngModel)]="seleccionadoPage" (click)="getPage()">
-        <option [value]="item" *ngFor="let item of listaPaginas">{{item}}</option>
-    </select> -->
 </div>
-<div *ngIf="inFiltering == true">
-    <div fxLayout="column wrap" fxLayoutAlign="space-between center" class="products" *ngFor = "let item of filtering">
-        <li>{{item.title}}</li>
-        <li><img [src]="item.thumbnailURL"></li>
-        <li class="price">{{item.priceHR}}</li>
-    </div>
-</div>
-<!--<div *ngIf = "filtering.length == 0 && inFiltering == true" class="searchError">
+<div  fxLayout="row wrap" fxLayoutAlign="center center" *ngIf="productsCategory.length == 0">
     <div>
-        <p>Ups... Su búsqueda no coincide con ninguno de nuestros productos😅</p>
-        <p routerLink="" class="errorLink">◀ ¿Quiere volver al inicio?</p>
-    </div>
-</div>-->
-<!-- <div *ngIf = "searchingChild == true">
-    <div fxLayout="row wrap" fxLayoutAlign="center center" *ngIf = "showChild != ''">
-        <div fxLayout="column wrap" fxLayoutAlign="space-between center" class="products" *ngFor = "let item of showChild">
-            <li>{{item.title}}</li>
-            <li><img [src]="item.thumbnailURL"></li>
-            <li class="price">{{item.priceHR}}</li>
-        </div>
-    </div>
-    <div *ngIf = "showChild == ''">
-        <p>Su búsqueda no coincide con ningún producto.</p>
+        <h2>No hay articulos que cumplan con estas especificaciones</h2>
+
     </div>
 </div>
-
-
-<div *ngIf="categoryChild == true">
-    <h1 class="productCategory">{{selectedCategoryChild}}</h1>
-    <div fxLayout="row wrap" fxLayoutAlign="center center">
-    <div div fxLayout="column wrap" fxLayoutAlign="center center" class="products" *ngFor ="let item of productsCategoryChild"> 
-        
-        <li>{{item.title}} </li>
-        <li><img [src]="item.thumbnailURL"></li>
-        <li class="price">{{item.priceHR}}</li>
-    </div>
-    </div>
-</div> -->
