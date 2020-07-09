@@ -64,9 +64,9 @@ export class FeaturedComponent implements OnInit {
     this.checkboxAuricular = false;
     this.checkboxAltavoz = false;
     this.busquedaSave = JSON.parse(JSON.stringify(busqueda));
-    console.log(busqueda)
+    /*console.log(busqueda)
     console.log(busqueda.busqueda)
-    console.log(this.busquedaSave)
+    console.log(this.busquedaSave)*/
     // this.products.forEach(product => {
     //   if (product.title.toLowerCase().includes(this.busqueda.toLocaleLowerCase()) === true){
     //     this.show.push(product);
@@ -79,7 +79,6 @@ export class FeaturedComponent implements OnInit {
         console.log(this.show)
       })
     busqueda.busqueda = "";
-    console.log(busqueda.busqueda)
   }
 
   async searchFilter(){
