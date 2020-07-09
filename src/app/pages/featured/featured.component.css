@@ -50,3 +50,5 @@
     font-weight: 500;
 }
 .errorLink{color:var(--main-color);text-align: center; cursor:pointer;}
+.container{display:flex;}
+

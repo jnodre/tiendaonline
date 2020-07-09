@@ -9,6 +9,7 @@
     </div>
 </div>
 <div  fxLayout="row wrap" fxLayoutAlign="center center">
+
     <div  fxLayout="column wrap" fxLayoutAlign="space-between center" class="products" *ngFor = "let product of productsCategory">
     <li >{{product.title}}</li>
     <li><img [src]="product.thumbnailURL"></li>
@@ -18,5 +19,6 @@
 <div  fxLayout="row wrap" fxLayoutAlign="center center" *ngIf="productsCategory.length == 0">
     <div>
         <h2>No hay articulos que cumplan con estas especificaciones</h2>
+
     </div>
 </div>

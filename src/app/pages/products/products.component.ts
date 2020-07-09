@@ -45,6 +45,7 @@ export class ProductsComponent implements OnInit {
     const maxPrice = parseInt(this.selectedCategory.maxPrice, 10);
     console.log(minPrice);
     console.log(maxPrice)
+
     if(this.selectedCategory.categoria == "Todo"){
       this.ProductService.getApiProducts()
         .then(response => {
@@ -53,9 +54,9 @@ export class ProductsComponent implements OnInit {
       } else {
         console.log("hola")
         this.ProductService.getApiProductsCategory(this.selectedCategory.categoria, minPrice, maxPrice)
+
           .then(data => {
             this.productsCategory = data;
-            console.log(this.productsCategory);
           })
     }
     // if(this.selectedCategory == "Todo"){
@@ -64,6 +65,17 @@ export class ProductsComponent implements OnInit {
     //   this.products.filter(product => product.category == this.selectedCategory).forEach(item => this.productsCategory.push(item));
     //   this.productsCategory = JSON.parse(JSON.stringify(this.products));
     // }
+  }
+
+  async categoryFilter(){
+    this.inFiltering = true;
+    this.filtering = [];
+    this.filtering = await this.ProductService.getApiProductsCategory(this.selectedCategory.categoria, this.value, this.highValue);
+    console.log(this.inFiltering);
+    console.log(this.filtering);
+    console.log(this.value);
+    console.log(this.highValue);
+    console.log(this.selectedCategory);
   }
 
   ngOnInit(): void {
@@ -144,8 +156,6 @@ export class ProductsComponent implements OnInit {
     // }
 
   }
-
-
 
   // async getProductsFromThisCategory (category){
   //   this.productsChild = await this.ProductService.getApiProductsCategory(category);

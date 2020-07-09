@@ -32,12 +32,13 @@ export class AppComponent {
     this.products2 = await this.ProductService.getApiProducts2();
     this.searching = false;
     this.category = false;
+    
   }
 
   getCategory(){
     this.products2.forEach(product => {
       if(this.categorias.includes(product.category) == false)
-        this.categorias.push(product.category)
+        this.categorias.push(product.category);
       })
   }
 

@@ -1,5 +1,5 @@
 <header class="header">
-        <img class="logo" src="/assets/Images/logo_1.png">
+        <img class="logo" routerLink="" src="/assets/Images/logo_1.png">
         <div class="we">
         <nav class="topmenu" >
             <ul>
@@ -9,16 +9,12 @@
                     <li *ngFor = "let opcion of categorias"[routerLink]="['/categoria', opcion]"><span >{{opcion}}</span></li>
                 </ul>
                 </li>
-                <!--
-                <li class="button">Últimos productos</li>
-                <li class="button">Login</li>-->
             </ul>
         </nav>
 
         <div class="searchContainer ">
             <input  class="searchbar" placeholder="Escribe lo que quieres buscar..." [(ngModel)]="busqueda">
-            <button class="searchButton" [routerLink]="['/search', busqueda]"><fa-icon [icon]="faSearch"></fa-icon></button>
-            <!--<button class="button"><fa-icon [icon]="faShoppingCart"></fa-icon></button>-->
+            <button [disabled]="busqueda == ''" class="searchButton" [routerLink]="['/search', busqueda]" (click)="busqueda = ''"><fa-icon [icon]="faSearch"></fa-icon></button>
         </div>
     </div>
 </header>
@@ -28,15 +24,4 @@
 
     </router-outlet>
 </div>
-<!--
-<div *ngIf="category == true">
-    <h1 class="productCategory">{{selectedCategory}}</h1>
-    <div fxLayout="row wrap" fxLayoutAlign="center center">
-    <div div fxLayout="column wrap" fxLayoutAlign="center center" class="products" *ngFor ="let item of productsCategory">
 
-        <li>{{item.title}} </li>
-        <li><img [src]="item.thumbnailURL"></li>
-        <li>{{item.priceHR}}</li>
-    </div>
-    </div>
-</div> -->

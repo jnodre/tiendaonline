@@ -28,6 +28,7 @@ export class ProductApiService {
       url += '_page=' + seleccionadoPage + '&_limit=10';
     }
     return axios.get(url)
+
       .then (response => {
         return response.data;
       })
@@ -36,16 +37,24 @@ export class ProductApiService {
       })
   }
 
-  getApiProductsSearch(busqueda:string, value?: number, highValue?: number){
-    let url = 'http://localhost:3000/products?'
+  getApiProductsSearch(busqueda:string, value?: number, highValue?: number, selectedCategory?: any){
+    console.log(busqueda);
+    let url = `http://localhost:3000/products?`;
     if (busqueda) {
-      url += 'title_like=' + busqueda;
+      url += `title_like=${busqueda}`;
     }
     if (value) {
-      url += '&price_gte=' + value;
+      url += `&price_gte=${value}`;
     }
     if (highValue) {
-      url += '&price_lte=' + highValue;
+      url += `&price_lte=${highValue}`;
+    }
+    if (selectedCategory){
+    if (selectedCategory.length > 0){
+      for (let i=0; i <= selectedCategory.length; i++){
+        url += `&category=${selectedCategory[i]}`
+      }
+    }
     }
     return axios.get(url)
       .then (response => {
@@ -60,14 +69,19 @@ export class ProductApiService {
 
   getApiProductsCategory(selectedCategory:string, minPrice : number= 0, maxPrice: number = 2500  ){
     let url = 'http://localhost:3000/products?'
+
     if (selectedCategory) {
-      url += 'category=' + selectedCategory;
+      url += `category=${selectedCategory}`;
+    }
+    if (value) {
+      url += `&price_gte=${value}`;
     }
     if (minPrice) {
       url += '&price_gte=' + minPrice;
     }
     if (maxPrice) {
       url += '&price_lte=' + maxPrice;
+
     }
     return axios.get(url)
       .then (response => {
