@@ -24,6 +24,8 @@ export class AppComponent {
   categorias : string[] =["Todo"];
   selectedCategory: string = "";
 
+
+
   constructor ( private ProductService: ProductApiService, public router: Router){
     this.getProducts();
     this.getCategory();
@@ -42,6 +44,7 @@ export class AppComponent {
       })
   }
 
+  
   public onFileChange(event){
     let workBook = null;
     let jsonData = null;
@@ -62,4 +65,5 @@ export class AppComponent {
       console.log(dataString.slice(0, 300).concat("..."))
     }
   }
+
 }
