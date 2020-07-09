@@ -14,7 +14,7 @@
 
         <div class="searchContainer ">
             <input  class="searchbar" placeholder="Escribe lo que quieres buscar..." [(ngModel)]="busqueda">
-            <button [disabled]="busqueda == ''" class="searchButton" [routerLink]="['/search', busqueda]"><fa-icon [icon]="faSearch"></fa-icon></button>
+            <button [disabled]="busqueda == ''" class="searchButton" [routerLink]="['/search', busqueda]" (click)="busqueda = ''"><fa-icon [icon]="faSearch"></fa-icon></button>
         </div>
     </div>
 </header>
