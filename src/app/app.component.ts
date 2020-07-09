@@ -71,6 +71,7 @@ export class AppComponent {
     itemsToModify.forEach(product => {
       this.ProductService.updateProduct(product);
     });
+    console.log("its done")
   }
 
   public addProducts(){
@@ -78,6 +79,7 @@ export class AppComponent {
     itemsToModify.forEach(product => {
       this.ProductService.putProduct(product);
     });
+    console.log("its done 2")
   }
 
 
