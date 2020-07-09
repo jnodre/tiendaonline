@@ -71,10 +71,7 @@ export class ProductApiService {
     let url = 'http://localhost:3000/products?'
 
     if (selectedCategory) {
-      url += `category=${selectedCategory}`;
-    }
-    if (value) {
-      url += `&price_gte=${value}`;
+      url += `category=` + selectedCategory;
     }
     if (minPrice) {
       url += '&price_gte=' + minPrice;
