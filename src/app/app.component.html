@@ -1,5 +1,5 @@
 <header class="header">
-        <img class="logo" src="/assets/Images/logo_1.png">
+        <img class="logo" routerLink="" src="/assets/Images/logo_1.png">
         <div class="we">
         <nav class="topmenu" >
             <ul>
@@ -14,7 +14,7 @@
 
         <div class="searchContainer ">
             <input  class="searchbar" placeholder="Escribe lo que quieres buscar..." [(ngModel)]="busqueda">
-            <button class="searchButton" [routerLink]="['/search', busqueda]"><fa-icon [icon]="faSearch"></fa-icon></button>
+            <button [disabled]="busqueda == ''" class="searchButton" [routerLink]="['/search', busqueda]"><fa-icon [icon]="faSearch"></fa-icon></button>
         </div>
     </div>
 </header>
