@@ -40,44 +40,23 @@ export class AppComponent {
         this.categorias.push(product.category)
       })
   }
-  getProductByCategory(opcion){
-    this.selectedCategory = opcion;
-    this.show =[];
-    this.productsCategory =[];
-    this.category = true;
-    if(this.selectedCategory == "Todo"){
-      this.productsCategory= this.products;
-    }else {
-      this.ProductService.getApiProductsCategory(this.selectedCategory)
-      .then (data => {
-        this.productsCategory =data;
-        console.log(this.productsCategory);
-      })
-    }
-    // if(this.selectedCategory == "Todo"){
-    //   this.productsCategory= this.products;
-    // }else{
-    //   this.products.filter(product => product.category == this.selectedCategory).forEach(item => this.productsCategory.push(item));
-    //   this.productsCategory = JSON.parse(JSON.stringify(this.products));
-    // }
-  }
 
-  searchItem (){
-    this.show = [];
-    this.searching = true;
-    // this.products.forEach(product => {
-    //   if (product.title.toLowerCase().includes(this.busqueda.toLocaleLowerCase()) === true){
-    //     this.show.push(product);
-    //   }
+  // searchItem (){
+  //   this.show = [];
+  //   this.searching = true;
+  //   // this.products.forEach(product => {
+  //   //   if (product.title.toLowerCase().includes(this.busqueda.toLocaleLowerCase()) === true){
+  //   //     this.show.push(product);
+  //   //   }
       
-    // });
-    this.ProductService.getApiProductsSearch(this.busqueda, null, null)
-      .then (data => {
-        this.show =data;
-        console.log(this.show)
-      })
-    this.busquedaSave = JSON.parse(JSON.stringify(this.busqueda));
-    this.busqueda = "";
-  }
+  //   // });
+  //   this.ProductService.getApiProductsSearch(this.busqueda, null, null)
+  //     .then (data => {
+  //       this.show =data;
+  //       console.log(this.show)
+  //     })
+  //   this.busquedaSave = JSON.parse(JSON.stringify(this.busqueda));
+  //   this.busqueda = "";
+  // }
 
 }

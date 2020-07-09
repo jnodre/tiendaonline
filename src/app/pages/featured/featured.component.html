@@ -1,1 +1,12 @@
-
+<div>
+    <div fxLayout="row wrap" fxLayoutAlign="center center" *ngIf = "show != ''">
+        <div fxLayout="column wrap" fxLayoutAlign="space-between center" class="products" *ngFor = "let item of show">
+            <li>{{item.title}}</li>
+            <li><img [src]="item.thumbnailURL"></li>
+            <li class="price">{{item.priceHR}}</li>
+        </div>
+    </div>
+    <div *ngIf = "show == ''">
+        <p>Su búsqueda no coincide con ningún producto.</p>
+    </div>
+</div>

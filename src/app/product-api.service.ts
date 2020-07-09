@@ -18,7 +18,7 @@ export class ProductApiService {
       })
   }
 
-  getApiProductsSearch(busqueda:string, value: number, highValue: number){
+  getApiProductsSearch(busqueda:string, value?: number, highValue?: number){
     let url = 'http://localhost:3000/products?'
     if (busqueda) {
       url += 'title_like=' + busqueda;
