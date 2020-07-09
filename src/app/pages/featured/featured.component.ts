@@ -26,6 +26,8 @@ export class FeaturedComponent implements OnInit {
         const search = params['search'];
         const minPrice = queryParams['minPrice'];
         const maxPrice = queryParams['maxPrice'];
+        console.log('Hay que buscar search = ',  search);
+
         // this.getProductByCategory(this.categoriaFilter, { minPrice: minPrice })
         this.searchItem(
           {
@@ -43,7 +45,7 @@ export class FeaturedComponent implements OnInit {
     //   if (product.title.toLowerCase().includes(this.busqueda.toLocaleLowerCase()) === true){
     //     this.show.push(product);
     //   }
-      
+
     // });
     this.ProductService.getApiProductsSearch(this.busquedaSave.busqueda)
       .then (data => {

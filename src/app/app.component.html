@@ -21,8 +21,8 @@
         </nav>
 
         <div class="searchContainer ">
-            <input  class="searchbar" placeholder="Escribe lo que quieres buscar..." [(ngModel)]="busqueda">
-            <button class="searchButton" [routerLink]="['/search', busqueda]"><fa-icon [icon]="faSearch"></fa-icon></button>
+            <input   class="searchbar" placeholder="Escribe lo que quieres buscar..." [(ngModel)]="busqueda">
+            <button class="searchButton" [routerLink]="['../']" [queryParams]="{search: busqueda}"    ><fa-icon [icon]="faSearch"></fa-icon></button>
             <!--<button class="button"><fa-icon [icon]="faShoppingCart"></fa-icon></button>-->
         </div>
     </div>

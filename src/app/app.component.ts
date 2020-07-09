@@ -19,7 +19,7 @@ export class AppComponent {
   showCopy: any = [];
   showFiltered: any = [];
   searching: boolean = false;
-  productsCategory: any []; 
+  productsCategory: any [];
   category : boolean = false;
   categorias : string[] =["Todo"];
   selectedCategory: string = "";
@@ -30,7 +30,7 @@ export class AppComponent {
     this.getProducts();
     this.getCategory();
   }
-  
+
   async getProducts (){
     this.products = await this.ProductService.getApiProducts();
     this.searching = false;
@@ -44,7 +44,7 @@ export class AppComponent {
       })
   }
 
-  
+
   public onFileChange(event){
     let workBook = null;
     let jsonData = null;
@@ -54,15 +54,20 @@ export class AppComponent {
     reader.readAsBinaryString(file);
     reader.onload = (event) => {
       const data = reader.result;
-      workBook = XLSX.read(data, { type: 'binary' });
+      workBook = XLSX.read(data, { type: 'binary'});
+
       jsonData = workBook.SheetNames.reduce((initial, name) => {
         const sheet = workBook.Sheets[name];
         initial[name] = XLSX.utils.sheet_to_json(sheet);
         return initial;
       }, {});
-      const dataString = JSON.stringify(jsonData);
-      console.log("Entras macho")
-      console.log(dataString.slice(0, 300).concat("..."))
+
+      console.log({jsonData});
+
+      const itemsToModify = jsonData.Sheet1;
+      itemsToModify.forEach(product => {
+        this.ProductService.updateProduct(product);
+      });
     }
   }
 

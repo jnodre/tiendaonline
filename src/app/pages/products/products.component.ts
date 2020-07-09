@@ -17,14 +17,14 @@ export class ProductsComponent implements OnInit {
   @Input() categoryChild: any;
   @Input() selectedCategoryChild: string;
   @Input() productsCategoryChild: any [];
-  @Input() busquedaChild: string ; 
+  @Input() busquedaChild: string ;
 
-  
+
   selectedCategory: any;
   show: any = [];
   productsCategory: any[] = [];
   category: boolean = false;
-   
+
 
   productsChild: any;
   filteringChild: boolean = false;
@@ -46,15 +46,15 @@ export class ProductsComponent implements OnInit {
   countPage : number = 1;
   listaPaginas: number[] = [1, 2, 3, 4];
   seleccionadoPage: number;
-  
 
- 
+
+
   // FUTURE : Detectar si estoy en una url con subcategoría puesta
   constructor(private ProductService: ProductApiService, private route : ActivatedRoute) {
     // Detectar si estoy en una url con categoria puesta
-    // Detectar si estoy con queryParams de filtrado puestos  
+    // Detectar si estoy con queryParams de filtrado puestos
     // Buscar los productos que toquen en base a lo de arriba
-    // No hay nada en la url y estoy en localhost:4200 a pelo 
+    // No hay nada en la url y estoy en localhost:4200 a pelo
   }
 
   getProductByCategory(opcion, filterOption?) {
@@ -109,15 +109,45 @@ export class ProductsComponent implements OnInit {
         const queryParams = results[1];  // esto es el resultado de this.route.queryParams
         const categoria = params['categoria'];
         const minPrice = queryParams['minPrice'];
+        const search = queryParams['search'];
         const maxPrice = queryParams['maxPrice'];
         // this.getProductByCategory(this.categoriaFilter, { minPrice: minPrice })
-        this.getProductByCategory(
+
+        console.log('Hay que buscar search = ', search);
+
+        // this.getProductByCategory(this.categoriaFilter, { minPrice: minPrice })
+        this.searchItem(
           {
-            categoria: categoria,
-            minPrice: minPrice,
-            maxPrice: maxPrice
+            busqueda: search,
           })
+
+
+        // this.getProductByCategory(
+        //   {
+        //     categoria: categoria,
+        //     minPrice: minPrice,
+        //     maxPrice: maxPrice
+        //   })
       })
+  }
+
+  searchItem (busqueda){
+    const busquedaSave = JSON.parse(JSON.stringify(busqueda));
+    console.log(busqueda)
+    console.log(busqueda.busqueda)
+    // this.products.forEach(product => {
+    //   if (product.title.toLowerCase().includes(this.busqueda.toLocaleLowerCase()) === true){
+    //     this.show.push(product);
+    //   }
+
+    // });
+    this.ProductService.getApiProductsSearch(busquedaSave.busqueda)
+      .then (data => {
+        this.show =data;
+        console.log(this.show)
+      })
+    // this.busqueda = "";
+  }
 
 
 
@@ -145,7 +175,7 @@ export class ProductsComponent implements OnInit {
     // if (this.selectedCategoryChild) {
     //   alert('Estas filtrando por la categoria ' + this.selectedCategoryChild)
     //   this.getProductsFromThisCategory(this.selectedCategoryChild)
-      
+
     // }else{
 
     //   // Si quisiera en el home simplemente mostrar sin filtrar la primera pagina
@@ -155,7 +185,7 @@ export class ProductsComponent implements OnInit {
 
     // }
 
-  }
+
 
 
 
@@ -183,8 +213,8 @@ export class ProductsComponent implements OnInit {
     //     })
     // } else {
     //   this.showCopyChild = JSON.parse(JSON.stringify(this.showChild));
-    // }    
-    
+    // }
+
     if(data.showPrecio == true) {
        this.showCopyChild = this.showChild.filter(i => i.price >= this.filtro.value && i.price <= this.filtro.highValue)
      } else {
@@ -193,28 +223,28 @@ export class ProductsComponent implements OnInit {
      if(data.showCategoria == true) {
        if (data.checkSobremesas == true) {
          this.showCopyChild = this.showCopyChild.filter(i => i.category == "Sobremesas");
-         console.log(this.showCopyChild)   
+         console.log(this.showCopyChild)
        }
        if (data.checkPortatiles == true) {
-         this.showCopyChild = this.showCopyChild.filter(i => i.category == "Portátiles");     
-       } 
+         this.showCopyChild = this.showCopyChild.filter(i => i.category == "Portátiles");
+       }
        if (data.checkTelevisores == true) {
-         this.showCopyChild = this.showCopyChild.filter(i => i.category == "Televisores");      
-       } 
-     } 
+         this.showCopyChild = this.showCopyChild.filter(i => i.category == "Televisores");
+       }
+     }
      if(data.showNewCategoria == true) {
        this.showCopyChild = this.showCopyChild.filter(i => i.category == data.seleccionado )
-     } 
+     }
     console.log(this.filtro);
     this.searchingChild = this.filtro.searching;
     this.filteringChild = this.filtro.filtering;
-  }  
+  }
 
   getFirstPage() {
     this.ProductService.getApiProductsPaginateFirst()
          .then (response => {
            this.productsChild = response;
-         })   
+         })
   }
 
   getPage() {
@@ -226,6 +256,6 @@ export class ProductsComponent implements OnInit {
 
 
 
-  
+
 
 }
