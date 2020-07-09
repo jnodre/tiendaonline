@@ -22,6 +22,7 @@
 
         <div class="searchContainer ">
             <input   class="searchbar" placeholder="Escribe lo que quieres buscar..." [(ngModel)]="busqueda">
+            <!--  TODO : Este routerlink es lo único que deberíamos de cambiar. para que no navegue a ningún lado nuevo -->
             <button class="searchButton" [routerLink]="['../']" [queryParams]="{search: busqueda}"    ><fa-icon [icon]="faSearch"></fa-icon></button>
             <!--<button class="button"><fa-icon [icon]="faShoppingCart"></fa-icon></button>-->
         </div>
