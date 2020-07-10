@@ -14,7 +14,9 @@ export class FeaturedComponent implements OnInit {
   show: any = [];
   busquedaSave: any;
   value: number = 0;
+  value2: number = 0;
   highValue: number = 3000;
+  highValue2: number = 3000;
   options: Options = {
     floor: 0,
     ceil: 3000
@@ -43,12 +45,17 @@ export class FeaturedComponent implements OnInit {
         const params = results[0]; // esto es el resultado de this.route.params
         const queryParams = results[1];  // esto es el resultado de this.route.queryParams
         const search = params['search'];
-        const minPrice = queryParams['minPrice'];
-        const maxPrice = queryParams['maxPrice'];
+        this.value2 = this.value
+        this.value2 = queryParams['minPrice'];
+        this.highValue2 = this.highValue
+        console.log(this.value)
+        this.highValue2 = queryParams['maxPrice'];
         // this.getProductByCategory(this.categoriaFilter, { minPrice: minPrice })
         this.searchItem(
           {
             busqueda: search,
+            minPrice: this.value2,
+            maxPrice: this.highValue2
           })
       })
   }
@@ -90,6 +97,16 @@ export class FeaturedComponent implements OnInit {
       })
     busqueda.busqueda = "";
   }
+
+  // searchItem (){
+  //   this.ProductService.getApiProductsSearch(this.busqueda, null, null)
+  //     .then (data => {
+  //       this.show =data;
+  //       console.log(this.show)
+  //     })
+  //   this.busquedaSave = JSON.parse(JSON.stringify(this.busqueda));
+  //   this.busqueda = "";
+  // }
 
   async searchFilter(){
     this.inFiltering = true;

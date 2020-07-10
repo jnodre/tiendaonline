@@ -73,9 +73,6 @@ export class ProductApiService {
     if (selectedCategory) {
       url += `category=${selectedCategory}`;
     }
-    if (value) {
-      url += `&price_gte=${value}`;
-    }
     if (minPrice) {
       url += '&price_gte=' + minPrice;
     }

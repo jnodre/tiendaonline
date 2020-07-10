@@ -1,7 +1,7 @@
 <div class="container">
     <div class="filter">
             <h3>Precio</h3>
-            <ng5-slider [(value)]="value" [(highValue)]="highValue" [options]="options" ></ng5-slider>
+            <ng5-slider [(value)]="value" [(highValue)]="highValue" [options]="options" [routerLink]="['/categoria', selectedCategory.categoria]" [queryParams]="{minPrice: value, maxPrice: highValue}" ></ng5-slider>
             <h3>Categorías</h3>
             <div>
                 <label><input type="checkbox" id="cbox" [(ngModel)]="checkboxSobremesa">Sobremesas</label><br>

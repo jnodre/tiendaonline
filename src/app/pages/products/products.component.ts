@@ -67,17 +67,6 @@ export class ProductsComponent implements OnInit {
     // }
   }
 
-  async categoryFilter(){
-    this.inFiltering = true;
-    this.filtering = [];
-    this.filtering = await this.ProductService.getApiProductsCategory(this.selectedCategory.categoria, this.value, this.highValue);
-    console.log(this.inFiltering);
-    console.log(this.filtering);
-    console.log(this.value);
-    console.log(this.highValue);
-    console.log(this.selectedCategory);
-  }
-
   ngOnInit(): void {
     console.log('Esto solo una vez')
 
