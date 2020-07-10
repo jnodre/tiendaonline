@@ -14,8 +14,13 @@
 
         <div class="searchContainer ">
             <input  class="searchbar" placeholder="Escribe lo que quieres buscar..." [(ngModel)]="busqueda">
-            <button [disabled]="busqueda == ''" class="searchButton" [routerLink]="['/search', busqueda]" (click)="busqueda = ''"><fa-icon [icon]="faSearch"></fa-icon></button>
+            <button [disabled]="busqueda == '' || busqueda == ' '" class="searchButton" [routerLink]="['/search', busqueda]" (click)="busqueda = ''"><fa-icon [icon]="faSearch"></fa-icon></button>
         </div>
+        <li class="button">
+            <label>Actualizar Productos
+                <input type="file" style="visibility:hidden" class ="upload" (change)= "onFileChange($event)" a="Actualizar Productos">
+            </label>
+        </li>
     </div>
 </header>
 
@@ -54,7 +59,7 @@
         </div>
     </div>
     <div class="j2pkText">
-        <p>Sitio desarrolado por J2PK con <fa-icon class="heart" [icon]="faHeart"></fa-icon></p>
+        <p>Sitio desarrollado por J2PK con <fa-icon class="heart" [icon]="faHeart"></fa-icon></p>
     </div>
     <div class="cookiesLinks">
         <ul>
