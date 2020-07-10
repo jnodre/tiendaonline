@@ -42,4 +42,8 @@
 }
 .paginacion{
     text-align: center;
+    color:var(--main-color);
+}
+.paginacion p{
+    font-size: bolder;
 }

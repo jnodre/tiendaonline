@@ -11,7 +11,7 @@ export class ProductApiService {
   getApiProducts(seleccionadoPage: number = 1) {
     let url = 'http://localhost:3000/products?'
     if (seleccionadoPage) {
-      url += '_page=' + seleccionadoPage + '&_limit=10';
+      url += '_page=' + seleccionadoPage + '&_limit=12';
     }
     return axios.get(url)
       .then (response => {
