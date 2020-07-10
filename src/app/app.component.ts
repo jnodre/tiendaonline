@@ -2,14 +2,23 @@ import { Component } from '@angular/core';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { ProductApiService } from './product-api.service';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
+import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
+import { faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  faHeart = faHeart;
+  faTwitterSquare = faTwitterSquare;
+  faInstagram = faInstagram;
   faSearch = faSearch;
+  faFacebookSquare = faFacebookSquare;
   faShoppingCart = faShoppingCart;
   busqueda: string = "";
   busquedaSave: string;

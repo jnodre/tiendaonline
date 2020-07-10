@@ -50,3 +50,5 @@
     font-size: 1.6em;
     font-weight: 500;
 }
+.mainContainer{display:flex;}
+.errorLink{color:var(--main-color);text-align: center; cursor:pointer;}
