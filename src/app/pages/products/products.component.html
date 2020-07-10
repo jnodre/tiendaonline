@@ -1,7 +1,7 @@
 <div class="mainContainer">
 <div class="container">
     <div>
-        <div><h2>Precio (€)</h2></div>
+        <div><h2>Precio</h2></div>
         <div>
             <ng5-slider [(value)]="value" [(highValue)]="highValue" [options]="options" [routerLink]="['/categoria', selectedCategory.categoria]" [queryParams]="{minPrice: value, maxPrice: highValue}"></ng5-slider>
         </div>
