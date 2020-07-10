@@ -7,6 +7,9 @@ import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
 import { faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope} from '@fortawesome/free-solid-svg-icons';
+import { faPhone} from '@fortawesome/free-solid-svg-icons';
+import { faHome} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +17,9 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  faEnvelope= faEnvelope;
+  faPhone = faPhone;
+  faHome = faHome;
   faHeart = faHeart;
   faTwitterSquare = faTwitterSquare;
   faInstagram = faInstagram;

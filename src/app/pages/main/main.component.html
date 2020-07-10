@@ -7,7 +7,7 @@
     <!-- TODO: Preparando el paginado, trabajar después  -->
 </div>
 <div class="paginacion" >
-    <p>Ver más productos:</p>
+    <p class="paginacionP">Ver más productos:</p>
     <select name="miselectPages" [(ngModel)]="seleccionadoPage" [routerLink]="['']" [queryParams]="{Page: seleccionadoPage}">
         <option [value]="item" *ngFor="let item of pages">{{item}}</option>
     </select> 
