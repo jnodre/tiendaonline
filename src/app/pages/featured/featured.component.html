@@ -1,10 +1,33 @@
 <div class="container">
     <div class="filter">
             <h3>Precio</h3>
-            <ng5-slider [(value)]="value" [(highValue)]="highValue" [options]="options" [routerLink]="['/categoria', selectedCategory.categoria]" [queryParams]="{minPrice: value, maxPrice: highValue}" ></ng5-slider>
+            <ng5-slider [(value)]="value" [(highValue)]="highValue" [options]="options" [routerLink]="['/search', busquedaSave.busqueda]" 
+            [queryParams]="{minPrice: value, maxPrice: highValue, categoria1: categoria1, categoria2: categoria2, categoria3: categoria3, categoria4: categoria4,
+            categoria5: categoria5 }" ></ng5-slider>
             <h3>Categorías</h3>
+            <div class="autocomplete">
+                <div class="chips-input-container">
+                <div class="user-chip" *ngFor="let user of userSelects">
+                  {{user.name}}
+                  <span (click)="deleteSelects(user)" class="delete-icon-chip">&#10006;</span>
+                </div>
+            
+                <input name="suggestion" type="text" placeholder="Categoria" (click)="suggest()" [(ngModel)]="userSelectsString">
+                <button [routerLink]="['/search', busquedaSave.busqueda]"
+                [queryParams]="{minPrice: value, maxPrice: highValue, categoria1: categoria1, categoria2: categoria2, categoria3: categoria3, categoria4: categoria4,
+                    categoria5: categoria5 }"> Filtrar Categoria</button>
+                </div>
+            
+                <div class="autocomplete-items" *ngIf="show">
+                  <div *ngFor="let s of suggestions" [ngClass]="isSelected(s) ? 'selected-suggestion' : ''" (click)="selectSuggestion(s)">{{ s.name }}</div>
+                </div>
+            </div>
             <div>
-                <label><input type="checkbox" id="cbox" [(ngModel)]="checkboxSobremesa">Sobremesas</label><br>
+                <!-- <div *ngIf="checkboxSobremesa1 == false" (click)="changeSobremesa()" [routerLink]="['/search', busquedaSave.busqueda]" [queryParams]="{categoria1: sobremesa}">Sobremesas (unchecked)</div>
+                <div *ngIf="checkboxSobremesa1 == true"(click)="changeSobremesa()">Sobremesas (checked)</div> -->
+                <!-- <input type="checkbox" [(ngModel)]="checkboxSobremesa" (change)="checkValueSobremesas(checkboxSobremesa? null: 'Sobremesas')" [routerLink]="['/search', busquedaSave.busqueda]" [queryParams]="{categoria1: sobremesa}" /> Sobremesas
+                <input type="checkbox" [(ngModel)]="checkboxTelevisor" (change)="checkValueTelevisores(checkboxTelevisor? null: 'Televisores')" [routerLink]="['/search', busquedaSave.busqueda]" [queryParams]="{categoria2: televisor}" /> Televisores -->
+                <!-- <label><input type="checkbox" id="cbox" ng-model="checkboxSobremesa" [routerLink]="['/search', busquedaSave.busqueda]" [queryParams]="{categoria1: checkboxSobremesa}">Sobremesas</label><br>
                 <label><input type="checkbox" id="cbox" [(ngModel)]="checkboxPortatil">Portátiles</label><br>
                 <label><input type="checkbox" id="cbox" [(ngModel)]="checkboxTelevisor">Televisores</label><br>
                 <label><input type="checkbox" id="cbox" [(ngModel)]="checkboxComponente">Componentes</label><br>
@@ -12,24 +35,24 @@
                 <label><input type="checkbox" id="cbox" [(ngModel)]="checkboxAccesorio">Accesorios Smartphones</label><br>
                 <label><input type="checkbox" id="cbox" [(ngModel)]="checkboxAuricular">Auriculares</label><br>
                 <label><input type="checkbox" id="cbox" [(ngModel)]="checkboxAltavoz">Altavoces</label><br>
-                
+                 -->
             </div>
-            <button (click)="searchFilter()">Filtrar</button>
+            <!-- <button (click)="searchFilter()">Filtrar</button> -->
     </div>
-    <div *ngIf="inFiltering == true">
-        <div fxLayout="column wrap" fxLayoutAlign="space-between center" class="products" *ngFor = "let item of filtering">
+    <div >
+        <div fxLayout="column wrap" fxLayoutAlign="space-between center" class="products" *ngFor = "let item of show">
             <li>{{item.title}}</li>
             <li><img [src]="item.thumbnailURL"></li>
             <li class="price">{{item.priceHR}}</li>
         </div>
     </div>
-    <div *ngIf = "filtering.length == 0 && inFiltering == true" class="searchError">
+    <div *ngIf = "show.length == 0" class="searchError">
         <div>
             <p>Ups... Su búsqueda no coincide con ninguno de nuestros productos😅</p>
             <p routerLink="" class="errorLink">◀ ¿Quiere volver al inicio?</p>
         </div>
     </div>
-    <div fxLayout="row wrap" fxLayoutAlign="center center" *ngIf = "show != '' && inFiltering == false">
+    <!-- <div fxLayout="row wrap" fxLayoutAlign="center center" *ngIf = "show != '' && inFiltering == false">
         <div fxLayout="column wrap" fxLayoutAlign="space-between center" class="products" *ngFor = "let item of show">
             <li>{{item.title}}</li>
             <li><img [src]="item.thumbnailURL"></li>
@@ -42,4 +65,4 @@
             <p routerLink="" class="errorLink">◀ ¿Quiere volver al inicio?</p>
         </div>
     </div>
-</div>
+</div> -->
