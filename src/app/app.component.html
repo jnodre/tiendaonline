@@ -14,8 +14,13 @@
 
         <div class="searchContainer ">
             <input  class="searchbar" placeholder="Escribe lo que quieres buscar..." [(ngModel)]="busqueda">
-            <button [disabled]="busqueda == ''" class="searchButton" [routerLink]="['/search', busqueda]" (click)="busqueda = ''"><fa-icon [icon]="faSearch"></fa-icon></button>
+            <button [disabled]="busqueda == '' || busqueda == ' '" class="searchButton" [routerLink]="['/search', busqueda]" (click)="busqueda = ''"><fa-icon [icon]="faSearch"></fa-icon></button>
         </div>
+        <li class="button">
+            <label>Actualizar Productos
+                <input type="file" style="visibility:hidden" class ="upload" (change)= "onFileChange($event)" a="Actualizar Productos">
+            </label>
+        </li>
     </div>
 </header>
 
@@ -25,3 +30,42 @@
     </router-outlet>
 </div>
 
+<footer class="footer">
+    <div class="mainFooter">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112620.92610047462!2d-15.531973780418596!3d28.10371908775194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc4094518b44a92f%3A0x40340f3be4d13e0!2sLas%20Palmas%20de%20Gran%20Canaria%2C%20Las%20Palmas!5e0!3m2!1ses!2ses!4v1594367771373!5m2!1ses!2ses" width="300" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <div class="nosotros">
+            <p class="footerTitle">J2PK</p>
+                <ul>
+                    <li><fa-icon [icon]="faHome"></fa-icon> C/ Las Palmas, nº 1 - 35000</li>
+                    <li><fa-icon [icon]="faPhone"></fa-icon> 666888777</li>
+                    <li><fa-icon [icon]="faEnvelope"></fa-icon> info@j2pk.com</li>
+                </ul>
+        </div>
+        <div class="nosotros">
+            <p class="footerTitle">Nosotros</p>
+            <ul>
+                <li>Nuestra tienda</li>
+                <li>Trabaja con nosotros</li>
+            </ul>
+        </div>
+        <div class="social">
+            <p class="footerTitle">Social</p>
+            <ul>
+                <li><fa-icon [icon]="faFacebookSquare"></fa-icon></li>
+                <li><fa-icon [icon]="faInstagram"></fa-icon></li>
+                <li><fa-icon [icon]="faTwitterSquare"></fa-icon></li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="j2pkText">
+        <p>Sitio desarrollado por J2PK con <fa-icon class="heart" [icon]="faHeart"></fa-icon></p>
+    </div>
+    <div class="cookiesLinks">
+        <ul>
+            <li>Política de Cookies</li>
+            <li>Política de privacidad</li>
+            <li>Sitemap</li>
+        </ul>
+    </div>
+</footer>

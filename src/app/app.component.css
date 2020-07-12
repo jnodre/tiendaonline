@@ -20,7 +20,7 @@
     cursor: pointer;
 }
 /*MENU*/
-.topmenu{ 
+.topmenu{
     grid-area: menu;
     width: 50vw; 
     margin: 0 auto;
@@ -31,6 +31,7 @@
     list-style: none;
     padding-left: 0px;
     justify-content: center;
+    margin-left: -150px;
 }
 .topmenu ul li{
     margin: 0px 5px 0px 5px;
@@ -93,7 +94,7 @@
     transition: 0.2s linear;
 }
 .searchContainer:focus-within .searchButton{
-    color:black;
+    color:var(--main-color);
     transition: 0.2s linear;
 }
 .searchButton{
@@ -102,6 +103,7 @@
     border:none;
     background:none;
 }
+
 .searchbar:focus{   
     border: 1px solid rgb(190, 190, 190);
     width: 50vw;
@@ -153,11 +155,70 @@
 .topmenu ul li ul li:last-child:hover{border-radius: 0px 0px 5px 5px;}
 
 .topmenu ul li ul li:first-child:hover{border-radius: 5px 5px 0px 0px;}
-
+.footerTitle{
+    font-weight: 500;
+    font-size: 1.5em;
+}
+.footer{
+    background:var(--main-color);
+    color:white;
+    padding-top:50px;
+    padding-bottom:20px;
+    margin-top: 20px;
+}
+.heart{
+    font-size: 2em;
+}
+.nosotros ul{
+    list-style: none;
+    padding-left: 0px;
+}
+.nosotros ul li:hover{
+    font-weight: 500;
+    cursor: pointer;
+}
+.social ul{
+    display: flex;
+    list-style: none;
+    padding-left: 0px;
+}
+.social ul li{
+    margin: 0px 5px;
+    cursor: pointer;
+}
+.social ul li{font-size: 3em;}
+.mainFooter{
+    width: 70vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.cookiesLinks ul{
+    display:flex;
+    justify-content: center;
+    list-style: none;
+}
+.cookiesLinks ul li{
+    margin: 0px 20px;
+    cursor: pointer;
+    padding:10px;
+}
+.cookiesLinks ul li:hover{
+    font-weight: 500;
+    transition: 0.1s linear;
+}
+.address{
+    display: flex;
+    flex-direction: row;
+}
+.j2pkText{
+    text-align: center;
+    cursor: pointer;
+}
+.j2pkText:hover{
+    font-weight: 500;
+}
 @media (max-width: 599px){
-    .topmenu ul{
-        flex-direction: column;
-    }
     .header{
         flex-direction: column;
     }
@@ -165,5 +226,36 @@
         flex-direction: column;
         margin: 0 auto;
         text-align: center;
+    }
+    .mainFooter{
+        flex-direction: column;
+        text-align: center;
+    }
+    .social ul li{
+        margin: 0 auto;
+    }
+    .header{
+        flex-direction: column;
+        margin-bottom:20px;
+    }
+
+}
+
+@media (max-width: 1080px){
+    .header{
+        flex-direction: column;
+        margin-bottom:20px;
+    }
+    .searchContainer{
+        min-width: 300px;
+    }
+    .searchContainer input{
+        min-width: 280px;
+    }
+    .searchContainer input{
+        margin-right:-20px;
+    }
+    .topmenu ul{
+        margin-left: 0px;
     }
 }

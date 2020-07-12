@@ -40,3 +40,7 @@
     overflow:hidden;
     white-space:nowrap;
 }
+.paginacion{
+    text-align: center;
+    color:var(--main-color);
+}

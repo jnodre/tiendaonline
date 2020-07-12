@@ -1,8 +1,7 @@
-<h2 class="title">Lista de productos</h2>
-
+<div class="mainContainer">
 <div class="container">
     <div>
-        <div><h2>Precio (€)</h2></div>
+        <div><h2>Precio</h2></div>
         <div>
             <ng5-slider [(value)]="value" [(highValue)]="highValue" [options]="options" [routerLink]="['/categoria', selectedCategory.categoria]" [queryParams]="{minPrice: value, maxPrice: highValue}"></ng5-slider>
         </div>
@@ -17,8 +16,9 @@
     </div>
 </div>
 <div  fxLayout="row wrap" fxLayoutAlign="center center" *ngIf="productsCategory.length == 0">
-    <div>
-        <h2>No hay articulos que cumplan con estas especificaciones</h2>
-
+    <div  class="searchError">
+        <p>Ups... Su búsqueda no coincide con ninguno de nuestros productos😅</p>
+        <p routerLink="" class="errorLink">◀ ¿Quiere volver al inicio?</p>
     </div>
+</div>
 </div>

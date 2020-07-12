@@ -122,4 +122,21 @@ input:hover{
 }
 .errorLink{color:var(--main-color);text-align: center; cursor:pointer;}
 .container{display:flex;}
-
+.button{
+    border:none;
+    padding: 10px;
+    border-radius: 5px;
+}
+.button:first-of-type{
+    margin-right: 10px;
+}
+.button{
+    margin-left: 10px;
+}
+.button:hover{
+    background: var(--gray);
+    transition: 0.2s linear;
+}
+.filter{
+    margin-left: 10px;
+}

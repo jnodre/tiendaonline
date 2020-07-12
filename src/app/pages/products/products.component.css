@@ -50,3 +50,6 @@
     font-size: 1.6em;
     font-weight: 500;
 }
+.mainContainer{display:flex;}
+.container{width: 10vw; margin-left:20px;}
+.errorLink{color:var(--main-color);text-align: center; cursor:pointer;}

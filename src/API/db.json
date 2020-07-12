@@ -1,378 +1,364 @@
 {
-    "products": [
-        {
-            "id":0,
-            "title":"HP 22-c0039ns",
-            "price":439,
-            "priceHR":"439.00€",
-            "description":"Potente equipo todo en uno HP 22-c0039ns en color blanco nieve para que disfrutes con toda tu familia. Navega con facilidad gracias Windows 10 mientras navegas cómodamente gracias a su inclinación ajustable que te permite trabajar en varias medidas.",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_73749070/fee_194_131_png/All-in-one---HP-22-c0039ns--21.5%22-FHD--AMD-A4--9125-Dual-Core--8-GB-RAM--256-GB-SSD--Windows-10--Blanco",
-            "category":"Sobremesas"
-        },
-        {
-            "id":1,
-            "title":"ASUS F543BA",
-            "price":396,
-            "priceHR":"396.00€",
-            "description": "El ASUS F543BA-GQ739T es un portátil de 15.6 con una sólida construcción y peso de 2kg. Ideal para cubrir tus necesidades informáticas o consumir contenido online para tu entretenimiento. ",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_72549056/fee_240_148_png/Port%C3%A1til---ASUS-Laptop-F543BA-GQ739T--15.6%22-HD--AMD-Dual-Core-A9-9425--8GB--256GB-SSD--W10",
-            "category":"Portátiles"
-        },
-        {
-            "id":2,
-            "title":"Acer Aspire XC-886",
-            "price":657,
-            "priceHR":"657.00€",
-            "description":"Disfruta de nuevas experiencias tecnológicas con el PC Sobremesa Acer Aspire XC-886 fusionando potencia y calidad en sus componentes. Esta combinación te aportará la velocidad y fluidez de datos que necesitas para que disfrutes de todo el rendimiento y que puedas ejecutar tus tareas o procesos.",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_73217646/fee_240_148_png/PC-Sobremesa---Acer-Aspire-XC-886--Intel%C2%AE-Core%E2%84%A2-i5-9400--8-GB-RAM--512-GB-SSD--W10--Negro",
-            "category":"Sobremesas"
-        },
-        {
-            "id":3,
-            "title":"Lenovo S340-15IIL",
-            "price":881,
-            "priceHR":"881.00€",
-            "description":"El portátil Lenovo S340-15IIL con pantalla de 15.6 Full HD y en color gris platino tiene un diseño ligero y fino y con él podrás realizar todas tus tareas gracias a su potente procesador.",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_74909395/fee_240_148_png/Port%C3%A1til---Lenovo-S340-15IIL--15.6-%22-Full-HD--Intel%C2%AE-Core%E2%84%A2-i7-1065G7--8-GB-DDR4--1-TB-SSD--W10-Home--Gris",
-            "category":"Portátiles"
-        },
-        {
-            "id":4,
-            "title":"HP S01-pF0023ns",
-            "price":399,
-            "priceHR":"399.00€",
-            "description":"Ejecuta varias tareas de forma eficiente y gestiona todas las necesidades diarias con la mini torre HP Slim Desktop S01-pF0023ns en color negro azabache con logo cromado oscuro.",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_74625697/fee_240_148_png/PC-Sobremesa---HP-S01-pF0023ns--Intel%C2%AE-Core%E2%84%A2-i3-9100--8-GB--512-GB-SSD--FreeDOS--Negro",
-            "category":"Sobremesas"
-        },
-        {
-            "id":5,
-            "title":"Xiaomi Mi TV 4A",
-            "price":179,
-            "priceHR":"179.00€",
-            "description":"La TV LED 32 Xiaomi Mi TV 4A está pensada para que la exprimas al máximo. Con alta conectividad, preparada para contenidos HD y sonido Dolby Audio. Con Xiaomi descubrirás las ventajas de tecnología superior.",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_70644748/fee_240_148_png/TV-LED-32%22---Xiaomi-Mi-TV-4A--HD--Quad-Core--Bluetooth--Android-TV--PatchWall--Google-Assistant--Chromecast",
-            "category":"Televisores"
-            
-        },
-        {
-            "id":6,
-            "title":"Lenovo S145-15AST",
-            "price":416,
-            "priceHR":"416.00€",
-            "description":"Lenovo te trae el ordenador portátil Ideapad S145-15IWL que hará que tus tareas sean mucho más fáciles. Cuenta con un potente procesador AMD con un diseño elegante y ligero. Este portátil duradero de 39,62 cm (15,6) ofrece un magnífico sonido con una variedad de opciones de almacenamiento seguras y rápidas.",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_71439419/fee_240_148_png/Port%C3%A1til---Lenovo-S145-15AST--15.6%22-FullHD--AMD-A6-9225--8-GB---256-GB--SSD--W10-Home--Gris",
-            "category":"Portátiles"
-        },
-        {
-            "id":7,
-            "title":" Cellularline BTPETITTWSW",
-            "price":72.99,
-            "priceHR":"72.99€",
-            "description":"Los auriculares inalámbricos Cellularline BTPETITTWSW te permiten movilidad y funcionalidad, allá donde vayas. Atiende llamadas, juega, escucha podcasts, sigue tu emisora favorita, etc. Conecta con tu mundo y disfruta de la mejor música.",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_71377542/fee_325_225_png/Auriculares-inal%C3%A1mbricos---Cellularline-BTPETITTWSW--Bluetooth--MicroUSB--Atiende-llamadas--4.5-Horas--Blanco",
-            "category":"Sobremesas"
-        },
-        {
-            "id":8,
-            "title":"StarTech.com PEX2M2 ",
-            "price":104.39,
-            "priceHR":"104.39€",
-            "description":"Esta tarjeta controladora SSD M.2 le permite instalar dos unidades de estado sólido (SSD) SATA M.2 en su ordenador a través de PCI Express. Es posible instalar casi cualquier unidad M.2 directamente en la tarjeta, lo cual constituye una forma práctica y discreta de mejorar el rendimiento de su sistema informático. Además, la tarjeta es un complemento esencial del ordenador si se necesita recuperar datos de una unidad M.2 existente, o para expandir en general su almacenamiento interno.",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-79136511/fee_325_225_png/Tarjeta-M.2---StarTech.com-PEX2M2-Tarjeta-Controladora-M.2--PCI-Express-para-2-SSD",
-            "category":"Componentes"
-        },
-        {
-            "id":9,
-            "title":"HP 14-df0003ns",
-            "price":323,
-            "priceHR":"323.00€",
-            "description":"El portátil HP 14-df0003ns con pantalla de 14 Full HD y en color blanco copo de nieve tiene un diseño ligero y fino y con él podrás realizar todas tus tareas gracias a su procesador y su batería de larga duración (hasta 10 horas y media).",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_72220879/fee_240_148_png/Port%C3%A1til----HP-14-df0003ns--14%22-Full-HD--Intel%C2%AE-Celeron%C2%AE-N4000--4GB-RAM--64GB-eMMC--Windows-10-Home--Blanco",
-            "category":"Portátiles"
-        },
-        {
-            "id":10,
-            "title":"Samsung Crystal UHD 65TU7125",
-            "price":829,
-            "priceHR":"829.00€",
-            "description":"Los paneles Crystal UHD con resolución 4K de Samsung, estánconstruidos con nanopartículas inorgánicas cristalinas y 16 bits, lo cual les permite reproducir hasta 1.000 millones de colores y, al ser inorgánicas, no se degradan con el tiempo. ¿Quieres el televisor 4K perfecto para tu día a día?",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_75698564/fee_240_148_png/TV-LED-65%22---Samsung-Crystal-UHD-65TU7125--Smart-TV--4K-Real-y-HDR10---Compatible-Asistentes-de-Voz--Tap-View",
-            "category":"Televisores"
-
-        },
-        {
-            "id":11,
-            "title":"HP Slim Desktop S01-aF0010ns",
-            "price":249,
-            "priceHR":"249.00€",
-            "description":"Ejecuta varias tareas de forma eficiente y gestiona todas las necesidades diarias con la mini torre HP Slim Desktop S01-aF0010ns en color negro azabache con logo cromado oscuro.",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_74719488/fee_240_148_png/PC-Sobremesa---HP-Slim-Desktop-S01-aF0010ns--Intel%C2%AE-Celeron%C2%AE-J4005--8-GB-RAM--256-GB-SSD--Intel%C2%AE-UHD-6--FDOS",
-            "category":"Sobremesas"
-        },
-        {
-            "id":12,
-            "title":"Xiaomi Redmi 8",
-            "price":193,
-            "priceHR":"193.00€",
-            "description":"Déjate cautivar por la pantalla HD+ del móvil Xiaomi Redmi 8 en color azul de diseño fino y elegante. ¡Pero no todo es el físico! Este smartphone te ofrecerá un rendimiento espectacular, espacio para todos tus archivos y unas fotografías casi profesionales gracias a su triple cámara.",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_71455239/fee_325_225_png/M%C3%B3vil---Xiaomi-Redmi-8--Azul--64-GB--4-GB-RAM--6.22%22-HD---Snapdragon-439--5000-mAh--Android",
-            "category":"Smartphones"
-        },
-        {
-            "id":13,
-            "title":"APPLE MRR12Y/A",
-            "price":2399,
-            "priceHR":"2399.00€",
-            "description":"Apple lo ha vuelto a hacer. Otra vez nos ha sorprendido a todos. Deja que el All in One Apple iMac MRR12Y de 27 te deslumbre cada vez que abras la puerta de tu escritorio y te deje cautivado con su increíble rendimiento, calidad y elegancia.",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_73617044/fee_240_148_png/iMac---APPLE-MRR12Y-A--27%27%27-Retina-5K--Intel%C2%AE-Core%E2%84%A2-i5-9600K--8-GB--2-TB-Fusion-Drive--Radeon-Pro-580X--Plata",
-            "category":"Sobremesas"
-        },
-        {
-            "id":14,
-            "title":"Xiaomi Redmi Note 8 Pro",
-            "price":229,
-            "priceHR":"229.00€",
-            "description":"Si necesitas un móvil versátil y funcional al mismo tiempo que no quieres renunciar al rendimiento, no te pierdas la oportunidad de hacerte con tu móvil Xiaomi Redmi Note 8 Pro, de 6 GB de RAM y 128 GB de capacidad. Tecnología y componentes de calidad a tu alcance.",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_73342444/fee_325_225_png/M%C3%B3vil---Xiaomi-Redmi-Note-8-Pro--Azul--128-GB--6-GB-RAM--6.53%22-Full-HD---Helio-G90T--4500-mAh--Android",
-            "category":"Smartphones"
-
-        },
-        {
-            "id":15,
-            "title":"Samsung Galaxy A51,",
-            "price":299,
-            "priceHR":"299.00€",
-            "description":"Acércate a lo que más te importa con las 6,5 pulgadas de la pantalla del Galaxy A51. Una pantalla de extremo a extremo con marco casi inexistente. Adéntrate aún más en tus videos y streamings favoritos con su resolución FHD+ y color Super AMOLED y capacidad de almacenamiento interno de hasta 128 GB.",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_72138660/fee_325_225_png/M%C3%B3vil---Samsung-Galaxy-A51--Azul--128-GB--4-GB-RAM--6.5%22-Full-HD---Exynos9611--4000-mAh--Android",
-            "category":"Smartphones"
-
-        },
-        {
-            "id":16,
-            "title":"Lenovo S540-15IWL",
-            "price":619,
-            "priceHR":"619.00€",
-            "description":"Combina rendimiento y portabilidad con el portátil Lenovo S540-15IWL con pantalla de 15.6 FHD y en gris platino. Además este portátil velará por tu seguridad con el lector de huellas y el obturador de privacidad de la webcam.",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_72791460/fee_240_148_png/Port%C3%A1til---Lenovo-S540-15IWL--15.6%22-Full-HD--Intel%C2%AE-Core%E2%84%A2-i3-8145U---8-GB--512-GB-SSD--W10-Home--Gris",
-            "category":"Portátiles"
-        },
-        {
-            "id":17,
-            "title":" Lenovo 310S-08ASR A9-9425",
-            "price":448,
-            "priceHR":"448.00€",
-            "description":" Si necesitas un equipo para tus tareas cotidianas tales como trabajar, estudiar, o consultar tu correo electrónico y páginas webs preferidas, con este pc sobremesa Lenovo 310S-08ASR A9-9425 tendrás todo lo que buscas. Práctico y ágil para tu día a día. ",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-81255748/fee_325_225_png/PC-Sobremesa---Lenovo-310S-08ASR-A9-9425--AMD-Radeon-R5--8-GB---1-TB--W10--Negro",
-            "category":"Sobremesas"
-        },
-        {
-            "id":18,
-            "title":"Sandisk Ultra, 32GB",
-            "price":7.09,
-            "priceHR":"7.09€",
-            "description":"Capta, lleva y conserva más fotografías y vídeos Full HD de alta calidad en tu smartphone o tableta Android, o en tu cámara compacta de enfoque automático con la tarjeta microSD Sandisk Ultra de 32GB. ",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-76008878/fee_325_225_png/Tarjeta-micro-SD---Sandisk-Ultra--32GB--Velocidad-hasta-98-MB-s--Clase-10--U1--A1",
-            "category":"Accesorios Smartphones"
-
-        },
-        {
-            "id":19,
-            "title":"Microsoft Surface Pro 7",
-            "price":999,
-            "priceHR":"999.00€",
-            "description":"Todo lo que necesitas en un solo equipo; la versatilidad del convertible 2 en 1 Microsoft, SRFC PRO7 te dejará impactado. Úsalo como una tablet, un portátil o una pantalla con soporte; su diseño ligero y cambiante permite llevar siempre contigo un ordenador de gran potencia allá donde vayas.",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_69790815/fee_240_148_png/Convertible-2-en-1----Microsoft-Surface-Pro-7--12.3-%22--Intel%C2%AE-Core%E2%84%A2-i5-1035G4--8-GB-RAM--128-GB--W10",
-            "category":"Portátiles"
-
-        },
-        {
-            "id":20,
-            "title":"Samsung EB-P1100",
-            "price":15.99,
-            "priceHR":"15.99€",
-            "description":"Batería externa Samsung delgada y liviana de 10000mAh con función de carga rápida QC 2.0 y soporte de potencia de salida de hasta 15W que permite una carga rápida cuando está en movimiento.",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-81774961/fee_325_225_png/Powerbank---Samsung-EB-P1100--10000-mAh--Carga-r%C3%A1pida--Plata",
-            "category":"Accesorios Smartphones"
-
-        },
-        {
-            "id":21,
-            "title":"Primux 2401F",
-            "price":369,
-            "priceHR":"369.00€",
-            "description":"El iox All in One 2401F hará que disfrutes intensamente de cada píxel de sus imágenes, ya que tiene una pantalla sin marcos de 24 pulgadas (23,8 reales), IPS Full HD de 1080p grado A+. Calidad excepcional de alta definición para que disfrutes totalmente de la imagen.",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_72646053/fee_325_225_png/All-in-one---Primux-2401F--23.8%22-IPS-Full-HD--Intel%C2%AE-Celeron%C2%AE-J4005--4GB--64GB-120GB-SSD--W10-S--Gris",
-            "category":"Sobremesas"
-        },
-        {
-            "id":22,
-            "title":"Thomson WEAR7208PU",
-            "price":18.99,
-            "priceHR":"18.99€",
-            "description":"¿Eres de los que disfruta del deporte al ritmo de la música? Pues los auriculares inalámbricos Thomson WEAR7208PU BT están diseñados para ti. Sin cables, resistentes al sudor y a  salpicaduras, ligeros, atractivos y además con una buena batería. ¿Qué más puedes pedir?",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-80935462/fee_325_225_png/Auriculares-inal%C3%A1mbricos---Thomson-WEAR7208PU--Bluetooth--In-Ear--Lila",
-            "category":"Auriculares"
-        },
-        {
-            "id":23,
-            "title":"ASUS VivoBook 15 S512FJ-BR192T",
-            "price":450,
-            "priceHR":"450.00€",
-            "description":"ASUS VivoBook 15 S512FJ-BR192T, es un portátil compacto, de 15.6, con un peso de 1,7 Kg, diseñado para el trabajo del día a día y la multimedia. Llévalo de forma cómoda siempre contigo. Equipado con una pantalla NanoEdge, con un marco de 5,7 mm solamente, otorga un nivel de inmersión visual espectacular. Su procesador Intel® Core™ i3 y la gráfica integrada, permite un rendimiento bueno para tu tareas del trabajo o universidad. El disco duro SSD de 256 GB conseguirá que arranques Windows, abras aplicaciones o guardes archivos a una altísima velocidad.",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_75243275/fee_240_148_png/Port%C3%A1til---ASUS-VivoBook-15-S512FJ-BR192T--15.6%22--Intel%C2%AE-Core%E2%84%A2-i3-1005G1--8-GB--256-GB-SSD--UHD-Graphics--W10",
-            "category":"Portátiles"
-        },
-        {
-            "id":24,
-            "title":"Xiaomi Mi Compact Speaker 2,",
-            "price":9.99,
-            "priceHR":"9.99€",
-            "description":"Escucha música en cualquier parte con el altavoz inalámbrico Xiaomi Mi Compact Speaker 2 en color blanco. Con una capacidad de 480 mAh, podrás reproducir música de manera inalámbrica gracias a la conexión Bluetooth.",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_72091835/fee_325_225_png/Altavoz-inal%C3%A1mbrico---Xiaomi-Mi-Compact-Speaker-2--Bluetooth--Autonom%C3%ADa-4h--480mAh--Blanco",
-            "category":"Altavoces"
-        },
-        {
-            "id":25,
-            "title":"Sudio Tio SUDTIOWH",
-            "price":56.99,
-            "priceHR":"52.00€",
-            "description":"Di adiós a los enredos de cables y a los tapones que se caen. Con los auriculares inalámbricos Sudio Tio SUDTIOWH en color blanco y su tecnología inalámbrica Bluetooth, puedes conectar tu dispositivo inalámbricamente y escuchar perfectamente y sin interrupciones. Además son resistentes al sudor, lluvia o nieve, ideales para hacer deporte al aire libre.",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_73748466/fee_325_225_png/Auriculares-inal%C3%A1mbricos---Sudio-Tio-SUDTIOWH--Bluetooth--9h-Autonom%C3%ADa--Resistentes-a-salpicaduras--Blanco",
-            "category":"Auriculares"
-
-        },
-        {
-            "id":26,
-            "title":"Sony Htrt4",
-            "price":328.1,
-            "priceHR":"328.10€",
-            "description":"Inunda tu salón con un auténtico sonido Surround con el sistema de cine en casa de 5.1 canales Sony HTRT4. Un kit compuesto de barra de sonido, subwoofer externo y unos altavoces traseros alargados. ",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-75878397/fee_325_225_png/Home-Cinema---Sony-Htrt4--5.1Canales--Barra-de-sonido--Subwoofer-Externo--Altavoces-Traseros--600-W",
-            "category":"Altavoces"
-        },
-        {
-            "id":27,
-            "title":"Samsung Galaxy A71",
-            "price":378,
-            "priceHR":"378.00€",
-            "description":"Diseñado para otorgar innovaciones significativas y experiencias móviles increíbles para todos, el Samsung Galaxy A71 ofrece muchas características mejoradas: una batería más durable para acompañar el ritmo de tu estilo de vida siempre conectado, una cámara más inteligente para ayudar a capturar el mundo como tú lo ves y una pantalla Infinity-O, que brinda una experiencia visual ininterrumpida.",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_75369473/fee_325_225_png/M%C3%B3vil---Samsung-Galaxy-A71--Plata--128-GB--6-GB-RAM--6.7%22-Full-HD---SDM730--4500-mAh--Android",
-            "category":"Smartphones"
-
-        },
-        {
-            "id":28,
-            "title":"Fonestar BOX-35LED",
-            "price":66.99,
-            "priceHR":"66.99.00€",
-            "description":"Improvisa un karaoke en cualquier parte con tu altavoz portátil Box-35LED de Fonestar con micrófono y función karaoke. No dejes que decaiga la fiesta y dale caña al volumen, su potencia de 35W RMS harán que tiemblen hasta los cristales y sin distorsiones.",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-76658458/fee_240_148_png/Altavoz-port%C3%A1til---Fonestar-BOX-35LED--Bluetooth--Karaoke--Efectos-luminosos--Micr%C3%B3fono",
-            "category":"Altavoces"
-        },
-        {
-            "id":29,
-            "title":"Samsung 65RU7105",
-            "price":630,
-            "priceHR":"630.00€",
-            "description":"Potente calidad de imagen con Resolución 4K UHD Real. Panel RGB con un contraste superior y colores aún más vivos gracias a una resolución 4 veces superior a Full HD. Una calidad de imagen asombrosa gracias al procesador Samsung que gestiona el color, optimiza el contraste y domina el HDR.",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_74376618/fee_240_148_png/TV-LED-65%22---Samsung-65RU7105--4K-UHD-Real--HDR--Smart-TV--Bluetooth--Soluci%C3%B3n-cables-ordenados",
-            "category":"Televisores"
-        },
-        {
-            "id":30,
-            "title":"Apple AirPods Pro",
-            "price":229,
-            "priceHR":"229.00€",
-            "description":"Un sonido claro y preciso cuando hablas y cuando te hablan, junto con la comodidad de no usar cables. Los auriculares inalámbricos Apple AirPods Pro + Estuche de carga inalámbrica combinan sencillez con tecnología avanzada. Con conectividad Bluetooth, podrás escuchar música como nunca antes lo habías hecho.",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_70362454/fee_240_148_png/Auriculares-inal%C3%A1mbricos---Apple-AirPods-Pro--True-Wireless--Chip-H1--Siri--IPX4---Estuche-carga-inal%C3%A1mbrico",
-            "category":"Auriculares"
-        },
-        {
-            "id":31,
-            "title":"Samsung Galaxy Z Flip",
-            "price":1499,
-            "priceHR":"1499.00€",
-            "description":"Un nuevo giro en el mundo de los smartphones: el Samsung Galaxy Z Flip en color negro. ¡Pero no todo es el físico! Este smartphone te ofrecerá un rendimiento espectacular con su enorme memoria RAM, mucho espacio para todos tus archivos y unas fotografías profesionales gracias a su doble cámara.",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_73616610/fee_325_225_png/M%C3%B3vil---Samsung-Galaxy-Z-Flip--Negro--256-GB--8-GB--6.7-%22-HD---Snapdragon-855--3300-mAh--Android",
-            "category":"Smartphones"
-
-        },
-        {
-            "id":32,
-            "title":"Ultimate Ears Wonderboom Phantom",
-            "price":59.99,
-            "priceHR":"59.99€",
-            "description":"Llévate tu música a todas partes con el altavoz inalámbrico Ultimate Ears Wonderboom en diseño Phantom black. Tanto si planeas una excursión por la montaña, como si quieres relajarte en la piscina, este altavoz Bluetooth de gran autonomía y resistente al agua no te defraudará. ",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-74499042/fee_240_148_png/Altavoz-inal%C3%A1mbrico---Ultimate-Ears-Wonderboom-Phantom--Bluetooth--Autonom%C3%ADa-de-10h--Resistente-al-agua--Negro",
-            "category":"Auriculares"
-        },
-        {
-            "id":33,
-            "title":" Creative Sound Blaster Audigy FX",
-            "price":39.99,
-            "priceHR":"39.99€",
-            "description":"Sound Blaster Audigy FX es una tarjeta de sonido de media altura basada en la tecnología SBX Pro Studio, ideal para actualizar el audio de tu ordenador y sacar el máximo partido a tus películas, juegos y música. Gracias a esta tarjeta de Creative tu sistema se convertirá en un sistema de sonido envolvente 5.1.",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-79190147/fee_325_225_png/Tarjeta-de-sonido---Creative-Sound-Blaster-Audigy-FX--sonido-5.1",
-            "category":"Componentes"
-
-        },
-        {
-            "id":34,
-            "title":"OK ODL 50662UN-TIB,",
-            "price":299,
-            "priceHR":"299.00€",
-            "description":"La Smart TV LED 50 OK ODL 50662UN-TIB está pensada para que la exprimas al máximo. Con alta conectividad, preparada para contenidos HD y sonido Dolby Audio, disfrutarás de ella ya que tiene una excelente relación calidad/precio. Además tiene Smart TV para que disfrutes de tu mejor contenido multimedia y online.",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_73886163/fee_240_148_png/TV-LED-50%22---OK-ODL-50662UN-TIB--UHD-4K--Smart-TV--Dolby-Audio--HDMI--USB--Negro",
-            "category":"Componentes"
-        },
-        {
-            "id":35,
-            "title":"LG RK1,",
-            "price":99,
-            "priceHR":"99.00€",
-            "description":"Si buscas una torre de sonido única para hacer unas fiestas épicas en casa con tus amigos, la torre de sonido LG RK1 te proporcionará un sonido único y un ambiente de fiesta que nunca olvidarán. ¡Dale al play y diviértete!",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-77567821/fee_240_148_png/Torre-de-sonido---LG-RK1--100-W--Bluetooth--USB--Radio-FM--Aux--Negro",
-            "category":"Altavoces"
-        },
-        {
-            "id":36,
-            "title":"PB NVIDIA Quadro M4000 8GB",
-            "price":836.4,
-            "priceHR":"836.40€",
-            "description":" PNY VCQM4000-PB. Familia de procesadores de gráficos: NVIDIA, Procesador gráfico: Quadro M4000, Máxima resolución: 4096 x 2160 Pixeles. Gráficos discretos memoria del adaptador: 8 GB, Tipo de memoria de adaptador gráfico: GDDR5-SDRAM, Ancho de datos: 256 bit. Tipo de interfaz: PCI Express x16 3.0, Versión de DisplayPort: 1.2. Versión DirectX: 12.0, Versión Shader model: 5.0, Versión OpenGL: 4.5. Tipo de enfriamiento: Activo",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-79172137/fee_325_225_png/Tarjeta-Gr%C3%A1fica---PNY-VCQM4000-PB-NVIDIA-Quadro-M4000-8GB",
-            "category":"Componentes"
-        },
-        {
-            "id":37,
-            "title":"Cellular Line Free Slim 5000K",
-            "price":19.99,
-            "priceHR":"19.99€",
-            "description":" La batería externa Cellular Line Free Slim 5000K se presenta como el mejor compromiso entre potencia y tamaño. Es un cargador portátil ultra ligero que es sólo 13 mm de espesor, pero proporciona una carga rápida y de alta capacidad en un paquete increíblemente ligero. - Ultra delgado y ligero: 110 x 42 x 13 mm- Sistema de carga simultánea: es capaz de recargar el dispositivo y el cargador portátil al mismo tiempo con un solo cargador de batería.- Sistema de control de sobrecalentamiento que le permite cargar sus dispositivos con total seguridad.",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-79193364/fee_325_225_png/Bater%C3%ADa-externa---Cellular-Line-Free-Slim-5000K--5000mAh--Negro",
-            "category":"Accesorios Smartphones"
-
-        },
-        {
-            "id":38,
-            "title":"Engel LE2262",
-            "price":109,
-            "priceHR":"109.00€",
-            "description":"Pásate a tecnología superior con el TV de Engel LE2262, disfruta de toda una tecnología compacta con un diseño que se adapta a ti para que disfrutes de todas tus programas.",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-81468763/fee_325_225_png/TV-LED-22%22---Engel-LE2262--Full-HD--12V--USB--Especial-Camping--TDT2",
-            "category":"Televisores"
-        },
-        {
-            "id":39,
-            "title":"Tarjeta micro SDXC 128GB",
-            "price":25,
-            "priceHR":"25.00€",
-            "description":"Disfruta de velocidades extremas para una transferencia rápida, rendimiento de las aplicaciones y contenido 4K UHD. Esta tarjeta micro SDXC de alto rendimiento es perfecta para los teléfonos inteligentes Android y cámaras de acción o drones, con capacidad de grabación de video 4K UHD, video full HD y fotos de alta resolución. La tarjeta de memoria superrápida SanDisk Extreme microSDXC tiene una capacidad de lectura de hasta 100 MB/s y de escritura de hasta 90 MB/s. Además, es de clase A1, lo que aporta un rendimiento de las aplicaciones excelente para disfrutar de una experiencia excepcional con los teléfonos inteligentes.",
-            "thumbnailURL":"https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-76123896/fee_325_225_png/Tarjeta-micro-SDXC---Sandisk-Ultra--128-GB--A1--Velocidad-hasta-100-MB-s--Clase-10",
-            "category":"Accesorios Smartphones"
-
-        }
-    ]
-    
+  "products": [
+    {
+      "id": 0,
+      "title": "HP 22-c0039ns",
+      "price": 439,
+      "priceHR": "439.00€",
+      "description": "Potente equipo todo en uno HP 22-c0039ns en color blanco nieve para que disfrutes con toda tu familia. Navega con facilidad gracias Windows 10 mientras navegas cómodamente gracias a su inclinación ajustable que te permite trabajar en varias medidas.",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_73749070/fee_194_131_png/All-in-one---HP-22-c0039ns--21.5%22-FHD--AMD-A4--9125-Dual-Core--8-GB-RAM--256-GB-SSD--Windows-10--Blanco",
+      "category": "Sobremesas"
+    },
+    {
+      "id": 1,
+      "title": "ASUS F543BA",
+      "price": 396,
+      "priceHR": "396.00€",
+      "description": "El ASUS F543BA-GQ739T es un portátil de 15.6 con una sólida construcción y peso de 2kg. Ideal para cubrir tus necesidades informáticas o consumir contenido online para tu entretenimiento. ",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_72549056/fee_240_148_png/Port%C3%A1til---ASUS-Laptop-F543BA-GQ739T--15.6%22-HD--AMD-Dual-Core-A9-9425--8GB--256GB-SSD--W10",
+      "category": "Portátiles"
+    },
+    {
+      "id": 2,
+      "title": "Acer Aspire XC-886",
+      "price": 657,
+      "priceHR": "657.00€",
+      "description": "Disfruta de nuevas experiencias tecnológicas con el PC Sobremesa Acer Aspire XC-886 fusionando potencia y calidad en sus componentes. Esta combinación te aportará la velocidad y fluidez de datos que necesitas para que disfrutes de todo el rendimiento y que puedas ejecutar tus tareas o procesos.",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_73217646/fee_240_148_png/PC-Sobremesa---Acer-Aspire-XC-886--Intel%C2%AE-Core%E2%84%A2-i5-9400--8-GB-RAM--512-GB-SSD--W10--Negro",
+      "category": "Sobremesas"
+    },
+    {
+      "id": 3,
+      "title": "Lenovo S340-15IIL",
+      "price": 881,
+      "priceHR": "881.00€",
+      "description": "El portátil Lenovo S340-15IIL con pantalla de 15.6 Full HD y en color gris platino tiene un diseño ligero y fino y con él podrás realizar todas tus tareas gracias a su potente procesador.",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_74909395/fee_240_148_png/Port%C3%A1til---Lenovo-S340-15IIL--15.6-%22-Full-HD--Intel%C2%AE-Core%E2%84%A2-i7-1065G7--8-GB-DDR4--1-TB-SSD--W10-Home--Gris",
+      "category": "Portátiles"
+    },
+    {
+      "id": 4,
+      "title": "HP 23-c0039ns",
+      "price": 700,
+      "priceHR": "700.00€",
+      "description": "Potente equipo todo en uno HP 22-c0039ns en color blanco nieve para que disfrutes con toda tu familia. Navega con facilidad gracias Windows 10 mientras navegas cÃ³modamente gracias a su inclinaciÃ³n ajustable que te permite trabajar en varias medidas.",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_73749070/fee_194_131_png/All-in-one---HP-22-c0039ns--21.5%22-FHD--AMD-A4--9125-Dual-Core--8-GB-RAM--256-GB-SSD--Windows-10--Blanco",
+      "category": "Sobremesas"
+    },
+    {
+      "id": 5,
+      "title": "Xiaomi Mi TV 4A",
+      "price": 179,
+      "priceHR": "179.00€",
+      "description": "La TV LED 32 Xiaomi Mi TV 4A está pensada para que la exprimas al máximo. Con alta conectividad, preparada para contenidos HD y sonido Dolby Audio. Con Xiaomi descubrirás las ventajas de tecnología superior.",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_70644748/fee_240_148_png/TV-LED-32%22---Xiaomi-Mi-TV-4A--HD--Quad-Core--Bluetooth--Android-TV--PatchWall--Google-Assistant--Chromecast",
+      "category": "Televisores"
+    },
+    {
+      "id": 6,
+      "title": "Lenovo S145-15AST",
+      "price": 416,
+      "priceHR": "416.00€",
+      "description": "Lenovo te trae el ordenador portátil Ideapad S145-15IWL que hará que tus tareas sean mucho más fáciles. Cuenta con un potente procesador AMD con un diseño elegante y ligero. Este portátil duradero de 39,62 cm (15,6) ofrece un magnífico sonido con una variedad de opciones de almacenamiento seguras y rápidas.",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_71439419/fee_240_148_png/Port%C3%A1til---Lenovo-S145-15AST--15.6%22-FullHD--AMD-A6-9225--8-GB---256-GB--SSD--W10-Home--Gris",
+      "category": "Portátiles"
+    },
+    {
+      "id": 7,
+      "title": " Cellularline BTPETITTWSW",
+      "price": 72.99,
+      "priceHR": "72.99€",
+      "description": "Los auriculares inalámbricos Cellularline BTPETITTWSW te permiten movilidad y funcionalidad, allá donde vayas. Atiende llamadas, juega, escucha podcasts, sigue tu emisora favorita, etc. Conecta con tu mundo y disfruta de la mejor música.",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_71377542/fee_325_225_png/Auriculares-inal%C3%A1mbricos---Cellularline-BTPETITTWSW--Bluetooth--MicroUSB--Atiende-llamadas--4.5-Horas--Blanco",
+      "category": "Sobremesas"
+    },
+    {
+      "id": 8,
+      "title": "StarTech.com PEX2M2 ",
+      "price": 104.39,
+      "priceHR": "104.39€",
+      "description": "Esta tarjeta controladora SSD M.2 le permite instalar dos unidades de estado sólido (SSD) SATA M.2 en su ordenador a través de PCI Express. Es posible instalar casi cualquier unidad M.2 directamente en la tarjeta, lo cual constituye una forma práctica y discreta de mejorar el rendimiento de su sistema informático. Además, la tarjeta es un complemento esencial del ordenador si se necesita recuperar datos de una unidad M.2 existente, o para expandir en general su almacenamiento interno.",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-79136511/fee_325_225_png/Tarjeta-M.2---StarTech.com-PEX2M2-Tarjeta-Controladora-M.2--PCI-Express-para-2-SSD",
+      "category": "Componentes"
+    },
+    {
+      "id": 9,
+      "title": "HP 14-df0003ns",
+      "price": 323,
+      "priceHR": "323.00€",
+      "description": "El portátil HP 14-df0003ns con pantalla de 14 Full HD y en color blanco copo de nieve tiene un diseño ligero y fino y con él podrás realizar todas tus tareas gracias a su procesador y su batería de larga duración (hasta 10 horas y media).",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_72220879/fee_240_148_png/Port%C3%A1til----HP-14-df0003ns--14%22-Full-HD--Intel%C2%AE-Celeron%C2%AE-N4000--4GB-RAM--64GB-eMMC--Windows-10-Home--Blanco",
+      "category": "Portátiles"
+    },
+    {
+      "id": 10,
+      "title": "Samsung Crystal UHD 65TU7125",
+      "price": 829,
+      "priceHR": "829.00€",
+      "description": "Los paneles Crystal UHD con resolución 4K de Samsung, estánconstruidos con nanopartículas inorgánicas cristalinas y 16 bits, lo cual les permite reproducir hasta 1.000 millones de colores y, al ser inorgánicas, no se degradan con el tiempo. ¿Quieres el televisor 4K perfecto para tu día a día?",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_75698564/fee_240_148_png/TV-LED-65%22---Samsung-Crystal-UHD-65TU7125--Smart-TV--4K-Real-y-HDR10---Compatible-Asistentes-de-Voz--Tap-View",
+      "category": "Televisores"
+    },
+    {
+      "id": 11,
+      "title": "HP Slim Desktop S01-aF0010ns",
+      "price": 249,
+      "priceHR": "249.00€",
+      "description": "Ejecuta varias tareas de forma eficiente y gestiona todas las necesidades diarias con la mini torre HP Slim Desktop S01-aF0010ns en color negro azabache con logo cromado oscuro.",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_74719488/fee_240_148_png/PC-Sobremesa---HP-Slim-Desktop-S01-aF0010ns--Intel%C2%AE-Celeron%C2%AE-J4005--8-GB-RAM--256-GB-SSD--Intel%C2%AE-UHD-6--FDOS",
+      "category": "Sobremesas"
+    },
+    {
+      "id": 12,
+      "title": "Xiaomi Redmi 8",
+      "price": 193,
+      "priceHR": "193.00€",
+      "description": "Déjate cautivar por la pantalla HD+ del móvil Xiaomi Redmi 8 en color azul de diseño fino y elegante. ¡Pero no todo es el físico! Este smartphone te ofrecerá un rendimiento espectacular, espacio para todos tus archivos y unas fotografías casi profesionales gracias a su triple cámara.",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_71455239/fee_325_225_png/M%C3%B3vil---Xiaomi-Redmi-8--Azul--64-GB--4-GB-RAM--6.22%22-HD---Snapdragon-439--5000-mAh--Android",
+      "category": "Smartphones"
+    },
+    {
+      "id": 13,
+      "title": "APPLE MRR12Y/A",
+      "price": 2399,
+      "priceHR": "2399.00€",
+      "description": "Apple lo ha vuelto a hacer. Otra vez nos ha sorprendido a todos. Deja que el All in One Apple iMac MRR12Y de 27 te deslumbre cada vez que abras la puerta de tu escritorio y te deje cautivado con su increíble rendimiento, calidad y elegancia.",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_73617044/fee_240_148_png/iMac---APPLE-MRR12Y-A--27%27%27-Retina-5K--Intel%C2%AE-Core%E2%84%A2-i5-9600K--8-GB--2-TB-Fusion-Drive--Radeon-Pro-580X--Plata",
+      "category": "Sobremesas"
+    },
+    {
+      "id": 14,
+      "title": "Xiaomi Redmi Note 8 Pro",
+      "price": 229,
+      "priceHR": "229.00€",
+      "description": "Si necesitas un móvil versátil y funcional al mismo tiempo que no quieres renunciar al rendimiento, no te pierdas la oportunidad de hacerte con tu móvil Xiaomi Redmi Note 8 Pro, de 6 GB de RAM y 128 GB de capacidad. Tecnología y componentes de calidad a tu alcance.",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_73342444/fee_325_225_png/M%C3%B3vil---Xiaomi-Redmi-Note-8-Pro--Azul--128-GB--6-GB-RAM--6.53%22-Full-HD---Helio-G90T--4500-mAh--Android",
+      "category": "Smartphones"
+    },
+    {
+      "id": 15,
+      "title": "Samsung Galaxy A51,",
+      "price": 299,
+      "priceHR": "299.00€",
+      "description": "Acércate a lo que más te importa con las 6,5 pulgadas de la pantalla del Galaxy A51. Una pantalla de extremo a extremo con marco casi inexistente. Adéntrate aún más en tus videos y streamings favoritos con su resolución FHD+ y color Super AMOLED y capacidad de almacenamiento interno de hasta 128 GB.",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_72138660/fee_325_225_png/M%C3%B3vil---Samsung-Galaxy-A51--Azul--128-GB--4-GB-RAM--6.5%22-Full-HD---Exynos9611--4000-mAh--Android",
+      "category": "Smartphones"
+    },
+    {
+      "id": 16,
+      "title": "Lenovo S540-15IWL",
+      "price": 619,
+      "priceHR": "619.00€",
+      "description": "Combina rendimiento y portabilidad con el portátil Lenovo S540-15IWL con pantalla de 15.6 FHD y en gris platino. Además este portátil velará por tu seguridad con el lector de huellas y el obturador de privacidad de la webcam.",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_72791460/fee_240_148_png/Port%C3%A1til---Lenovo-S540-15IWL--15.6%22-Full-HD--Intel%C2%AE-Core%E2%84%A2-i3-8145U---8-GB--512-GB-SSD--W10-Home--Gris",
+      "category": "Portátiles"
+    },
+    {
+      "id": 17,
+      "title": " Lenovo 310S-08ASR A9-9425",
+      "price": 448,
+      "priceHR": "448.00€",
+      "description": " Si necesitas un equipo para tus tareas cotidianas tales como trabajar, estudiar, o consultar tu correo electrónico y páginas webs preferidas, con este pc sobremesa Lenovo 310S-08ASR A9-9425 tendrás todo lo que buscas. Práctico y ágil para tu día a día. ",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-81255748/fee_325_225_png/PC-Sobremesa---Lenovo-310S-08ASR-A9-9425--AMD-Radeon-R5--8-GB---1-TB--W10--Negro",
+      "category": "Sobremesas"
+    },
+    {
+      "id": 18,
+      "title": "Sandisk Ultra, 32GB",
+      "price": 7.09,
+      "priceHR": "7.09€",
+      "description": "Capta, lleva y conserva más fotografías y vídeos Full HD de alta calidad en tu smartphone o tableta Android, o en tu cámara compacta de enfoque automático con la tarjeta microSD Sandisk Ultra de 32GB. ",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-76008878/fee_325_225_png/Tarjeta-micro-SD---Sandisk-Ultra--32GB--Velocidad-hasta-98-MB-s--Clase-10--U1--A1",
+      "category": "Accesorios Smartphones"
+    },
+    {
+      "id": 19,
+      "title": "Microsoft Surface Pro 7",
+      "price": 999,
+      "priceHR": "999.00€",
+      "description": "Todo lo que necesitas en un solo equipo; la versatilidad del convertible 2 en 1 Microsoft, SRFC PRO7 te dejará impactado. Úsalo como una tablet, un portátil o una pantalla con soporte; su diseño ligero y cambiante permite llevar siempre contigo un ordenador de gran potencia allá donde vayas.",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_69790815/fee_240_148_png/Convertible-2-en-1----Microsoft-Surface-Pro-7--12.3-%22--Intel%C2%AE-Core%E2%84%A2-i5-1035G4--8-GB-RAM--128-GB--W10",
+      "category": "Portátiles"
+    },
+    {
+      "id": 20,
+      "title": "Samsung EB-P1100",
+      "price": 15.99,
+      "priceHR": "15.99€",
+      "description": "Batería externa Samsung delgada y liviana de 10000mAh con función de carga rápida QC 2.0 y soporte de potencia de salida de hasta 15W que permite una carga rápida cuando está en movimiento.",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-81774961/fee_325_225_png/Powerbank---Samsung-EB-P1100--10000-mAh--Carga-r%C3%A1pida--Plata",
+      "category": "Accesorios Smartphones"
+    },
+    {
+      "id": 21,
+      "title": "Primux 2401F",
+      "price": 369,
+      "priceHR": "369.00€",
+      "description": "El iox All in One 2401F hará que disfrutes intensamente de cada píxel de sus imágenes, ya que tiene una pantalla sin marcos de 24 pulgadas (23,8 reales), IPS Full HD de 1080p grado A+. Calidad excepcional de alta definición para que disfrutes totalmente de la imagen.",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_72646053/fee_325_225_png/All-in-one---Primux-2401F--23.8%22-IPS-Full-HD--Intel%C2%AE-Celeron%C2%AE-J4005--4GB--64GB-120GB-SSD--W10-S--Gris",
+      "category": "Sobremesas"
+    },
+    {
+      "id": 22,
+      "title": "Thomson WEAR7208PU",
+      "price": 18.99,
+      "priceHR": "18.99€",
+      "description": "¿Eres de los que disfruta del deporte al ritmo de la música? Pues los auriculares inalámbricos Thomson WEAR7208PU BT están diseñados para ti. Sin cables, resistentes al sudor y a  salpicaduras, ligeros, atractivos y además con una buena batería. ¿Qué más puedes pedir?",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-80935462/fee_325_225_png/Auriculares-inal%C3%A1mbricos---Thomson-WEAR7208PU--Bluetooth--In-Ear--Lila",
+      "category": "Auriculares"
+    },
+    {
+      "id": 23,
+      "title": "ASUS VivoBook 15 S512FJ-BR192T",
+      "price": 450,
+      "priceHR": "450.00€",
+      "description": "ASUS VivoBook 15 S512FJ-BR192T, es un portátil compacto, de 15.6, con un peso de 1,7 Kg, diseñado para el trabajo del día a día y la multimedia. Llévalo de forma cómoda siempre contigo. Equipado con una pantalla NanoEdge, con un marco de 5,7 mm solamente, otorga un nivel de inmersión visual espectacular. Su procesador Intel® Core™ i3 y la gráfica integrada, permite un rendimiento bueno para tu tareas del trabajo o universidad. El disco duro SSD de 256 GB conseguirá que arranques Windows, abras aplicaciones o guardes archivos a una altísima velocidad.",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_75243275/fee_240_148_png/Port%C3%A1til---ASUS-VivoBook-15-S512FJ-BR192T--15.6%22--Intel%C2%AE-Core%E2%84%A2-i3-1005G1--8-GB--256-GB-SSD--UHD-Graphics--W10",
+      "category": "Portátiles"
+    },
+    {
+      "id": 24,
+      "title": "Xiaomi Mi Compact Speaker 2,",
+      "price": 9.99,
+      "priceHR": "9.99€",
+      "description": "Escucha música en cualquier parte con el altavoz inalámbrico Xiaomi Mi Compact Speaker 2 en color blanco. Con una capacidad de 480 mAh, podrás reproducir música de manera inalámbrica gracias a la conexión Bluetooth.",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_72091835/fee_325_225_png/Altavoz-inal%C3%A1mbrico---Xiaomi-Mi-Compact-Speaker-2--Bluetooth--Autonom%C3%ADa-4h--480mAh--Blanco",
+      "category": "Altavoces"
+    },
+    {
+      "id": 25,
+      "title": "Sudio Tio SUDTIOWH",
+      "price": 56.99,
+      "priceHR": "52.00€",
+      "description": "Di adiós a los enredos de cables y a los tapones que se caen. Con los auriculares inalámbricos Sudio Tio SUDTIOWH en color blanco y su tecnología inalámbrica Bluetooth, puedes conectar tu dispositivo inalámbricamente y escuchar perfectamente y sin interrupciones. Además son resistentes al sudor, lluvia o nieve, ideales para hacer deporte al aire libre.",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_73748466/fee_325_225_png/Auriculares-inal%C3%A1mbricos---Sudio-Tio-SUDTIOWH--Bluetooth--9h-Autonom%C3%ADa--Resistentes-a-salpicaduras--Blanco",
+      "category": "Auriculares"
+    },
+    {
+      "id": 26,
+      "title": "Sony Htrt4",
+      "price": 328.1,
+      "priceHR": "328.10€",
+      "description": "Inunda tu salón con un auténtico sonido Surround con el sistema de cine en casa de 5.1 canales Sony HTRT4. Un kit compuesto de barra de sonido, subwoofer externo y unos altavoces traseros alargados. ",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-75878397/fee_325_225_png/Home-Cinema---Sony-Htrt4--5.1Canales--Barra-de-sonido--Subwoofer-Externo--Altavoces-Traseros--600-W",
+      "category": "Altavoces"
+    },
+    {
+      "id": 27,
+      "title": "Samsung Galaxy A71",
+      "price": 378,
+      "priceHR": "378.00€",
+      "description": "Diseñado para otorgar innovaciones significativas y experiencias móviles increíbles para todos, el Samsung Galaxy A71 ofrece muchas características mejoradas: una batería más durable para acompañar el ritmo de tu estilo de vida siempre conectado, una cámara más inteligente para ayudar a capturar el mundo como tú lo ves y una pantalla Infinity-O, que brinda una experiencia visual ininterrumpida.",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_75369473/fee_325_225_png/M%C3%B3vil---Samsung-Galaxy-A71--Plata--128-GB--6-GB-RAM--6.7%22-Full-HD---SDM730--4500-mAh--Android",
+      "category": "Smartphones"
+    },
+    {
+      "id": 28,
+      "title": "Fonestar BOX-35LED",
+      "price": 66.99,
+      "priceHR": "66.99.00€",
+      "description": "Improvisa un karaoke en cualquier parte con tu altavoz portátil Box-35LED de Fonestar con micrófono y función karaoke. No dejes que decaiga la fiesta y dale caña al volumen, su potencia de 35W RMS harán que tiemblen hasta los cristales y sin distorsiones.",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-76658458/fee_240_148_png/Altavoz-port%C3%A1til---Fonestar-BOX-35LED--Bluetooth--Karaoke--Efectos-luminosos--Micr%C3%B3fono",
+      "category": "Altavoces"
+    },
+    {
+      "id": 29,
+      "title": "Samsung 65RU7105",
+      "price": 630,
+      "priceHR": "630.00€",
+      "description": "Potente calidad de imagen con Resolución 4K UHD Real. Panel RGB con un contraste superior y colores aún más vivos gracias a una resolución 4 veces superior a Full HD. Una calidad de imagen asombrosa gracias al procesador Samsung que gestiona el color, optimiza el contraste y domina el HDR.",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_74376618/fee_240_148_png/TV-LED-65%22---Samsung-65RU7105--4K-UHD-Real--HDR--Smart-TV--Bluetooth--Soluci%C3%B3n-cables-ordenados",
+      "category": "Televisores"
+    },
+    {
+      "id": 30,
+      "title": "Apple AirPods Pro",
+      "price": 229,
+      "priceHR": "229.00€",
+      "description": "Un sonido claro y preciso cuando hablas y cuando te hablan, junto con la comodidad de no usar cables. Los auriculares inalámbricos Apple AirPods Pro + Estuche de carga inalámbrica combinan sencillez con tecnología avanzada. Con conectividad Bluetooth, podrás escuchar música como nunca antes lo habías hecho.",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_70362454/fee_240_148_png/Auriculares-inal%C3%A1mbricos---Apple-AirPods-Pro--True-Wireless--Chip-H1--Siri--IPX4---Estuche-carga-inal%C3%A1mbrico",
+      "category": "Auriculares"
+    },
+    {
+      "id": 31,
+      "title": "Samsung Galaxy Z Flip",
+      "price": 1499,
+      "priceHR": "1499.00€",
+      "description": "Un nuevo giro en el mundo de los smartphones: el Samsung Galaxy Z Flip en color negro. ¡Pero no todo es el físico! Este smartphone te ofrecerá un rendimiento espectacular con su enorme memoria RAM, mucho espacio para todos tus archivos y unas fotografías profesionales gracias a su doble cámara.",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_73616610/fee_325_225_png/M%C3%B3vil---Samsung-Galaxy-Z-Flip--Negro--256-GB--8-GB--6.7-%22-HD---Snapdragon-855--3300-mAh--Android",
+      "category": "Smartphones"
+    },
+    {
+      "id": 32,
+      "title": "Ultimate Ears Wonderboom Phantom",
+      "price": 59.99,
+      "priceHR": "59.99€",
+      "description": "Llévate tu música a todas partes con el altavoz inalámbrico Ultimate Ears Wonderboom en diseño Phantom black. Tanto si planeas una excursión por la montaña, como si quieres relajarte en la piscina, este altavoz Bluetooth de gran autonomía y resistente al agua no te defraudará. ",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-74499042/fee_240_148_png/Altavoz-inal%C3%A1mbrico---Ultimate-Ears-Wonderboom-Phantom--Bluetooth--Autonom%C3%ADa-de-10h--Resistente-al-agua--Negro",
+      "category": "Auriculares"
+    },
+    {
+      "id": 33,
+      "title": " Creative Sound Blaster Audigy FX",
+      "price": 39.99,
+      "priceHR": "39.99€",
+      "description": "Sound Blaster Audigy FX es una tarjeta de sonido de media altura basada en la tecnología SBX Pro Studio, ideal para actualizar el audio de tu ordenador y sacar el máximo partido a tus películas, juegos y música. Gracias a esta tarjeta de Creative tu sistema se convertirá en un sistema de sonido envolvente 5.1.",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-79190147/fee_325_225_png/Tarjeta-de-sonido---Creative-Sound-Blaster-Audigy-FX--sonido-5.1",
+      "category": "Componentes"
+    },
+    {
+      "id": 34,
+      "title": "OK ODL 50662UN-TIB,",
+      "price": 299,
+      "priceHR": "299.00€",
+      "description": "La Smart TV LED 50 OK ODL 50662UN-TIB está pensada para que la exprimas al máximo. Con alta conectividad, preparada para contenidos HD y sonido Dolby Audio, disfrutarás de ella ya que tiene una excelente relación calidad/precio. Además tiene Smart TV para que disfrutes de tu mejor contenido multimedia y online.",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_73886163/fee_240_148_png/TV-LED-50%22---OK-ODL-50662UN-TIB--UHD-4K--Smart-TV--Dolby-Audio--HDMI--USB--Negro",
+      "category": "Componentes"
+    },
+    {
+      "id": 35,
+      "title": "LG RK1,",
+      "price": 99,
+      "priceHR": "99.00€",
+      "description": "Si buscas una torre de sonido única para hacer unas fiestas épicas en casa con tus amigos, la torre de sonido LG RK1 te proporcionará un sonido único y un ambiente de fiesta que nunca olvidarán. ¡Dale al play y diviértete!",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-77567821/fee_240_148_png/Torre-de-sonido---LG-RK1--100-W--Bluetooth--USB--Radio-FM--Aux--Negro",
+      "category": "Altavoces"
+    },
+    {
+      "id": 36,
+      "title": "PB NVIDIA Quadro M4000 8GB",
+      "price": 836.4,
+      "priceHR": "836.40€",
+      "description": " PNY VCQM4000-PB. Familia de procesadores de gráficos: NVIDIA, Procesador gráfico: Quadro M4000, Máxima resolución: 4096 x 2160 Pixeles. Gráficos discretos memoria del adaptador: 8 GB, Tipo de memoria de adaptador gráfico: GDDR5-SDRAM, Ancho de datos: 256 bit. Tipo de interfaz: PCI Express x16 3.0, Versión de DisplayPort: 1.2. Versión DirectX: 12.0, Versión Shader model: 5.0, Versión OpenGL: 4.5. Tipo de enfriamiento: Activo",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-79172137/fee_325_225_png/Tarjeta-Gr%C3%A1fica---PNY-VCQM4000-PB-NVIDIA-Quadro-M4000-8GB",
+      "category": "Componentes"
+    },
+    {
+      "id": 37,
+      "title": "Cellular Line Free Slim 5000K",
+      "price": 19.99,
+      "priceHR": "19.99€",
+      "description": " La batería externa Cellular Line Free Slim 5000K se presenta como el mejor compromiso entre potencia y tamaño. Es un cargador portátil ultra ligero que es sólo 13 mm de espesor, pero proporciona una carga rápida y de alta capacidad en un paquete increíblemente ligero. - Ultra delgado y ligero: 110 x 42 x 13 mm- Sistema de carga simultánea: es capaz de recargar el dispositivo y el cargador portátil al mismo tiempo con un solo cargador de batería.- Sistema de control de sobrecalentamiento que le permite cargar sus dispositivos con total seguridad.",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-79193364/fee_325_225_png/Bater%C3%ADa-externa---Cellular-Line-Free-Slim-5000K--5000mAh--Negro",
+      "category": "Accesorios Smartphones"
+    },
+    {
+      "id": 38,
+      "title": "Engel LE2262",
+      "price": 109,
+      "priceHR": "109.00€",
+      "description": "Pásate a tecnología superior con el TV de Engel LE2262, disfruta de toda una tecnología compacta con un diseño que se adapta a ti para que disfrutes de todas tus programas.",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-81468763/fee_325_225_png/TV-LED-22%22---Engel-LE2262--Full-HD--12V--USB--Especial-Camping--TDT2",
+      "category": "Televisores"
+    },
+    {
+      "id": 39,
+      "title": "Tarjeta micro SDXC 128GB",
+      "price": 25,
+      "priceHR": "25.00€",
+      "description": "Disfruta de velocidades extremas para una transferencia rápida, rendimiento de las aplicaciones y contenido 4K UHD. Esta tarjeta micro SDXC de alto rendimiento es perfecta para los teléfonos inteligentes Android y cámaras de acción o drones, con capacidad de grabación de video 4K UHD, video full HD y fotos de alta resolución. La tarjeta de memoria superrápida SanDisk Extreme microSDXC tiene una capacidad de lectura de hasta 100 MB/s y de escritura de hasta 90 MB/s. Además, es de clase A1, lo que aporta un rendimiento de las aplicaciones excelente para disfrutar de una experiencia excepcional con los teléfonos inteligentes.",
+      "thumbnailURL": "https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-76123896/fee_325_225_png/Tarjeta-micro-SDXC---Sandisk-Ultra--128-GB--A1--Velocidad-hasta-100-MB-s--Clase-10",
+      "category": "Accesorios Smartphones"
+    }
+  ]
 }

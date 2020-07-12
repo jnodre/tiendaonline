@@ -2,14 +2,30 @@ import { Component } from '@angular/core';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { ProductApiService } from './product-api.service';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
+import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
+import { faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope} from '@fortawesome/free-solid-svg-icons';
+import { faPhone} from '@fortawesome/free-solid-svg-icons';
+import { faHome} from '@fortawesome/free-solid-svg-icons';
+import * as XLSX from 'xlsx';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  faEnvelope= faEnvelope;
+  faPhone = faPhone;
+  faHome = faHome;
+  faHeart = faHeart;
+  faTwitterSquare = faTwitterSquare;
+  faInstagram = faInstagram;
   faSearch = faSearch;
+  faFacebookSquare = faFacebookSquare;
   faShoppingCart = faShoppingCart;
   busqueda: string = "";
   busquedaSave: string;
@@ -40,6 +56,30 @@ export class AppComponent {
       if(this.categorias.includes(product.category) == false)
         this.categorias.push(product.category);
       })
+  }
+
+  public onFileChange(event){
+    let workBook = null;
+    let jsonData = null;
+    const reader = new FileReader();
+    const file = event.target.files[0];
+    console.log(file)
+    reader.readAsBinaryString(file);
+    reader.onload = (event) => {
+      const data = reader.result;
+      workBook = XLSX.read(data, { type: 'binary'});
+      jsonData = workBook.SheetNames.reduce((initial, name) => {
+        const sheet = workBook.Sheets[name];
+        initial[name] = XLSX.utils.sheet_to_json(sheet);
+        return initial;
+      }, {});
+    console.log(jsonData);
+    const itemsToModify = jsonData.Sheet1;
+    itemsToModify.forEach(product => {
+      this.ProductService.updateProduct(product);
+    });
+      console.log("its updated")
+    }
   }
 
   // searchItem (){

@@ -11,7 +11,7 @@ export class ProductApiService {
   getApiProducts(seleccionadoPage: number = 1) {
     let url = 'http://localhost:3000/products?'
     if (seleccionadoPage) {
-      url += '_page=' + seleccionadoPage + '&_limit=10';
+      url += '_page=' + seleccionadoPage + '&_limit=12';
     }
     return axios.get(url)
       .then (response => {
@@ -76,7 +76,8 @@ export class ProductApiService {
     let url = 'http://localhost:3000/products?'
 
     if (selectedCategory) {
-      url += `category=${selectedCategory}`;
+
+      url += `category=` + selectedCategory;
     }
     if (minPrice) {
       url += '&price_gte=' + minPrice;
@@ -92,7 +93,6 @@ export class ProductApiService {
         console.log("Se ha producido el error", error);
       })
   }
-  
   // getApiProductsSearch(busqueda:string, value?: number, highValue?: number, selectedCategory?: any){
   //   console.log(busqueda);
   //   let url = `http://localhost:3000/products?`;
@@ -120,4 +120,5 @@ export class ProductApiService {
   //       console.log("Se ha producido el error", error);
   //     })
   // }
+
 }
