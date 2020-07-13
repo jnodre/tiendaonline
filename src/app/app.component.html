@@ -9,6 +9,11 @@
                     <li *ngFor = "let opcion of categorias"[routerLink]="['/categoria', opcion]"><span >{{opcion}}</span></li>
                 </ul>
                 </li>
+                <li class="button">
+                    <label>Actualizar Productos
+                        <input id = "excel" type="file" style="visibility:hidden" class ="upload" (change)= "onFileChange($event)" a="Actualizar Productos">
+                    </label>
+                </li>
             </ul>
         </nav>
 
@@ -16,11 +21,7 @@
             <input  class="searchbar" placeholder="Escribe lo que quieres buscar..." [(ngModel)]="busqueda">
             <button [disabled]="busqueda == '' || busqueda == ' '" class="searchButton" [routerLink]="['/search', busqueda]" (click)="busqueda = ''"><fa-icon [icon]="faSearch"></fa-icon></button>
         </div>
-        <li class="button">
-            <label>Actualizar Productos
-                <input type="file" style="visibility:hidden" class ="upload" (change)= "onFileChange($event)" a="Actualizar Productos">
-            </label>
-        </li>
+
     </div>
 </header>
 

@@ -37,7 +37,9 @@
     margin: 0px 5px 0px 5px;
     cursor: pointer;
 }
-
+#excel{
+    width: 20px; 
+}
 
 .search{
     display: flex;
