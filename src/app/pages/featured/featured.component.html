@@ -12,8 +12,8 @@
                   <span (click)="deleteSelects(user)" class="delete-icon-chip">&#10006;</span>
                 </div>
             
-                <input name="suggestion" type="text" placeholder="Categoria" (click)="suggest()" [(ngModel)]="userSelectsString">
-                <button [routerLink]="['/search', busquedaSave.busqueda]"
+                <input class="categories" name="suggestion" type="text" placeholder="Categoria" (click)="suggest()" [(ngModel)]="userSelectsString">
+                <button class="button" [routerLink]="['/search', busquedaSave.busqueda]"
                 [queryParams]="{minPrice: value, maxPrice: highValue, categoria1: categoria1, categoria2: categoria2, categoria3: categoria3, categoria4: categoria4,
                     categoria5: categoria5 }"> Filtrar Categoria</button>
                 </div>

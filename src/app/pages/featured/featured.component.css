@@ -1,11 +1,13 @@
 .autocomplete {
     position: relative;
     width: 100%;
+
 }
 
 .chips-input-container{
   display: inline-flex;
-  border: 1px solid grey;
+  border: 1px solid var(--border-gray);
+  border-radius: 5px;
 }
 
 input {
@@ -18,7 +20,9 @@ input:hover{
   border:none;
   border-radius: 0px;
 }
-
+.categories{
+    font-weight: 400;
+}
 .autocomplete-items {
       position: absolute;
     border: 1px solid #d4d4d4;
@@ -42,7 +46,8 @@ input:hover{
 }
 
 .autocomplete-items div:hover {
-    background-color: #a695957a; 
+    background-color: var(--main-color); 
+    color:white;
 }
 
 .user-chip{
