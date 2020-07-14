@@ -31,7 +31,7 @@
     list-style: none;
     padding-left: 0px;
     justify-content: center;
-    margin-left: -150px;
+    margin-left: -100px;
 }
 .topmenu ul li{
     margin: 0px 5px 0px 5px;
@@ -219,6 +219,12 @@
 }
 .j2pkText:hover{
     font-weight: 500;
+}
+#excel{
+    cursor: pointer;
+}
+.button2{
+    cursor: pointer;
 }
 @media (max-width: 599px){
     .header{
