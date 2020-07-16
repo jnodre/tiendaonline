@@ -1,7 +1,7 @@
 <div  fxLayout="row wrap" fxLayoutAlign="center center">
     <div  fxLayout="column wrap" fxLayoutAlign="space-between center" class="products" *ngFor = "let product of products" [routerLink]="['/products', product.id]">
     <li class="name">{{product.title}}</li>
-    <li><img [src]="product.thumbnailURL"></li>
+    <li><img [src]="product.thumbnailURL[0].image"></li>
     <li class="price">{{product.priceHR}}</li>
     </div>
     <!-- TODO: Preparando el paginado, trabajar después  -->

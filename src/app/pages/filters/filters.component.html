@@ -1,6 +1,14 @@
 <div>
     <h1>{{product.title}}</h1>
-    <li><img [src]="product.thumbnailURL"></li>
+    <div style="width: 840px; height: 400px; text-align:center;margin:0; padding:0;">
+        <ng-image-slider #nav
+          [images]="imageObject"
+          [infinite]="false"
+          [autoSlide]="1"
+          [imageSize]="{width: '45%', height: '400px', space: 4}"
+          slideImage="1"></ng-image-slider>
+    </div>
+    <li><img [src]="product.thumbnailURL[0].image"></li> 
     <li>{{product.description}}</li>
     <li>Precio: {{product.priceHR}}</li>
     <li *ngIf="product.motherboard">Motherboard: {{product.motherboard}}</li> 

@@ -73,7 +73,6 @@ export class FeaturedComponent implements OnInit {
         this.categoria5 = queryParams ['categoria5']
         console.log(this.categoria1)
         this.highValue2 = queryParams['maxPrice'];
-        // this.getProductByCategory(this.categoriaFilter, { minPrice: minPrice })
         this.searchItem(
           {
             busqueda: search,

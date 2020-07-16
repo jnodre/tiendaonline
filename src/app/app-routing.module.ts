@@ -6,6 +6,7 @@ import { MainComponent} from './pages/main/main.component'
 import { ProductsComponent } from './pages/products/products.component';
 import { FeaturedComponent } from './pages/featured/featured.component';
 import { FiltersComponent } from './pages/filters/filters.component';
+import { TrabajaComponent } from './pages/trabaja/trabaja.component';
 
 const routes: Routes = [
   // lo que hay en los :algo es el nombre con el que recogo el parametro de la url
@@ -24,7 +25,11 @@ const routes: Routes = [
   },
   { path: 'products/:id'
   , component: FiltersComponent
+  },
+  { path: 'trabaja-con-nosotros'
+  , component: TrabajaComponent
   }
+
 ];
 
 @NgModule({

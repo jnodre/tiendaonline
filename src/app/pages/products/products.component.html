@@ -11,7 +11,7 @@
 
     <div  fxLayout="column wrap" fxLayoutAlign="space-between center" class="products" *ngFor = "let product of productsCategory" [routerLink]="['/products', product.id]">
     <li >{{product.title}}</li>
-    <li><img [src]="product.thumbnailURL"></li>
+    <li><img [src]="product.thumbnailURL[0].image"></li>
     <li class="price">{{product.priceHR}}</li>
     </div>
 </div>

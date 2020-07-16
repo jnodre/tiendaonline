@@ -9,6 +9,7 @@ import { ActivatedRoute } from "@angular/router";
 })
 export class FiltersComponent implements OnInit {
   product: any = {};
+  imageObject: any[];
   
   constructor(private ProductService: ProductApiService,  private route : ActivatedRoute) { 
     this.loadProduct();
@@ -21,7 +22,16 @@ export class FiltersComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
     console.log(id);
     this.product= await this.ProductService.getApiProductById(id);
-    console.log(this.product)
+    this.imageObject = this.product.thumbnailURL;
+    console.log(this.imageObject);
+    console.log(this.product);
   }
+
+    //   // this.products.forEach(product => {
+  //   //   if (product.title.toLowerCase().includes(this.busqueda.toLocaleLowerCase()) === true){
+  //   //     this.show.push(product);
+  //   //   }
+      
+  //   // });
 
 }
