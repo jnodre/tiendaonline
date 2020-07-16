@@ -1,22 +1,37 @@
-<div class="container">
-    <div>
-        <div (click)="MostrarFiltroPrecio()" ><h2>Precio (€)</h2></div>
-        <div *ngIf="showPrecio == true">
-            <ng5-slider [(value)]="value" [(highValue)]="highValue" [options]="options" ></ng5-slider>
-        </div>
-        <div (click)="MostrarFiltroCategoria()" ><h2>Categoria</h2></div>
-        <div *ngIf="showCategoria == true">
-          <!-- Investigar como hacer que este input simplemente haga un routerLink a donde ya estamos pero con un queryParam nuevo -->
-            <input [routerLink]="" [queryParams]="{}" type="checkbox"/> <label >Sobremesas </label>
-            <input type="checkbox" [(ngModel)]="checkPortatiles"/> <label routerLink="/searching/Portátiles"  >Portátiles </label>
-            <input type="checkbox" [(ngModel)]="checkTelevisores"/> <label routerLink="/searching/Televisores"  >Televisores </label>
-        </div>
-        <div (click)="MostrarFiltroNewCategoria()" ><h2>Categoria</h2></div>
-        <div *ngIf="showNewCategoria == true">
-                <select name="miselect" [(ngModel)]="seleccionado">
-                <option [value]="item" *ngFor="let item of listaCategorias">{{item}}</option>
-                </select>
-        </div>
-        <button (click)="filtrarPrecio()">Filtrar</button>
-    </div>
+<div>
+    <h1>{{product.title}}</h1>
+    <li><img [src]="product.thumbnailURL"></li>
+    <li>{{product.description}}</li>
+    <li>Precio: {{product.priceHR}}</li>
+    <li *ngIf="product.motherboard">Motherboard: {{product.motherboard}}</li> 
+    <li *ngIf="product.memoria">Memoria: {{product.memoria}}</li>
+    <li *ngIf="product.memoriaYAlmacenamiento">Memoria y Almacenamiento: {{product.memoriaYAlmacenamiento}}</li>
+    <li *ngIf="product.almacenamientoInterno">Almacenamiento Interno: {{product.almacenamientoInterno}}</li>
+    <li *ngIf="product.tamanoPantalla">Tamaño de la Pantalla (cm/pulg): {{product.tamanoPantalla}}</li>
+    <li *ngIf="product.caracteristicasPantalla">Caracteristicas Pantalla: {{product.caracteristicasPantalla}}</li>
+    <li *ngIf="product.calidadDeImagen">Calidad de Imagen: {{product.calidadDeImagen}}</li>
+    <li *ngIf="product.tipoDeProcesador">Tipo de Procesador: {{product.tipoDeProcesador}}</li>
+    <li *ngIf="product.procesador">Procesador: {{product.procesador}}</li>
+    <li *ngIf="product.modeloDelProcesador">Modelo del Procesador: {{product.modeloDelProcesador}}</li>
+    <li *ngIf="product.familiaDeProcesador">Familia de Procesador: {{product.familiaDeProcesador}}</li>
+    <li *ngIf="product.velocidadDeProcesador">Velocidad de Procesador: {{product.velocidadDeProcesador}}</li>
+    <li *ngIf="product.graficos">Gráficos: {{product.graficos}}</li>
+    <li *ngIf="product.tarjetaGrafica">Tarjeta Gráfica: {{product.tarjetaGrafica}}</li>
+    <li *ngIf="product.puertos">Puertos: {{product.puertos}}</li>
+    <li *ngIf="product.interfazDeRed">Interfaz de Red: {{product.interfazDeRed}}</li>
+    <li *ngIf="product.elementosInalambricos">Elementos Inalámbricos: {{product.elementosInalambricos}}</li>
+    <li *ngIf="product.unidadOptica">Unidad Óptica: {{product.unidadOptica}}</li>
+    <li *ngIf="product.dispositivoDeTarjetaDeMemoria">Dispositivo de Tarjeta de Memoria: {{product.dispositivoDeTarjetaDeMemoria}}</li>
+    <li *ngIf="product.dimensiones">Dimensiones: {{product.dimensiones}}</li>
+    <li *ngIf="product.peso">Peso: {{product.peso}}</li>
+    <li *ngIf="product.colores">Colores: {{product.colores}}</li>
+    <li *ngIf="product.tipoDeFuenteDeAlimentacion">Tipo de Fuente de Alimentación: {{product.tipoDeFuenteDeAlimentacion}}</li>
+    <li *ngIf="product.teclado">Teclado: {{product.teclado}}</li>
+    <li *ngIf="product.inputDevicesMouse">Input Devices-Mouse: {{product.inputDevicesMouse}}</li>
+    <li *ngIf="product.camaraWeb">Camara Web: {{product.camaraWeb}}</li>
+    <li *ngIf="product.hPApps">HP Apps: {{product.hPApps}}</li>
+    <li *ngIf="product.softwareIncluido">Software Incluido: {{product.softwareIncluido}}</li>
+    <li *ngIf="product.sistemaOperativo">Sistema Operativo: {{product.sistemaOperativo}}</li>
+    <li *ngIf="product.touchpad">Touchpad: {{product.touchpad}}</li>
+
 </div>

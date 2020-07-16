@@ -22,6 +22,17 @@ export class ProductApiService {
       })
   }
 
+  getApiProductById(id: string) {
+    let url = 'http://localhost:3000/products/' + id;
+    return axios.get(url)
+      .then (response => {
+        return response.data;
+      })
+      .catch (error => {
+        console.log("Se ha producido el error" ,error);
+      })
+  }
+
   getApiProducts2(seleccionadoPage?: number) {
     let url = 'http://localhost:3000/products?'
     if (seleccionadoPage) {
@@ -135,7 +146,6 @@ export class ProductApiService {
     }
   }
   putProduct(product) {
-    // Machaco totalmente el objeto anterior en product.id
     if (product && typeof product.id != 'undefined') {
       return axios
       .put(

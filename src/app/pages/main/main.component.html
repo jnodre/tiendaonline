@@ -1,5 +1,5 @@
 <div  fxLayout="row wrap" fxLayoutAlign="center center">
-    <div  fxLayout="column wrap" fxLayoutAlign="space-between center" class="products" *ngFor = "let product of products">
+    <div  fxLayout="column wrap" fxLayoutAlign="space-between center" class="products" *ngFor = "let product of products" [routerLink]="['/products', product.id]">
     <li class="name">{{product.title}}</li>
     <li><img [src]="product.thumbnailURL"></li>
     <li class="price">{{product.priceHR}}</li>

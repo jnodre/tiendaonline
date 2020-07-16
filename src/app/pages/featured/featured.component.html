@@ -40,7 +40,7 @@
             <!-- <button (click)="searchFilter()">Filtrar</button> -->
     </div>
     <div >
-        <div fxLayout="column wrap" fxLayoutAlign="space-between center" class="products" *ngFor = "let item of show">
+        <div fxLayout="column wrap" fxLayoutAlign="space-between center" class="products" *ngFor = "let item of show" [routerLink]="['/products', item.id]">
             <li>{{item.title}}</li>
             <li><img [src]="item.thumbnailURL"></li>
             <li class="price">{{item.priceHR}}</li>

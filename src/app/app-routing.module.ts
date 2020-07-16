@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { MainComponent} from './pages/main/main.component'
 import { ProductsComponent } from './pages/products/products.component';
 import { FeaturedComponent } from './pages/featured/featured.component';
+import { FiltersComponent } from './pages/filters/filters.component';
 
 const routes: Routes = [
   // lo que hay en los :algo es el nombre con el que recogo el parametro de la url
@@ -20,6 +21,9 @@ const routes: Routes = [
   },
   { path: ''
   , component: MainComponent
+  },
+  { path: 'products/:id'
+  , component: FiltersComponent
   }
 ];
 
