@@ -19,25 +19,18 @@
       "category": "Sobremesas",
       "marca": "HP",
       "motherboard" : "Rhone",
-      "memoria" : "8 GB DDR4-2133 SDRAM (1 x 8 GB)",
-      "memoriaYAlmacenamiento": "memoria de 8 GB; Almacenamiento SSD de 256 GB",
+      "memoriaRAM" : "8 GB DDR4-2133 SDRAM (1 x 8 GB)",
       "almacenamientoInterno": "SSD de 256 GB PCIe® NVMe™ M.2",
       "tipoDeProcesador": "AMD A4 Series",
       "procesador": "AMD A4-9125 Dual-Core (reloj base 2,3 GHz con incremento máximo hasta 2,6 GHz, 1 MB de caché)",
       "familiaDeProcesador": "Procesador AMD Dual-Core serie A",
       "velocidadDeProcesador": "2,3 GHz",
-      "graficos": "Integrada",
       "tarjetaGrafica": "Gráficos AMD Radeon™ R5",
-      "puertos": "1 combo de auriculares/micrófono; 2 USB 2.0; 2 USB 3.0",
-      "interfazDeRed": "LAN 10/100/1000 GbE integrada",
-      "elementosInalambricos": "Combo Realtek 802.11b/g/n/a/ac (1x1) y Bluetooth® 4.2",
       "unidadOptica": "Unidad óptica no incluida",
-      "dispositivoDeTarjetaDeMemoria": "Lector tarjetas de memoria 3 en 1",
       "dimensiones": "49,03 x 1,43 x 39,07 cm",
       "peso": "5,39 kg",
       "tipoDeFuenteDeAlimentacion": "Adaptador de alimentación de CA externo de 65 W",
       "teclado": "HP White wired Keyboard",
-      "inputDevicesMouse": "Ratón blanco con cable HP",
       "camaraWeb": "Cámara HD de privacidad HP con micrófono digital integrado",
       "hPApps": "HP Audio Switch; HP JumpStart",
       "softwareIncluido": "McAfee LiveSafe™",
@@ -63,7 +56,7 @@
       ],
       "category": "Portátiles",
       "marca": "ASUS",
-      "memoria" : "8GB (8GB) DDR4 2400MHz",
+      "memoriaRAM" : "8GB (8GB) DDR4 2400MHz",
       "memoriaYAlmacenamiento": "256GB SSD SATA3",
       "almacenamientoInterno": "SSD de 256 GB PCIe® NVMe™ M.2",
       "tamanoPantalla": "39.62 cm / 15.6 pulg ",
@@ -98,8 +91,20 @@
           "thumbImage": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_70958867/fee_786_587_png/PC-Sobremesa---Acer-Aspire-XC-886--Intel%C2%AE-Core%E2%84%A2-i3-9100--8-GB-RAM--512-GB-SSD--W10"}
       ],
       "category": "Sobremesas",
-      "marca": "Acer"
-
+      "marca": "Acer",
+      "memoriaRAM" : "8 GB DDR4 2666 MHz UDIMM",
+      "almacenamientoInterno": "1024 GB M.2 2280 PCI-e SSD",
+      "tipoDeProcesador": "Core™ i5",
+      "procesador": "Intel® Core™ i5 9400 (2.9 GHz base frequency, up to 4.1 GHz with Intel® Turbo BoostTechnology, 9 MB cache, 6 cores)",
+      "familiaDeProcesador": "Hexa-core (6 Core™)",
+      "velocidadDeProcesador": "2,90 GHz",
+      "tarjetaGrafica": "HD Graphics 630 2Gb",
+      "unidadOptica": "Grabador DVD",
+      "dimensiones": "100 (W) x 330 (D) x 295 (H) mm (3.94 x 12.99 x 11.61 inches)",
+      "peso": "8 kg ",
+      "colores": "Negro",
+      "tipoDeFuenteDeAlimentacion": "220 W PFC (EuP), auto-sensing, 80PLUS Bronze",
+      "sistemaOperativo": "Windows 10 Home"
     },
     {
       "id": 3,
@@ -124,7 +129,23 @@
           "thumbImage": "https://img.pccomponentes.com/articles/28/285633/lenovo-ideapad-s340-15iil-intel-core-i5-1035g1-8gb-1tb-ssd-156-review.jpg"}
       ],
       "category": "Portátiles",
-      "marca": "Lenovo"
+      "marca": "Lenovo",
+      "memoriaRAM" : "4GB Soldered DDR4-2666 + 4GB SO-DIMM DDR4-2666",
+      "almacenamientoInterno": "1 TB SSD M.2 2280 PCIe NVMe",
+      "tamanoPantalla": "15.6pulg FHD (1920x1080) ",
+      "caracteristicasPantalla": "TN 220nits Anti-glare",
+      "calidadDeImagen": "FHD",
+      "procesador": "Intel Core i5-1035G1 (4C / 8T, 1.0 / 3.6GHz, 6MB)",
+      "modeloDelProcesador": " Intel® Core™ i5-1035G1",
+      "velocidadDeProcesador": "hasta 3.6GHz",
+      "unidadOptica": "No incluida",
+      "dimensiones" : "358 x 245 x 17,9 mm",
+      "peso": " 1,79 kg",
+      "colores": "Gris platino",
+      "sistemaOperativo": "Windows 10 Home 64 bits",
+      "tarjetaGrafica": "Intel UHD Graphics ",
+      "teclado": "Español",
+      "camaraWeb": "Fina 720p con obturador de privacidad"
     },
     {
       "id": 4,
@@ -143,8 +164,23 @@
           "thumbImage": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_73749068/fee_786_587_png/All-in-one---HP-22-c0039ns--21.5%22-FHD--AMD-A4--9125-Dual-Core--8-GB-RAM--256-GB-SSD--Windows-10--Blanco"}
       ],
       "category": "Sobremesas",
-      "marca": "HP"
-
+      "marca": "HP",
+      "memoriaRAM" : "8 GB DDR4-2133 SDRAM (1 x 8 GB)",
+      "almacenamientoInterno": "SSD de 256 GB PCIe® NVMe™ M.2",
+      "tipoDeProcesador": "AMD A4 Series",
+      "procesador": "AMD A4-9125 Dual-Core (reloj base 2,3 GHz con incremento máximo hasta 2,6 GHz, 1 MB de caché)",
+      "familiaDeProcesador": "Procesador AMD Dual-Core serie A",
+      "velocidadDeProcesador": "2,3 GHz",
+      "tarjetaGrafica": "Gráficos AMD Radeon™ R5",
+      "unidadOptica": "Unidad óptica no incluida",
+      "dimensiones": "49,03 x 1,43 x 39,07 cm",
+      "peso": "5,39 kg",
+      "tipoDeFuenteDeAlimentacion": "Adaptador de alimentación de CA externo de 65 W",
+      "teclado": "HP White wired Keyboard",
+      "camaraWeb": "Cámara HD de privacidad HP con micrófono digital integrado",
+      "hPApps": "HP Audio Switch; HP JumpStart",
+      "softwareIncluido": "McAfee LiveSafe™",
+      "sistemaOperativo": "Windows 10 Home 64"
     },
     {
       "id": 5,
@@ -165,7 +201,19 @@
           "thumbImage": "https://img.pccomponentes.com/articles/24/247583/32-3.jpg"}
       ],
       "category": "Televisores",
-      "marca": "Xiaomi"
+      "marca": "Xiaomi",
+      "procesador": "Quad Core (1.2 GHz) + 1.5 GB RAM DDR",
+      "tipoDePantalla": "LED",
+      "calidadDeImagen": "HD",
+      "disenoDePantalla":"Plano",
+      "tamanoPantalla": "31.5 pulgadas ",
+      "resolucionDePantalla": "1365 x 768",
+      "smartTV": "Sí",
+      "potenciaMusical": "2 x 5 W",
+      "contenido": "TV, Control remoto, Soporte, Tornillos, Manual",
+      "controlPorVoz": "Sí",
+      "dimensiones": "73.3 cm / 43.5 cm / 8 cm",
+      "peso": "3.95 kg"
     },
     {
       "id": 6,
@@ -184,7 +232,21 @@
           "thumbImage": "https://img.pccomponentes.com/articles/25/250924/4.jpg"}
       ],
       "category": "Portátiles",
-      "marca": "Lenovo"
+      "marca": "Lenovo",
+      "memoriaRAM" : "8GB DIMM DDR4-2133",
+      "almacenamientoInterno": " 512GB SSD M.2 2280 PCIe NVMe",
+      "tamanoPantalla": "15.6pulg FHD (1920x1080)",
+      "caracteristicasPantalla": " TN 220nits Anti-glare",
+      "calidadDeImagen": "FHD",
+      "procesador": " AMD A9-9425 (2C / 2T, 3.1 / 3.7GHz, 1MB L2)",
+      "velocidadDeProcesador": "3.7 GHz",
+      "unidadOptica": "no",
+      "dimensiones" : " 362,2 x 251,5 x 19.9 mm",
+      "peso": "1.85 kg ",
+      "colores": "Gris",
+      "sistemaOperativo": "Windows 10 Home 64 Bits",
+      "tarjetaGrafica": "AMD Radeon R5 Graphics",
+      "camaraWeb": "0.3MP Camera"
     },
     {
       "id": 7,
@@ -205,7 +267,14 @@
           "thumbImage": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_71377747/fee_786_587_png/Auriculares-inal%C3%A1mbricos---Cellularline-BTPETITTWSK--Bluetooth--MicroUSB--Atiende-llamadas--4.5-Horas--Gris"}
       ],
       "category": "Auriculares",
-      "marca": "Cellularline"
+      "marca": "Cellularline",
+      "transmision": "Inalámbrica",
+      "reduccionDeRuido": "Sí",
+      "controlDeVolumen": "Sí",
+      "bluetooth": "Si",
+      "autonomia": "4.5 h",
+      "diseno": "Clásico",
+      "contenido": "Auriculares con almohadillas, 2 pilas, Cable de carga Micro USB"
     },
     {
       "id": 8,
@@ -245,7 +314,23 @@
           "thumbImage": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_70335612/fee_786_587_png/Port%C3%A1til----HP-14-df0003ns--14%22-Full-HD--Intel%C2%AE-Celeron%C2%AE-N4000--4GB-RAM--64GB-eMMC--Windows-10-Home-S--Blanco"}
       ],
       "category": "Portátiles",
-      "marca": "HP"
+      "marca": "HP",
+      "memoriaRAM" : "DDR4 4GB",
+      "almacenamientoInterno": "4 GB",
+      "tamanoPantalla": "35.6 cm",
+      "calidadDeImagen": "HD",
+      "procesador": "Intel® Celeron® N4000",
+      "modeloDelProcesador": "Celeron®",
+      "velocidadDeProcesador": "1.10 GHz",
+      "unidadOptica": "no",
+      "dimensiones" : "1.99 cm x 32.40 cm x 22.59 cm",
+      "peso": "1.43 kg",
+      "colores": "Cubierta y base de color blanco copo de nieve, marco de teclado en blanco nieve",
+      "sistemaOperativo": "Windows 10 Home en modo S",
+      "tarjetaGrafica": "UHD Graphics 600",
+      "softwareIncluido": "HP Audio Switch; HP JumpStart, Netflix; 1 mes de prueba para los nuevos clientes de Microsoft Office 365, McAfee LiveSafe",
+      "teclado": "Teclado tipo isla de tamaño completo",
+      "camaraWeb": "1366 x 768 pixels"
     },
     {
       "id": 10,
@@ -272,7 +357,19 @@
           "thumbImage": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_75698575/fee_786_587_png/TV-LED-65%22---Samsung-Crystal-UHD-65TU7125--Smart-TV--4K-Real-y-HDR10---Compatible-Asistentes-de-Voz--Tap-View"}
       ],
       "category": "Televisores",
-      "marca": "Samsung"
+      "marca": "Samsung",
+      "procesador": "CRYSTAL PROCESSOR 4K",
+      "tipoDePantalla": "LED",
+      "calidadDeImagen": "UHD 4K",
+      "disenoDePantalla":"Plano",
+      "tamanoPantalla": "163 cm ",
+      "resolucionDePantalla": "1365 x 768",
+      "smartTV": "Sí",
+      "potenciaMusical": "20 W",
+      "contenido": "Netflix, Amazon Prime Video, Rakuten, Disney, Movistar +, DAZN, Atresmedia, Mitele",
+      "controlPorVoz": "no",
+      "dimensiones": "144.8 cm / 82.9 cm / 5.95 cm",
+      "peso": "20.9 kg"
     },
     {
       "id": 11,
@@ -289,7 +386,20 @@
           "thumbImage": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_74079153/fee_786_587_png/PC-Sobremesa---HP-Slim-Desktop-S01-aF0010ns--Intel%C2%AE-Celeron%C2%AE-J4005--8-GB-RAM--256-GB-SSD--Intel%C2%AE-UHD-6--FDOS"}
       ],
       "category": "Sobremesas",
-      "marca": "HP"
+      "marca": "HP",
+      "motherboard" : "BohemiaC",
+      "memoriaRAM" : "SDRAM de 8 GB DDR4-2400 (1 x 8 GB)",
+      "almacenamientoInterno": "SSD de 256 GB PCIe® NVMe™ M.2",
+      "tipoDeProcesador": "Intel Celeron",
+      "procesador": "Intel® Celeron® J4005 (frecuencia base de 2 GHz, frecuencia de ráfaga de hasta 2,7 GHz, 4 MB de caché, 2 núcleos)",
+      "familiaDeProcesador": "Procesador Intel® Celeron®",
+      "velocidadDeProcesador": "2 GHz",
+      "tarjetaGrafica": "Gráficos Intel® UHD 600",
+      "unidadOptica": "Unidad óptica no incluida",
+      "dimensiones": "9,5 × 30,3 × 27 cm",
+      "peso": "3,02 kg",
+      "tipoDeFuenteDeAlimentacion": "Adaptador de alimentación Smart AC de 65 W",
+      "sistemaOperativo": "FreeDOS"
     },
     {
       "id": 12,
@@ -331,7 +441,18 @@
           "thumbImage": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_73617037/fee_786_587_png/iMac---APPLE-MRR12Y-A--27%27%27-Retina-5K--Intel%C2%AE-Core%E2%84%A2-i5-9600K--8-GB--2-TB-Fusion-Drive--Radeon-Pro-580X--Plata"}
       ],
       "category": "Sobremesas",
-      "marca": "Apple"
+      "marca": "Apple",
+      "memoriaRAM" : " 8 GB de memoria DDR4 a 2.666 MHz",
+      "procesador": " Intel© Core™ i5 de seis núcleos a 3,7 GHz (Turbo Boost de hasta 4,6 GHz)",
+      "familiaDeProcesador": "Intel®",
+      "velocidadDeProcesador": "3.70 GHz",
+      "tarjetaGrafica": "Radeon Pro 580X",
+      "unidadOptica": "no",
+      "dimensiones": "650 mm x 516 mm x 203 mm",
+      "peso": "9.5 Kg",
+      "teclado": "Tu iMac viene con el Magic Keyboard, un teclado inalámbrico, ultracompacto y recargable para que te olvides de las pilas. Tiene un mecanismo de tijera muy estable, pulsación de teclas optimizada y un perfil estilizado para que escribas con total comodidad. Además, se enlaza al instante con tu iMac.",
+      "camaraWeb": "Sí",
+      "sistemaOperativo": "macOS Catalina"
     },
     {
       "id": 14,
@@ -385,7 +506,23 @@
           "thumbImage": "https://img.pccomponentes.com/articles/29/293595/lenovo-ideapad-s540-15iwl-intel-core-i7-8565u-8gb-512gb-ssd-gtx-1650-156-caracteristicas.jpg"}    
       ],
       "category": "Portátiles",
-      "marca": "Lenovo"
+      "marca": "Lenovo",
+      "memoriaRAM" : "4GB Soldered DDR4-2400 + 4GB SO-DIMM DDR4-2400",
+      "almacenamientoInterno": "512GB SSD M.2 2280 PCIe NVMe",
+      "tamanoPantalla": "39,6 cm (15,6pulg)",
+      "caracteristicasPantalla": "LED backlit FHD IPS AntiGlare 1920x1080",
+      "calidadDeImagen": "FHD",
+      "procesador": "Intel Core i7-8565U Processor ( 1,80GHz 8MB )",
+      "modeloDelProcesador": "Core™ i5",
+      "velocidadDeProcesador": "1.60 GHz",
+      "unidadOptica": "no",
+      "dimensiones" : "358 mm x 245 mm x 16,9 mm",
+      "peso": "1.8 kg",
+      "colores": "Gris",
+      "sistemaOperativo": "SIN SISTEMA OPERATIVO",
+      "tarjetaGrafica": "Gráficos Intel UHD 620 ",
+      "teclado": "6-row Backlit Spanish",
+      "camaraWeb": "Cámara 720p"
     },
     {
       "id": 17,
@@ -406,7 +543,16 @@
           "thumbImage": "https://img.pccomponentes.com/articles/22/229361/5-1.jpg"}    
       ],
       "category": "Sobremesas",
-      "marca": "Lenovo"
+      "marca": "Lenovo",
+      "memoriaRAM" : "1x 8GB DIMM DDR4-2666",
+      "almacenamientoInterno": "HDD 1 TB 7200 RPM",
+      "procesador": "AMD A9-9425",
+      "velocidadDeProcesador": "3.7 GHz",
+      "tarjetaGrafica": "AMD Radeon R5",
+      "dimensiones": "29,7 x 34,4 x 9 cm",
+      "peso": "6,17 Kg",
+      "colores": "Negro",
+      "sistemaOperativo": "Windows 10 Home"
     },
     {
       "id": 18,
@@ -441,8 +587,21 @@
           "thumbImage": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_69790812/fee_786_587_png/Convertible-2-en-1----Microsoft-Surface-Pro-7--12.3-%22--Intel%C2%AE-Core%E2%84%A2-i5-1035G4--8-GB-RAM--128-GB--W10"}
       ],
       "category": "Portátiles",
-      "marca": "Microsoft"
-
+      "marca": "Microsoft",
+      "memoriaRAM" : " 8 GB",
+      "almacenamientoInterno": "LPDDR4x-SDRAM",
+      "tamanoPantalla": "31,2 cm",
+      "caracteristicasPantalla": "2736 x 1824 Pixeles Pantalla PixelSense multitáctil de 10 punto Multi-touch",
+      "procesador": "Intel® Core™ i5-1035G4",
+      "modeloDelProcesador": "i5-1035G4",
+      "velocidadDeProcesador": "1,1 GHz",
+      "unidadOptica": "no",
+      "dimensiones" : "29.21 cm x 0.84 cm x 20.06 cm",
+      "peso": "0.8 kg",
+      "sistemaOperativo": " Windows 10 Home",
+      "tarjetaGrafica": "Iris® Plus Graphics",
+      "teclado": "Qwerty",
+      "camaraWeb": "Sí"
     },
     {
       "id": 20,
@@ -484,7 +643,19 @@
           "thumbImage": "https://img.pccomponentes.com/articles/24/241080/5.jpg"}    
       ],
       "category": "Sobremesas",
-      "marca": "Primux"
+      "marca": "Primux",
+      "motherboard" : "",
+      "memoriaRAM" : "4GB DDR4",
+      "almacenamientoInterno": "eMMc 64GB ",
+      "tipoDeProcesador": "Celeron J3455",
+      "procesador": "Intel Celeron",
+      "familiaDeProcesador": "Intel",
+      "velocidadDeProcesador": "2.7 GHz",
+      "tarjetaGrafica": "UHD Graphics 600",
+      "dimensiones": "54,1 x 31,7 x 0,8 cm",
+      "peso": "",
+      "colores": "Gris",
+      "sistemaOperativo": "Window 10 S"
     },
     {
       "id": 22,
@@ -499,7 +670,14 @@
           "thumbImage": "https://s12emagst.akamaized.net/products/25289/25288319/images/res_70514fae834fb9f053a53bfb9b513658_full.jpg"}
       ],
       "category": "Auriculares",
-      "marca": "Thomson"
+      "marca": "Thomson",
+      "transmision": "Inalámbrica",
+      "reduccionDeRuido": "Sí",
+      "controlDeVolumen": "Sí",
+      "bluetooth": "Si",
+      "autonomia": "4.5 h",
+      "diseno": "Deportivo",
+      "contenido": "Hama WEAR7208PU Dentro de oído Binaural Inalámbrico Púrpura - Auriculares (Inalámbrico, Dentro de oído, Binaural, Intraaural, 95 dB, Púrpura)"
     },
     {
       "id": 23,
@@ -520,7 +698,24 @@
           "thumbImage": "https://img.pccomponentes.com/articles/29/292813/asus-vivobook-s512ja-br1580t-intel-core-i3-1005g1-8gb-256gb-ssd-156-mejor-precio.jpg"}
       ],
       "category": "Portátiles",
-      "marca": "ASUS"
+      "marca": "ASUS",
+      "memoriaRAM" : "8GB (4GB + 4GB [EN PLACA]) DDR4 2400MHz",
+      "almacenamientoInterno": "256 GB SSD M.2 SATA3",
+      "tamanoPantalla": "15.6pulg (39,62cm)",
+      "caracteristicasPantalla": "15.6pulg (39,62cm) LED Retroiluminado / 60Hz / NanoEdge (Borde Estrecho) / 200nits / HD (1366x768/16:9) / Antirreflejos / NTSC:45 ",
+      "calidadDeImagen": "HD",
+      "procesador": "Intel® Core™ i3-1005G1 (2 Núcleos, 4 Subprocesos, Caché: 4MB SmartCache, 1.20GHz hasta 3.40GHz, 64-bit",
+      "modeloDelProcesador": "Core™ i3",
+      "velocidadDeProcesador": "1.20 GHz",
+      "unidadOptica": "no",
+      "dimensiones" : "357 x 230 x 19 mm",
+      "peso": "1.6 kg (con batería de 2 celdas)",
+      "colores": "Gris Pizarra",
+      "sistemaOperativo": " Windows 10 Home S 64 Bits",
+      "tarjetaGrafica": "Intel UHD 620",
+      "softwareIncluido": "MyASUS, ASUS Battery Health Charging, ASUS Splendid, ASUS Tru2Life, Microsoft® Office 365 Customers (versión prueba de 30 días).",
+      "teclado": "Teclado tipo chicle, teclado numérico aislado, Español.",
+      "camaraWeb": "HD (720p)"
     },
     {
       "id": 24,
@@ -556,7 +751,14 @@
           "thumbImage": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_73748464/fee_786_587_png/Auriculares-inal%C3%A1mbricos---Sudio-Tio-SUDTIOWH--Bluetooth--9h-Autonom%C3%ADa--Resistentes-a-salpicaduras--Blanco"}
       ],
       "category": "Auriculares",
-      "marca": "Sudio"
+      "marca": "Sudio",
+      "transmision": "Inalámbrica",
+      "reduccionDeRuido": "Sí",
+      "controlDeVolumen": "Sí",
+      "bluetooth": "Si",
+      "autonomia": "9 h",
+      "diseno": "Deportivo",
+      "contenido": "1 auriculares Sudio Tio, 4 almohadillas de distintos tamaños, 4 almohadillas de punta de ala para deportes, 1 cable USB de carga, 1 estuche de piel para transportarlo, 1 clip metálico para sujetar los cables"
     },
     {
       "id": 26,
@@ -646,7 +848,19 @@
           "thumbImage": "https://img.pccomponentes.com/articles/20/202078/es-ru7105-ue43ru7105kxxc-dynamicblack-150623332.jpg"}
       ],
       "category": "Televisores",
-      "marca": "Samsung"
+      "marca": "Samsung",
+      "procesador": "Processor 4k",
+      "tipoDePantalla": "LED",
+      "calidadDeImagen": "UHD 4K",
+      "disenoDePantalla":"Plano",
+      "tamanoPantalla": "165 cm ",
+      "resolucionDePantalla": "3840 x 2160 píxeles",
+      "smartTV": "Sí",
+      "potenciaMusical": "20 W",
+      "contenido": "TV modelo UE65RU7105KXXC",
+      "controlPorVoz": "no",
+      "dimensiones": "145.75 cm / 83.73 cm / 5.97 cm",
+      "peso": "25.5 kg"
     },
     {
       "id": 30,
@@ -667,8 +881,14 @@
           "thumbImage": "https://img.pccomponentes.com/articles/24/245285/5.jpg"}
       ],
       "category": "Auriculares",
-      "marca": "Apple"
-
+      "marca": "Apple",
+      "transmision": "Inalámbrica",
+      "reduccionDeRuido": "Sí",
+      "controlDeVolumen": "Sí",
+      "bluetooth": "Si",
+      "autonomia": "Hasta 4,5 horas de reproducción de audio con una sola carga (hasta 5 horas con la cancelación activa de ruido y el modo de sonido ambiente desactivados).",
+      "diseno": "Deportivo",
+      "contenido": "AirPods Pro Estuche de carga inalámbrica Almohadillas de silicona (tres tamaños) Cable de conector Lightning a USB‑C Documentación"
     },
     {
       "id": 31,
@@ -713,7 +933,7 @@
         {"image": "https://img.pccomponentes.com/articles/22/228646/8.jpg",
           "thumbImage": "https://img.pccomponentes.com/articles/22/228646/8.jpg"}
       ],
-      "category": "Auriculares",
+      "category": "Altavoces",
       "marca": "Wonderboom"
 
     },
@@ -754,7 +974,16 @@
           "thumbImage": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_73886162/fee_786_587_png/TV-LED-50%22---OK-ODL-50662UN-TIB--UHD-4K--Smart-TV--Dolby-Audio--HDMI--USB--Negro"}
       ],
       "category": "Televisores",
-      "marca": "OK"
+      "marca": "OK",
+      "tipoDePantalla": "LED",
+      "calidadDeImagen": "UHD 4K",
+      "disenoDePantalla":"Plano",
+      "tamanoPantalla": "50 pulg ",
+      "smartTV": "Sí",
+      "potenciaMusical": "2 x 8 W",
+      "contenido": "TV + Mando + Cable",
+      "dimensiones": "1113 mm / 642 mm / 91 mm",
+      "peso": "13 kg"
     },
     {
       "id": 35,
@@ -826,7 +1055,16 @@
           "thumbImage": "https://img.pccomponentes.com/articles/20/209871/2.jpg"}         
       ],
       "category": "Televisores",
-      "marca": "Engel"
+      "marca": "Engel",
+      "tipoDePantalla": "LED",
+      "calidadDeImagen": "UHD 4K",
+      "disenoDePantalla":"Plano",
+      "tamanoPantalla": "22 pulg",
+      "potenciaMusical": " 2x 3W",
+      "contenido": "Mando a distancia, Pilas, Instrucciones de uso, Toma de corriente 12V, Cable de red a 220V, guía Electrónica de Programas (EPG)",
+      "controlPorVoz": "no",
+      "dimensiones": "509,5 x 307,2 x 75,4 mm",
+      "peso": "29.5 kg"
     },
     {
       "id": 39,
