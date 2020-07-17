@@ -49,7 +49,21 @@ export class FeaturedComponent implements OnInit {
    categoria7: any = null;
    categoria8: any = null;
 
-  show2: boolean = false;
+   marcasSelects = [];
+   marcas = [{"id":"001","name":"HP"},{"id":"002","name":"ASUS"},{"id":"003","name":"Acer"},{"id":"004","name":"Lenovo"},{"id":"005","name":"Xiaomi"},{"id":"006","name":"Cellularline"},{"id":"007","name":"Startech"},{"id":"008","name":"Samsung"},
+   {"id":"009","name":"Apple"},{"id":"010","name":"Sandisk"},{"id":"011","name":"Microsoft"},{"id":"012","name":"Primux"},{"id":"013","name":"Thomson"}, {"id":"014","name":"Sudio"}, {"id":"015","name":"Sony"}, {"id":"016","name":"Fonestar"},
+   {"id":"017","name":"Wonderboom"},{"id":"018","name":"Creative"},{"id":"019","name":"LG"},{"id":"020","name":"NVIDIA"},{"id":"021","name":"Engel"}];
+   marca1: string = null;
+   marca2: any = null;
+   marca3: any = null;
+   marca4: any = null;
+   marca5: any = null;
+   marca6: any = null;
+   marca7: any = null;
+   marca8: any = null;
+   marca9: string = null;
+   marca10: any = null;
+   marca11: any = null;
 
   constructor(private ProductService: ProductApiService, private route : ActivatedRoute) { }
 
@@ -71,7 +85,12 @@ export class FeaturedComponent implements OnInit {
         this.categoria3 = queryParams ['categoria3']
         this.categoria4 = queryParams ['categoria4']
         this.categoria5 = queryParams ['categoria5']
-        console.log(this.categoria1)
+        this.marca1 = queryParams ['marca1']
+        this.marca2 = queryParams ['marca2']
+        this.marca3 = queryParams ['marca3']
+        this.marca4 = queryParams ['marca4']
+        this.marca5 = queryParams ['marca5']
+        console.log(this.marca1)
         this.highValue2 = queryParams['maxPrice'];
         this.searchItem(
           {
@@ -83,13 +102,15 @@ export class FeaturedComponent implements OnInit {
             categoria3: this.categoria3,
             categoria4: this.categoria4,
             categoria5: this.categoria5,
+            marca1: this.marca1,
+            marca2: this.marca2,
+            marca3: this.marca3,
+            marca4: this.marca4,
+            marca5: this.marca5,
           })
       })
   }
 
-  suggest() {
-    this.show2 = true;
-  }
 
   isSelected(s:any) {
    return this.userSelects.findIndex((item) => item.id === s.id) > -1 ? true : false;
@@ -101,50 +122,50 @@ export class FeaturedComponent implements OnInit {
     console.log(this.userSelects.length)
     if (this.userSelects.length == 0) {
       this.categoria1 = null;
-      this.categoria2= null;
-      this.categoria3= null;
-      this.categoria4= null;
-      this.categoria5= null;
-      this.categoria6= null;
-      this.categoria7= null;
-      this.categoria8= null;
+      // this.categoria2= null;
+      // this.categoria3= null;
+      // this.categoria4= null;
+      // this.categoria5= null;
+      // this.categoria6= null;
+      // this.categoria7= null;
+      // this.categoria8= null;
     }
     if(this.userSelects.length == 1) {
       this.categoria1= this.userSelects[0].name;
       this.categoria2= null;
-      this.categoria3= null;
-      this.categoria4= null;
-      this.categoria5= null;
-      this.categoria6= null;
-      this.categoria7= null;
-      this.categoria8= null;
+      // this.categoria3= null;
+      // this.categoria4= null;
+      // this.categoria5= null;
+      // this.categoria6= null;
+      // this.categoria7= null;
+      // this.categoria8= null;
     } else if (this.userSelects.length == 2) {
       this.categoria1= this.userSelects[0].name;
       this.categoria2= this.userSelects[1].name;
       this.categoria3= null;
-      this.categoria4= null;
-      this.categoria5= null;
-      this.categoria6= null;
-      this.categoria7= null;
-      this.categoria8= null;
+      // this.categoria4= null;
+      // this.categoria5= null;
+      // this.categoria6= null;
+      // this.categoria7= null;
+      // this.categoria8= null;
     } else if (this.userSelects.length == 3) {
       this.categoria1= this.userSelects[0].name;
       this.categoria2= this.userSelects[1].name;
       this.categoria3= this.userSelects[2].name;
       this.categoria4= null;
-      this.categoria5= null;
-      this.categoria6= null;
-      this.categoria7= null;
-      this.categoria8= null;
+      // this.categoria5= null;
+      // this.categoria6= null;
+      // this.categoria7= null;
+      // this.categoria8= null;
     } else if (this.userSelects.length == 4) {
       this.categoria1= this.userSelects[0].name;
       this.categoria2= this.userSelects[1].name;
       this.categoria3= this.userSelects[2].name;
       this.categoria4= this.userSelects[3].name;
       this.categoria5= null;
-      this.categoria6= null;
-      this.categoria7= null;
-      this.categoria8= null;
+      // this.categoria6= null;
+      // this.categoria7= null;
+      // this.categoria8= null;
     } else if (this.userSelects.length == 5) {
       this.categoria1= this.userSelects[0].name;
       this.categoria2= this.userSelects[1].name;
@@ -152,8 +173,8 @@ export class FeaturedComponent implements OnInit {
       this.categoria4= this.userSelects[3].name;
       this.categoria5= this.userSelects[4].name;
       this.categoria6= null;
-      this.categoria7= null;
-      this.categoria8= null;
+      // this.categoria7= null;
+      // this.categoria8= null;
     } else if (this.userSelects.length == 6) {
       this.categoria1= this.userSelects[0].name;
       this.categoria2= this.userSelects[1].name;
@@ -162,7 +183,7 @@ export class FeaturedComponent implements OnInit {
       this.categoria5= this.userSelects[4].name;
       this.categoria6= this.userSelects[5].name;
       this.categoria7= null;
-      this.categoria8= null;
+      // this.categoria8= null;
     } else if (this.userSelects.length == 7) {
       this.categoria1= this.userSelects[0].name;
       this.categoria2= this.userSelects[1].name;
@@ -185,57 +206,107 @@ export class FeaturedComponent implements OnInit {
     console.log(this.categoria1)
   }
 
-  deleteSelects(s) {
-    this.userSelects = this.userSelects.filter((item) => item.id !== s.id);
-    console.log(this.userSelects.length)
-    if(this.userSelects.length == 1) {
-      this.categoria1= this.userSelects[0].name;
-    } else if (this.userSelects.length == 2) {
-      this.categoria1= this.userSelects[0].name;
-      this.categoria2= this.userSelects[1].name;
-    } else if (this.userSelects.length == 3) {
-      this.categoria1= this.userSelects[0].name;
-      this.categoria2= this.userSelects[1].name;
-      this.categoria3= this.userSelects[2].name;
-    } else if (this.userSelects.length == 4) {
-      this.categoria1= this.userSelects[0].name;
-      this.categoria2= this.userSelects[1].name;
-      this.categoria3= this.userSelects[2].name;
-      this.categoria4= this.userSelects[3].name;
-    } else if (this.userSelects.length == 5) {
-      this.categoria1= this.userSelects[0].name;
-      this.categoria2= this.userSelects[1].name;
-      this.categoria3= this.userSelects[2].name;
-      this.categoria4= this.userSelects[3].name;
-      this.categoria5= this.userSelects[4].name;
-    } else if (this.userSelects.length == 6) {
-      this.categoria1= this.userSelects[0].name;
-      this.categoria2= this.userSelects[1].name;
-      this.categoria3= this.userSelects[2].name;
-      this.categoria4= this.userSelects[3].name;
-      this.categoria5= this.userSelects[4].name;
-      this.categoria6= this.userSelects[5].name;
-    } else if (this.userSelects.length == 7) {
-      this.categoria1= this.userSelects[0].name;
-      this.categoria2= this.userSelects[1].name;
-      this.categoria3= this.userSelects[2].name;
-      this.categoria4= this.userSelects[3].name;
-      this.categoria5= this.userSelects[4].name;
-      this.categoria6= this.userSelects[5].name;
-      this.categoria7= this.userSelects[6].name;
-    } else if (this.userSelects.length == 8) {
-      this.categoria1= this.userSelects[0].name;
-      this.categoria2= this.userSelects[1].name;
-      this.categoria3= this.userSelects[2].name;
-      this.categoria4= this.userSelects[3].name;
-      this.categoria5= this.userSelects[4].name;
-      this.categoria6= this.userSelects[5].name;
-      this.categoria7= this.userSelects[6].name;
-      this.categoria8= this.userSelects[7].name;
+  isSelected2(s:any) {
+    return this.marcasSelects.findIndex((item) => item.id === s.id) > -1 ? true : false;
+   }
+
+  selectMarca(s) {
+    this.marcasSelects.find((item) => item.id === s.id) ? 
+    this.marcasSelects = this.marcasSelects.filter((item) => item.id !== s.id) :
+    this.marcasSelects.push(s);
+    console.log(this.marcasSelects.length)
+    if (this.marcasSelects.length == 0) {
+      this.marca1 = null;
     }
-    console.log(this.categoria1);
-    console.log(this.categoria2);
-    console.log(this.categoria3);
+    if(this.marcasSelects.length == 1) {
+      this.marca1= this.marcasSelects[0].name;
+      this.marca2= null;
+    } else if (this.marcasSelects.length == 2) {
+      this.marca1= this.marcasSelects[0].name;
+      this.marca2= this.marcasSelects[1].name;
+      this.marca3= null;
+    } else if (this.marcasSelects.length == 3) {
+      this.marca1= this.marcasSelects[0].name;
+      this.marca2= this.marcasSelects[1].name;
+      this.marca3= this.marcasSelects[2].name;
+      this.marca4= null;
+    } else if (this.marcasSelects.length == 4) {
+      this.marca1= this.marcasSelects[0].name;
+      this.marca2= this.marcasSelects[1].name;
+      this.marca3= this.marcasSelects[2].name;
+      this.marca4= this.marcasSelects[3].name;
+      this.marca5= null;
+    } else if (this.marcasSelects.length == 5) {
+      this.marca1= this.marcasSelects[0].name;
+      this.marca2= this.marcasSelects[1].name;
+      this.marca3= this.marcasSelects[2].name;
+      this.marca4= this.marcasSelects[3].name;
+      this.marca5= this.marcasSelects[4].name;
+      this.marca6= null;
+    } else if (this.marcasSelects.length == 6) {
+      this.marca1= this.marcasSelects[0].name;
+      this.marca2= this.marcasSelects[1].name;
+      this.marca3= this.marcasSelects[2].name;
+      this.marca4= this.marcasSelects[3].name;
+      this.marca5= this.marcasSelects[4].name;
+      this.marca6= this.marcasSelects[5].name;
+      this.marca7= null;
+    } else if (this.marcasSelects.length == 7) {
+      this.marca1= this.marcasSelects[0].name;
+      this.marca2= this.marcasSelects[1].name;
+      this.marca3= this.marcasSelects[2].name;
+      this.marca4= this.marcasSelects[3].name;
+      this.marca5= this.marcasSelects[4].name;
+      this.marca6= this.marcasSelects[5].name;
+      this.marca7= this.marcasSelects[6].name;
+      this.marca8= null;
+    } else if (this.marcasSelects.length == 8) {
+      this.marca1= this.marcasSelects[0].name;
+      this.marca2= this.marcasSelects[1].name;
+      this.marca3= this.marcasSelects[2].name;
+      this.marca4= this.marcasSelects[3].name;
+      this.marca5= this.marcasSelects[4].name;
+      this.marca6= this.marcasSelects[5].name;
+      this.marca7= this.marcasSelects[6].name;
+      this.marca8= this.marcasSelects[7].name;
+      this.marca9 = null;
+    } else if (this.marcasSelects.length == 9) {
+      this.marca1= this.marcasSelects[0].name;
+      this.marca2= this.marcasSelects[1].name;
+      this.marca3= this.marcasSelects[2].name;
+      this.marca4= this.marcasSelects[3].name;
+      this.marca5= this.marcasSelects[4].name;
+      this.marca6= this.marcasSelects[5].name;
+      this.marca7= this.marcasSelects[6].name;
+      this.marca8= this.marcasSelects[7].name;
+      this.marca9 = this.marcasSelects[8].name;
+      this.marca10= null;
+    } else if (this.marcasSelects.length == 10) {
+      this.marca1= this.marcasSelects[0].name;
+      this.marca2= this.marcasSelects[1].name;
+      this.marca3= this.marcasSelects[2].name;
+      this.marca4= this.marcasSelects[3].name;
+      this.marca5= this.marcasSelects[4].name;
+      this.marca6= this.marcasSelects[5].name;
+      this.marca7= this.marcasSelects[6].name;
+      this.marca8= this.marcasSelects[7].name;
+      this.marca9 = this.marcasSelects[8].name;
+      this.marca10= this.marcasSelects[9].name;
+      this.marca11= null;
+    } else if (this.marcasSelects.length == 11) {
+      this.marca1= this.marcasSelects[0].name;
+      this.marca2= this.marcasSelects[1].name;
+      this.marca3= this.marcasSelects[2].name;
+      this.marca4= this.marcasSelects[3].name;
+      this.marca5= this.marcasSelects[4].name;
+      this.marca6= this.marcasSelects[5].name;
+      this.marca7= this.marcasSelects[6].name;
+      this.marca8= this.marcasSelects[7].name;
+      this.marca9 = this.marcasSelects[8].name;
+      this.marca10= this.marcasSelects[9].name;
+      this.marca11= this.marcasSelects[10].name;
+    }
+    console.log(this.marca9)
   }
 
   // checkValueSobremesas(event: any){
@@ -259,6 +330,11 @@ export class FeaturedComponent implements OnInit {
     const categoria3 = this.busquedaSave.categoria3;
     const categoria4 = this.busquedaSave.categoria4;
     const categoria5 = this.busquedaSave.categoria5;
+    const marca1 = this.busquedaSave.marca1;
+    const marca2 = this.busquedaSave.marca2;
+    const marca3 = this.busquedaSave.marca3;
+    const marca4 = this.busquedaSave.marca4;
+    const marca5 = this.busquedaSave.marca5;
     console.log(minPrice);
     console.log(maxPrice);
     console.log(categoria1);
@@ -274,7 +350,7 @@ export class FeaturedComponent implements OnInit {
       .replace("í", "i")
       .replace("ó", "o")
       .replace("ú", "u");
-    this.ProductService.getApiProductsSearch(this.busquedaSave.busqueda, minPrice, maxPrice, categoria1, categoria2, categoria3, categoria4, categoria5)
+    this.ProductService.getApiProductsSearch(this.busquedaSave.busqueda, minPrice, maxPrice, categoria1, categoria2, categoria3, categoria4, categoria5, marca1, marca2, marca3, marca4, marca5)
       .then (data => {
         this.show =data;
         console.log(this.show)

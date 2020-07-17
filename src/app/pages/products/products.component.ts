@@ -27,6 +27,22 @@ export class ProductsComponent implements OnInit {
 
   listaPaginas: number[] = [1, 2, 3, 4];
   seleccionadoPage: number;
+  marcasSelects = [];
+   marcas = [{"id":"001","name":"HP"},{"id":"002","name":"ASUS"},{"id":"003","name":"Acer"},{"id":"004","name":"Lenovo"},{"id":"005","name":"Xiaomi"},{"id":"006","name":"Cellularline"},{"id":"007","name":"Startech"},{"id":"008","name":"Samsung"},
+   {"id":"009","name":"Apple"},{"id":"010","name":"Sandisk"},{"id":"011","name":"Microsoft"},{"id":"012","name":"Primux"},{"id":"013","name":"Thomson"}, {"id":"014","name":"Sudio"}, {"id":"015","name":"Sony"}, {"id":"016","name":"Fonestar"},
+   {"id":"017","name":"Wonderboom"},{"id":"018","name":"Creative"},{"id":"019","name":"LG"},{"id":"020","name":"NVIDIA"},{"id":"021","name":"Engel"}];
+   marca1: string = null;
+   marca2: any = null;
+   marca3: any = null;
+   marca4: any = null;
+   marca5: any = null;
+   marca6: any = null;
+   marca7: any = null;
+   marca8: any = null;
+   marca9: string = null;
+   marca10: any = null;
+   marca11: any = null;
+
   
 
  
@@ -44,7 +60,12 @@ export class ProductsComponent implements OnInit {
     const minPrice = parseInt(this.selectedCategory.minPrice, 10);
     const maxPrice = parseInt(this.selectedCategory.maxPrice, 10);
     console.log(minPrice);
-    console.log(maxPrice)
+    console.log(maxPrice);
+    const marca1 = this.selectedCategory.marca1;
+    const marca2 = this.selectedCategory.marca2;
+    const marca3 = this.selectedCategory.marca3;
+    const marca4 = this.selectedCategory.marca4;
+    const marca5 = this.selectedCategory.marca5;
 
     if(this.selectedCategory.categoria == "Todo"){
       this.ProductService.getApiProducts()
@@ -53,7 +74,7 @@ export class ProductsComponent implements OnInit {
         })
       } else {
         console.log("hola")
-        this.ProductService.getApiProductsCategory(this.selectedCategory.categoria, minPrice, maxPrice)
+        this.ProductService.getApiProductsCategory(this.selectedCategory.categoria, minPrice, maxPrice, marca1, marca2, marca3, marca4, marca5)
 
           .then(data => {
             this.productsCategory = data;
@@ -65,6 +86,109 @@ export class ProductsComponent implements OnInit {
     //   this.products.filter(product => product.category == this.selectedCategory).forEach(item => this.productsCategory.push(item));
     //   this.productsCategory = JSON.parse(JSON.stringify(this.products));
     // }
+  }
+
+  isSelected2(s:any) {
+    return this.marcasSelects.findIndex((item) => item.id === s.id) > -1 ? true : false;
+   }
+
+  selectMarca(s) {
+    this.marcasSelects.find((item) => item.id === s.id) ? 
+    this.marcasSelects = this.marcasSelects.filter((item) => item.id !== s.id) :
+    this.marcasSelects.push(s);
+    console.log(this.marcasSelects.length)
+    if (this.marcasSelects.length == 0) {
+      this.marca1 = null;
+    }
+    if(this.marcasSelects.length == 1) {
+      this.marca1= this.marcasSelects[0].name;
+      this.marca2= null;
+    } else if (this.marcasSelects.length == 2) {
+      this.marca1= this.marcasSelects[0].name;
+      this.marca2= this.marcasSelects[1].name;
+      this.marca3= null;
+    } else if (this.marcasSelects.length == 3) {
+      this.marca1= this.marcasSelects[0].name;
+      this.marca2= this.marcasSelects[1].name;
+      this.marca3= this.marcasSelects[2].name;
+      this.marca4= null;
+    } else if (this.marcasSelects.length == 4) {
+      this.marca1= this.marcasSelects[0].name;
+      this.marca2= this.marcasSelects[1].name;
+      this.marca3= this.marcasSelects[2].name;
+      this.marca4= this.marcasSelects[3].name;
+      this.marca5= null;
+    } else if (this.marcasSelects.length == 5) {
+      this.marca1= this.marcasSelects[0].name;
+      this.marca2= this.marcasSelects[1].name;
+      this.marca3= this.marcasSelects[2].name;
+      this.marca4= this.marcasSelects[3].name;
+      this.marca5= this.marcasSelects[4].name;
+      this.marca6= null;
+    } else if (this.marcasSelects.length == 6) {
+      this.marca1= this.marcasSelects[0].name;
+      this.marca2= this.marcasSelects[1].name;
+      this.marca3= this.marcasSelects[2].name;
+      this.marca4= this.marcasSelects[3].name;
+      this.marca5= this.marcasSelects[4].name;
+      this.marca6= this.marcasSelects[5].name;
+      this.marca7= null;
+    } else if (this.marcasSelects.length == 7) {
+      this.marca1= this.marcasSelects[0].name;
+      this.marca2= this.marcasSelects[1].name;
+      this.marca3= this.marcasSelects[2].name;
+      this.marca4= this.marcasSelects[3].name;
+      this.marca5= this.marcasSelects[4].name;
+      this.marca6= this.marcasSelects[5].name;
+      this.marca7= this.marcasSelects[6].name;
+      this.marca8= null;
+    } else if (this.marcasSelects.length == 8) {
+      this.marca1= this.marcasSelects[0].name;
+      this.marca2= this.marcasSelects[1].name;
+      this.marca3= this.marcasSelects[2].name;
+      this.marca4= this.marcasSelects[3].name;
+      this.marca5= this.marcasSelects[4].name;
+      this.marca6= this.marcasSelects[5].name;
+      this.marca7= this.marcasSelects[6].name;
+      this.marca8= this.marcasSelects[7].name;
+      this.marca9 = null;
+    } else if (this.marcasSelects.length == 9) {
+      this.marca1= this.marcasSelects[0].name;
+      this.marca2= this.marcasSelects[1].name;
+      this.marca3= this.marcasSelects[2].name;
+      this.marca4= this.marcasSelects[3].name;
+      this.marca5= this.marcasSelects[4].name;
+      this.marca6= this.marcasSelects[5].name;
+      this.marca7= this.marcasSelects[6].name;
+      this.marca8= this.marcasSelects[7].name;
+      this.marca9 = this.marcasSelects[8].name;
+      this.marca10= null;
+    } else if (this.marcasSelects.length == 10) {
+      this.marca1= this.marcasSelects[0].name;
+      this.marca2= this.marcasSelects[1].name;
+      this.marca3= this.marcasSelects[2].name;
+      this.marca4= this.marcasSelects[3].name;
+      this.marca5= this.marcasSelects[4].name;
+      this.marca6= this.marcasSelects[5].name;
+      this.marca7= this.marcasSelects[6].name;
+      this.marca8= this.marcasSelects[7].name;
+      this.marca9 = this.marcasSelects[8].name;
+      this.marca10= this.marcasSelects[9].name;
+      this.marca11= null;
+    } else if (this.marcasSelects.length == 11) {
+      this.marca1= this.marcasSelects[0].name;
+      this.marca2= this.marcasSelects[1].name;
+      this.marca3= this.marcasSelects[2].name;
+      this.marca4= this.marcasSelects[3].name;
+      this.marca5= this.marcasSelects[4].name;
+      this.marca6= this.marcasSelects[5].name;
+      this.marca7= this.marcasSelects[6].name;
+      this.marca8= this.marcasSelects[7].name;
+      this.marca9 = this.marcasSelects[8].name;
+      this.marca10= this.marcasSelects[9].name;
+      this.marca11= this.marcasSelects[10].name;
+    }
+    console.log(this.marca9)
   }
 
   ngOnInit(): void {
@@ -99,12 +223,22 @@ export class ProductsComponent implements OnInit {
         this.highValue2 = this.highValue
         console.log(this.value)
         this.highValue2 = queryParams['maxPrice'];
+        this.marca1 = queryParams ['marca1']
+        this.marca2 = queryParams ['marca2']
+        this.marca3 = queryParams ['marca3']
+        this.marca4 = queryParams ['marca4']
+        this.marca5 = queryParams ['marca5']
         // this.getProductByCategory(this.categoriaFilter, { minPrice: minPrice })
         this.getProductByCategory(
           {
             categoria: categoria,
             minPrice: this.value2,
-            maxPrice: this.highValue2
+            maxPrice: this.highValue2,
+            marca1: this.marca1,
+            marca2: this.marca2,
+            marca3: this.marca3,
+            marca4: this.marca4,
+            marca5: this.marca5,
           })
       })
 

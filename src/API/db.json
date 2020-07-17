@@ -143,7 +143,7 @@
           "thumbImage": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_73749068/fee_786_587_png/All-in-one---HP-22-c0039ns--21.5%22-FHD--AMD-A4--9125-Dual-Core--8-GB-RAM--256-GB-SSD--Windows-10--Blanco"}
       ],
       "category": "Sobremesas",
-      "marca": "Lenovo"
+      "marca": "HP"
 
     },
     {
@@ -204,7 +204,7 @@
         {"image": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_71377747/fee_786_587_png/Auriculares-inal%C3%A1mbricos---Cellularline-BTPETITTWSK--Bluetooth--MicroUSB--Atiende-llamadas--4.5-Horas--Gris",
           "thumbImage": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_71377747/fee_786_587_png/Auriculares-inal%C3%A1mbricos---Cellularline-BTPETITTWSK--Bluetooth--MicroUSB--Atiende-llamadas--4.5-Horas--Gris"}
       ],
-      "category": "Sobremesas",
+      "category": "Auriculares",
       "marca": "Cellularline"
     },
     {
@@ -271,6 +271,7 @@
         {"image": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_75698575/fee_786_587_png/TV-LED-65%22---Samsung-Crystal-UHD-65TU7125--Smart-TV--4K-Real-y-HDR10---Compatible-Asistentes-de-Voz--Tap-View",
           "thumbImage": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_75698575/fee_786_587_png/TV-LED-65%22---Samsung-Crystal-UHD-65TU7125--Smart-TV--4K-Real-y-HDR10---Compatible-Asistentes-de-Voz--Tap-View"}
       ],
+      "category": "Televisores",
       "marca": "Samsung"
     },
     {
@@ -713,7 +714,7 @@
           "thumbImage": "https://img.pccomponentes.com/articles/22/228646/8.jpg"}
       ],
       "category": "Auriculares",
-      "marca": "Ultimate Ears"
+      "marca": "Wonderboom"
 
     },
     {
@@ -752,7 +753,7 @@
         {"image": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_73886162/fee_786_587_png/TV-LED-50%22---OK-ODL-50662UN-TIB--UHD-4K--Smart-TV--Dolby-Audio--HDMI--USB--Negro",
           "thumbImage": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_73886162/fee_786_587_png/TV-LED-50%22---OK-ODL-50662UN-TIB--UHD-4K--Smart-TV--Dolby-Audio--HDMI--USB--Negro"}
       ],
-      "category": "Componentes",
+      "category": "Televisores",
       "marca": "OK"
     },
     {
@@ -810,7 +811,7 @@
           "thumbImage": "https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-79193365/fee_786_587_png/Bater%C3%ADa-externa---Cellular-Line-Free-Slim-5000K--5000mAh--Negro"}          
       ],
       "category": "Accesorios Smartphones",
-      "marca": "Cellular"
+      "marca": "Cellularline"
     },
     {
       "id": 38,

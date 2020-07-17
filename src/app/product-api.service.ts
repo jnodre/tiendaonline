@@ -48,7 +48,7 @@ export class ProductApiService {
       })
   }
 
-  getApiProductsSearch(busqueda:string, minPrice?: number, maxPrice?: number, category1?:string, category2?:string, category3?:string, category4?:string, category5?:string ){
+  getApiProductsSearch(busqueda:string, minPrice?: number, maxPrice?: number, category1?:string, category2?:string, category3?:string, category4?:string, category5?:string, marca1?: string, marca2?: string, marca3?: string, marca4?: string, marca5?: string ){
     let url = `http://localhost:3000/products?`;
     if (busqueda) {
       url += `title_like=` + busqueda;
@@ -74,6 +74,21 @@ export class ProductApiService {
     if (category5) {
       url += `&category=` + category5;
     }
+    if (marca1) {
+      url += `&marca=` + marca1;
+    }
+    if (marca2) {
+      url += `&marca=` + marca2;
+    }
+    if (marca3) {
+      url += `&marca=` + marca3;
+    }
+    if (marca4) {
+      url += `&marca=` + marca4;
+    }
+    if (marca5) {
+      url += `&marca=` + marca5;
+    }
     return axios.get(url)
       .then (response => {
         return response.data;
@@ -83,7 +98,7 @@ export class ProductApiService {
       })
   }
 
-  getApiProductsCategory(selectedCategory:string, minPrice : number= 0, maxPrice: number = 2500  ){
+  getApiProductsCategory(selectedCategory:string, minPrice : number= 0, maxPrice: number = 2500, marca1?: string, marca2?: string, marca3?: string, marca4?: string, marca5?: string ){
     let url = 'http://localhost:3000/products?'
 
     if (selectedCategory) {
@@ -95,6 +110,21 @@ export class ProductApiService {
     }
     if (maxPrice) {
       url += '&price_lte=' + maxPrice;
+    }
+    if (marca1) {
+      url += `&marca=` + marca1;
+    }
+    if (marca2) {
+      url += `&marca=` + marca2;
+    }
+    if (marca3) {
+      url += `&marca=` + marca3;
+    }
+    if (marca4) {
+      url += `&marca=` + marca4;
+    }
+    if (marca5) {
+      url += `&marca=` + marca5;
     }
     return axios.get(url)
       .then (response => {

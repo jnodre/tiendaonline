@@ -1,53 +1,29 @@
-.autocomplete {
-    position: relative;
-    width: 100%;
-
+.filter-categories {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 18px;
 }
 
-.chips-input-container{
-  display: inline-flex;
-  border: 1px solid var(--border-gray);
-  border-radius: 5px;
-}
-
-input {
-  font-weight: 600;
-  border: none;
-  outline: none;
-  margin-left: 7px;
-}
-input:hover{
-  border:none;
-  border-radius: 0px;
+.filter-marcas {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 18px;
 }
 .categories{
     font-weight: 400;
 }
-.autocomplete-items {
-      position: absolute;
-    border: 1px solid #d4d4d4;
-    border-radius: 4px;
-    margin-top: 15px;
-    top: 100%;
-    left: 0;
-    right: 50%;
+
+.button{
+    border:none;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .selected-suggestion{
-    background-color: red !important; 
+    background-color: rgb(0, 81, 255) !important; 
     color: white;
-}
-
-.autocomplete-items div {
-    padding: 10px;
-    cursor: pointer;
-    background-color: #fff;
-    border-bottom: 1px solid #d4d4d41a;
-}
-
-.autocomplete-items div:hover {
-    background-color: var(--main-color); 
-    color:white;
 }
 
 .user-chip{
@@ -58,20 +34,6 @@ input:hover{
   width: 150px;
   text-align: center;
   color: white;
-}
-
-.delete-icon-chip {
-      color: white;
-    opacity: 0.7;
-    cursor: pointer;
-    float: right;
-    position: relative;
-    right: 7px;
-    font-size: 12px;
-}
-
-.delete-icon-chip:hover {
-  opacity: 1;
 }
 
 .products{
@@ -126,7 +88,14 @@ input:hover{
     font-weight: 500;
 }
 .errorLink{color:var(--main-color);text-align: center; cursor:pointer;}
-.container{display:flex;}
+.container{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start; 
+    height: 100%;
+    width: 100%;
+}
 .button{
     border:none;
     padding: 10px;
@@ -143,5 +112,10 @@ input:hover{
     transition: 0.2s linear;
 }
 .filter{
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    height: 100%;
+    width: 20%;
     margin-left: 10px;
 }
