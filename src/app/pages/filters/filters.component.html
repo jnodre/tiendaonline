@@ -3,16 +3,35 @@
     <div style="width: 840px; height: 400px; text-align:center;margin:0; padding:0;">
         <ng-image-slider #nav
           [images]="imageObject"
+          [imagePopup]="false"
           [infinite]="false"
           [autoSlide]="1"
           [imageSize]="{width: '45%', height: '400px', space: 4}"
-          slideImage="1"></ng-image-slider>
+          slideImage="1"
+          (imageClick)="showImage($event)"></ng-image-slider>
     </div>
-    <li><img [src]="product.thumbnailURL[0].image"></li> 
+    <li><img [src]="imageShow"></li> 
     <li>{{product.description}}</li>
     <li>Precio: {{product.priceHR}}</li>
-    <li *ngIf="product.motherboard">Motherboard: {{product.motherboard}}</li> 
-    <li *ngIf="product.memoria">Memoria: {{product.memoria}}</li>
+    <li *ngIf="product.tipoDeDispositivo">Tipo de Dispositivo: {{product.tipoDeDispositivo}}</li> 
+    <li *ngIf="product.motherboard">Motherboard: {{product.motherboard}}</li>
+    <li *ngIf="product.capacidadMemoria">Capacidad Memoria: {{product.capacidadMemoria}}</li>
+    <li *ngIf="product.capacidad">Capacidad: {{product.capacidad}}</li>
+    <li *ngIf="product.potenciaDeSalida">Potencia de Salida: {{product.potenciaDeSalida}}</li>
+    <li *ngIf="product.claseDeVelocidad">Clase de Velocidad: {{product.claseDeVelocidad}}</li>
+    <li *ngIf="product.velocidadDeLectura">Velocidad de Lectura: {{product.velocidadDeLectura}}</li>
+    <li *ngIf="product.adaptadorSD">Adaptador SD: {{product.adaptadorSD}}</li>
+    <li *ngIf="product.streamingDeMusica">Streaming de Musica: {{product.streamingDeMusica}}</li>
+    <li *ngIf="product.potenciaTotal">Potencia Total: {{product.potenciaTotal}}</li>
+    <li *ngIf="product.subwoofer">Subwoofer: {{product.subwoofer}}</li>
+    <li *ngIf="product.potenciaRMS">Potencia RMS: {{product.potenciaRMS}}</li>
+    <li *ngIf="product.asistenteDeVozIntegrado">Asistente de Voz Integrado: {{product.asistenteDeVozIntegrado}}</li>
+    <li *ngIf="product.compatiblecon">Compatible con: {{product.compatiblecon}}</li>
+    <li *ngIf="product.wiFi">Wi-Fi: {{product.wiFi}}</li>
+    <li *ngIf="product.reproduccionPor">Reproducción por: {{product.reproduccionPor}}</li>
+    <li *ngIf="product.sensibilidad">sensibilidad: {{product.sensibilidad}}</li>
+    <li *ngIf="product.alcanceInalambrico">Alcance Inalámbrico: {{product.alcanceInalambrico}}</li>
+    <li *ngIf="product.memoriaRAM">Memoria: {{product.memoria}}</li>
     <li *ngIf="product.memoriaYAlmacenamiento">Memoria y Almacenamiento: {{product.memoriaYAlmacenamiento}}</li>
     <li *ngIf="product.almacenamientoInterno">Almacenamiento Interno: {{product.almacenamientoInterno}}</li>
     <li *ngIf="product.tamanoPantalla">Tamaño de la Pantalla (cm/pulg): {{product.tamanoPantalla}}</li>
@@ -54,5 +73,14 @@
     <li *ngIf="product.bluetooth">Bluetooth: {{product.bluetooth}}</li>
     <li *ngIf="product.autonomia">Autonomia: {{product.autonomia}}</li>
     <li *ngIf="product.diseno">Diseno: {{product.diseno}}</li>
+    <li *ngIf="product.caracteristicasEspeciales">Caracteristicas Especiales: {{product.caracteristicasEspeciales}}</li>
+    <li *ngIf="product.anchura">Anchura: {{product.anchura}}</li>
+    <li *ngIf="product.altura">Altura: {{product.altura}}</li>
+    <li *ngIf="product.profundidad">Profundidad: {{product.profundidad}}</li>
+    <li *ngIf="product.sistemaDeSonido">Sistema de Sonido: {{product.sistemaDeSonido}}</li>
+    <li *ngIf="product.conversionDigitalAnalogico">Conversión Digital-Analógico: {{product.conversionDigitalAnalogico}}</li>
+    <li *ngIf="product.chipDeTarjetaGrafica">Chip de Tarjeta Gráfica: {{product.chipDeTarjetaGrafica}}</li> 
+    <li *ngIf="product.memoriaGraficaTotal">Memoria Gráfica Total: {{product.memoriaGraficaTotal}}</li>
+    <li *ngIf="product.tipoDeMemoriaGrafica">Tipo de Memoria Gráfica: {{product.tipoDeMemoriaGrafica}}</li>    
 
 </div>

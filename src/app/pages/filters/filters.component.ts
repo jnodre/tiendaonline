@@ -10,6 +10,7 @@ import { ActivatedRoute } from "@angular/router";
 export class FiltersComponent implements OnInit {
   product: any = {};
   imageObject: any[];
+  imageShow: any
   
   constructor(private ProductService: ProductApiService,  private route : ActivatedRoute) { 
     this.loadProduct();
@@ -23,8 +24,17 @@ export class FiltersComponent implements OnInit {
     console.log(id);
     this.product= await this.ProductService.getApiProductById(id);
     this.imageObject = this.product.thumbnailURL;
+    this.imageShow= this.product.thumbnailURL[0].image;
     console.log(this.imageObject);
     console.log(this.product);
+  }
+
+  showImage(event){
+    const index = event;
+    this.imageShow = this.imageObject[index].image;
+    console.log(this.imageShow)
+  
+    console.log(event)
   }
 
     //   // this.products.forEach(product => {

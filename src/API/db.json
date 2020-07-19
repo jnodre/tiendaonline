@@ -295,7 +295,12 @@
           "thumbImage": "https://sgcdn.startech.com/005329/media/products/gallery_large/pex2m2.b.jpg"}
       ],
       "category": "Componentes",
-      "marca": "Startech"
+      "marca": "Startech",
+      "caracteristicasEspeciales": "Piezas de ajuste y varios agujeros de montaje que permiten la instalación de unidades SSD de 110mm, 80mm, 60mm, 42mm y 30mm Configuración rápida, sin problemas, con soporte nativo en múltiples sistemas operativos Compatible con los estándares PCI Express 2.0 Compatible con NCQ (Native Command Queuing, cola de órdenes nativas) Alimentación por bus PCIe o por la fuente de alimentación de su ordenador mediante un conector de alimentación de unidad floppy de 4 pines (alimentación de unidad pequeña) Equipada con un soporte de perfil completo e incluye un soporte de perfil bajo/media altura que permite la instalación en ordenadores de factor de forma pequeño Se instala en ranuras PCIe x4, x8 o x16",
+      "anchura": "180 mm",
+      "altura": "120 mm",
+      "peso":"62",
+      "contenido": "Tarjeta controladora SSD M.2 SATA Soporte de perfil bajo Tornillos de Montaje de la unidad M.2"
     },
     {
       "id": 9,
@@ -420,7 +425,13 @@
           "thumbImage": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_71591200/fee_786_587_png/M%C3%B3vil---Xiaomi-Redmi-8--Azul--32-GB--3-GB-RAM--6.22%22-HD---Snapdragon-439--5000-mAh--Android"}
       ],
       "category": "Smartphones",
-      "marca": "Xiaomi"
+      "marca": "Xiaomi",
+      "tipoDeDispositivo": "Redmi 8",
+      "sistemaOperativo": "Android",
+      "procesador": "Snapdragon 439",
+      "velocidadDeProcesador": "2 GHz",
+      "capacidadMemoria": "64 GB",
+      "memoriaRAM": "4 GB"      
     },
     {
       "id": 13,
@@ -467,7 +478,13 @@
           "thumbImage": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_74002888/fee_786_587_png/M%C3%B3vil---Xiaomi-Redmi-Note-8-Pro--Verde--64-GB--6-GB--6.53-%22-Full-HD---Helio-G90T--4500-mAh--Android"}
       ],
       "category": "Smartphones",
-      "marca": "Xiaomi"
+      "marca": "Xiaomi",
+      "tipoDeDispositivo": "Redmi Note 8 Pro",
+      "sistemaOperativo": "Android",
+      "procesador": "Helio G90T",
+      "velocidadDeProcesador": "2,05 GHz",
+      "capacidadMemoria": "128 GB",
+      "memoriaRAM": "6 GB"   
     },
     {
       "id": 15,
@@ -484,7 +501,13 @@
           "thumbImage": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_72132828/fee_786_587_png/M%C3%B3vil---Samsung-Galaxy-A51--Azul--128-GB--4-GB-RAM--6.5%22-Full-HD---Exynos9611--4000-mAh--Android"}
       ],
       "category": "Smartphones",
-      "marca": "Samsung"
+      "marca": "Samsung",
+      "tipoDeDispositivo": "Galaxy A51",
+      "sistemaOperativo": "Android",
+      "procesador": "Exynos 9611",
+      "velocidadDeProcesador": "2,3 GHz",
+      "capacidadMemoria": "128 GB",
+      "memoriaRAM": "4 GB"
 
     },
     {
@@ -571,8 +594,13 @@
           "thumbImage": "https://img.pccomponentes.com/articles/13/138571/1385714.jpg"}   
       ],
       "category": "Accesorios Smartphones",
-      "marca": "Sandisk"
-
+      "marca": "Sandisk",
+      "capacidadMemoria": "32 GB",
+      "claseDeVelocidad": "Clase 10",
+      "velocidadDeLectura": "98 MB/s",
+      "adaptadorSD": "Sí",
+      "anchura": "10.1 cm",
+      "altura": "15.2 cm"
     },
     {
       "id": 19,
@@ -620,7 +648,10 @@
           "thumbImage": "https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-81816188/fee_786_587_png/Powerbank---Samsung-EB-P1100--10000-mAh--Carga-r%C3%A1pida--Plata"}   
       ],
       "category": "Accesorios Smartphones",
-      "marca": "Samsung"
+      "marca": "Samsung",
+      "anchura": "7.1 cm",
+      "altura": "14.18 cm",
+      "profundidad": "1.4 cm"
     },
     {
       "id": 21,
@@ -734,7 +765,12 @@
           "thumbImage": "https://img.pccomponentes.com/articles/26/263247/xiaomi-mi-compact-speaker-2-altavoz-bluetooth-blanco-especificaciones.jpg"}
       ],
       "category": "Altavoces",
-      "marca": "Xiaomi"
+      "marca": "Xiaomi",
+      "streamingDeMusica": "Bluetooth",
+      "bluetooth": "Si",
+      "caracteristicasEspeciales": "Hasta 10 metros, Impedancia de 4Ω, Soporte A2DP / AVRCP / SPP / HFP / BLE, Rango de frecuencia de audio 200Hz ~ 18kHz (-10dB)",
+      "dimensiones": "5 cm x 3.2 cm x 5 cm ",
+      "peso": "55 g"
     },
     {
       "id": 25,
@@ -779,7 +815,11 @@
           "thumbImage": "https://img.pccomponentes.com/articles/19/192466/05.jpg"}
       ],
       "category": "Altavoces",
-      "marca": "Sony"
+      "marca": "Sony",
+      "potenciaTotal": "600",
+      "subwoofer": "Inalámbrico",
+      "potenciaRMS": "600 W",
+      "bluetooth": "Si"
     },
     {
       "id": 27,
@@ -806,7 +846,13 @@
           "thumbImage": "https://img.pccomponentes.com/articles/25/257853/samsung-galaxy-a71-6-128gb-prism-crush-blue-mejor-precio.jpg"}
       ],
       "category": "Smartphones",
-      "marca": "Samsung"
+      "marca": "Samsung",
+      "tipoDeDispositivo": "Galaxy A71",
+      "sistemaOperativo": "Android",
+      "procesador": "SDM730",
+      "velocidadDeProcesador": "2,2 GHz",
+      "capacidadMemoria": "128 GB",
+      "memoriaRAM": "6 GB"
     },
     {
       "id": 28,
@@ -823,7 +869,12 @@
           "thumbImage": "https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-78688264/fee_786_587_png/Altavoz-port%C3%A1til---Fonestar-BOX-35LED--Bluetooth--Karaoke--Efectos-luminosos--Micr%C3%B3fono"}
       ],
       "category": "Altavoces",
-      "marca": "Fonestar"
+      "marca": "Fonestar",
+      "asistenteDeVozIntegrado": "Asistente de Google",
+      "compatiblecon": "Android, iOS",
+      "controlPorVoz": "Sí",
+      "wiFi": "Sí",
+      "peso": "390 g"
     },
     {
       "id": 29,
@@ -909,7 +960,13 @@
           "thumbImage": "https://img.pccomponentes.com/articles/29/299068/5694-samsung-galaxy-z-flip-8-256gb-mirror-black-libre-version-importada-eu-caracteristicas.jpg"}
       ],
       "category": "Smartphones",
-      "marca": "Samsung"
+      "marca": "Samsung",
+      "tipoDeDispositivo": "Galaxy Z Flip",
+      "sistemaOperativo": "Android",
+      "procesador": "Snapdragon 855",
+      "velocidadDeProcesador": "2,96 GHz",
+      "capacidadMemoria": "256 GB",
+      "memoriaRAM": "8 GB"
     },
     {
       "id": 32,
@@ -934,8 +991,13 @@
           "thumbImage": "https://img.pccomponentes.com/articles/22/228646/8.jpg"}
       ],
       "category": "Altavoces",
-      "marca": "Wonderboom"
-
+      "marca": "Wonderboom",
+      "reproduccionPor": "Bluetooth",
+      "potenciaRMS": "85 W",
+      "sensibilidad": "86 dB",
+      "alcanceInalambrico": "30 m",
+      "bluetooth": "Si",
+      "caracteristicasEspeciales": "Se puede emparejar con otro Wonderboom"
     },
     {
       "id": 33,
@@ -954,8 +1016,9 @@
           "thumbImage": "https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-79190163/fee_786_587_png/Tarjeta-de-sonido---Creative-Sound-Blaster-Audigy-FX--sonido-5.1"}
       ],
       "category": "Componentes",
-      "marca": "Creative"
-      
+      "marca": "Creative",
+      "sistemaDeSonido": "SBX Pro Studio 5.1",
+      "ConversionDigitalAnalogico": "DAC de 192 kHz / 24 bits"
     },
     {
       "id": 34,
@@ -1004,7 +1067,13 @@
           "thumbImage": "https://img.pccomponentes.com/articles/30/307786/5544-lg-rk1d-torre-de-sonido-bluetooth-con-radio-fm-usb-bass-refflex-60w-66f96e31-01c1-43e0-8f8b-7d85717433c0.jpg"}          
       ],
       "category": "Altavoces",
-      "marca": "LG"
+      "marca": "LG",
+      "bluetooth": "Si",
+      "caracteristicasEspeciales": "Radio FM",
+      "peso": "8",
+      "contenido": "Manual BásicoMando a Distancia2 pilas AAAAntena FM",
+      "profundidad": "29.8 cm",
+      "altura": "26.6 cm"
     },
     {
       "id": 36,
@@ -1025,7 +1094,10 @@
           "thumbImage": "https://img.pccomponentes.com/articles/14/146726/4.jpg"}          
       ],
       "category": "Componentes",
-      "marca": "NVIDIA"
+      "marca": "NVIDIA",
+      "chipDeTarjetaGrafica": "Quadro Maxwell M4000",
+      "memoriaGraficaTotal": "8 GB",
+      "tipoDeMemoriaGrafica" : "GDDR5"
     },
     {
       "id": 37,
@@ -1040,7 +1112,10 @@
           "thumbImage": "https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-79193365/fee_786_587_png/Bater%C3%ADa-externa---Cellular-Line-Free-Slim-5000K--5000mAh--Negro"}          
       ],
       "category": "Accesorios Smartphones",
-      "marca": "Cellularline"
+      "marca": "Cellularline",
+      "capacidad": "5000 mAh",
+      "potenciaDeSalida": "2.1 A",
+      "caracteristicasEspeciales": "Carga rápida"
     },
     {
       "id": 38,
@@ -1081,7 +1156,13 @@
           "thumbImage": "https://img.pccomponentes.com/articles/13/138622/03.jpg"}         
       ],
       "category": "Accesorios Smartphones",
-      "marca": "SanDisk"
+      "marca": "SanDisk",
+      "capacidadMemoria": "128 GB",
+      "claseDeVelocidad": "Clase 10",
+      "velocidadDeLectura": "100 MB/s",
+      "adaptadorSD": "Sí",
+      "caracteristicasEspeciales": "UHS-I",
+      "anchura": "10.1 cm"
     }
   ]
 }
