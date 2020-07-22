@@ -1,18 +1,34 @@
 <div>
-    <h1>{{product.title}}</h1>
-    <div style="width: 840px; height: 400px; text-align:center;margin:0; padding:0;">
-        <ng-image-slider #nav
-          [images]="imageObject"
-          [imagePopup]="false"
-          [infinite]="false"
-          [autoSlide]="1"
-          [imageSize]="{width: '45%', height: '400px', space: 4}"
-          slideImage="1"
-          (imageClick)="showImage($event)"></ng-image-slider>
+    <div class="container">
+        <div>
+            <div><img [src]="imageShow" style="width: 640px"></div> 
+            <div style="width: 640px; height: 200px; text-align:center;margin:0; padding:0;">
+                <ng-image-slider #nav
+                  [images]="imageObject"
+                  [imagePopup]="false"
+                  [infinite]="false"
+                  [autoSlide]="1"
+                  [imageSize]="{width: '20%', height: '100px', space: 4}"
+                  slideImage="1"
+                  (imageClick)="showImage($event)"></ng-image-slider>
+            </div> 
+        </div>
+        
+        <div class="container-mainContent">
+            <div>
+                <div><h1>{{product.title}}</h1></div>
+            </div>
+            <div>
+                <div>Descripción</div>
+                <div>{{product.description}}</div>
+            </div>
+            <div>
+                <div>Precio</div>
+                <div>{{product.priceHR}}</div>
+            </div>
+        </div>        
     </div>
-    <li><img [src]="imageShow"></li> 
-    <li>{{product.description}}</li>
-    <li>Precio: {{product.priceHR}}</li>
+    
     <li *ngIf="product.tipoDeDispositivo">Tipo de Dispositivo: {{product.tipoDeDispositivo}}</li> 
     <li *ngIf="product.motherboard">Motherboard: {{product.motherboard}}</li>
     <li *ngIf="product.capacidadMemoria">Capacidad Memoria: {{product.capacidadMemoria}}</li>
@@ -31,7 +47,7 @@
     <li *ngIf="product.reproduccionPor">Reproducción por: {{product.reproduccionPor}}</li>
     <li *ngIf="product.sensibilidad">sensibilidad: {{product.sensibilidad}}</li>
     <li *ngIf="product.alcanceInalambrico">Alcance Inalámbrico: {{product.alcanceInalambrico}}</li>
-    <li *ngIf="product.memoriaRAM">Memoria: {{product.memoria}}</li>
+    <li *ngIf="product.memoriaRAM">Memoria: {{product.memoriaRAM}}</li>
     <li *ngIf="product.memoriaYAlmacenamiento">Memoria y Almacenamiento: {{product.memoriaYAlmacenamiento}}</li>
     <li *ngIf="product.almacenamientoInterno">Almacenamiento Interno: {{product.almacenamientoInterno}}</li>
     <li *ngIf="product.tamanoPantalla">Tamaño de la Pantalla (cm/pulg): {{product.tamanoPantalla}}</li>
@@ -83,4 +99,13 @@
     <li *ngIf="product.memoriaGraficaTotal">Memoria Gráfica Total: {{product.memoriaGraficaTotal}}</li>
     <li *ngIf="product.tipoDeMemoriaGrafica">Tipo de Memoria Gráfica: {{product.tipoDeMemoriaGrafica}}</li>    
 
+</div>
+<h1>También podría interesar</h1>
+<div  fxLayout="row wrap" fxLayoutAlign="center center">
+    <div  fxLayout="column wrap" fxLayoutAlign="space-between center" class="products"
+     *ngFor = "let product of sugerencias" [routerLink]="['/products', product.id]">
+    <li class="name">{{product.title}}</li>
+    <li><img [src]="product.thumbnailURL[0].image"></li>
+    <li class="price">{{product.priceHR}}</li>
+    </div>
 </div>

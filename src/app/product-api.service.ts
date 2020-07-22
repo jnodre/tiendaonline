@@ -1,5 +1,9 @@
 import { Injectable } from '@angular/core';
 import axios from "axios";
+export type User = {
+  name: string,
+  lastname: string
+}
 
 @Injectable({
   providedIn: 'root'
@@ -98,7 +102,7 @@ export class ProductApiService {
       })
   }
 
-  getApiProductsCategory(selectedCategory:string, minPrice : number= 0, maxPrice: number = 2500, marca1?: string, marca2?: string, marca3?: string, marca4?: string, marca5?: string ){
+  getApiProductsCategory(selectedCategory:string, minPrice : number= 0, maxPrice: number = 2500, marca1?: string, marca2?: string, marca3?: string, marca4?: string, marca5?: string, exclude?: string ){
     let url = 'http://localhost:3000/products?'
 
     if (selectedCategory) {
@@ -126,6 +130,9 @@ export class ProductApiService {
     if (marca5) {
       url += `&marca=` + marca5;
     }
+    if (exclude) {
+      url += `&title_ne=` + exclude;
+    }
     return axios.get(url)
       .then (response => {
         return response.data;
@@ -134,6 +141,16 @@ export class ProductApiService {
         console.log("Se ha producido el error", error);
       })
   }
+
+  createWorker(user: User) {
+    console.log(user)
+    return axios.post('http://localhost:3000/workers', user)
+      .then (res=> res.data)
+      .catch (error => {
+        console.log("Se ha producido el error", error);
+      })
+  }
+
   // getApiProductsSearch(busqueda:string, value?: number, highValue?: number, selectedCategory?: any){
   //   console.log(busqueda);
   //   let url = `http://localhost:3000/products?`;

@@ -1,1 +1,10 @@
-<p>trabaja works!</p>
+<p>J2pk es una empresa lider en el sector de distribución de electrónica de consumo y servicios relacionados. El esfuerzo, entrega e ilusión de nuestro personal es una de las claves de nuestro éxito y su desarrollo profesional y formación son prioritarios para nuestro grupo. Nuestra prioridad es, sin duda, garantizar el bienestar de nuestros equipos. </p>
+
+<p> ¿Quieres ser parte de Nuestro Equipo? </p>
+
+<p>Te damos la oportunidad de darte a conocer.</p>
+
+<div>
+    <input placeholder="Nombre" [(ngModel)]="nuevoUser.name">
+    <button [disabled]="nuevoUser.name == '' || nuevoUser.name == ' '" (click)="crearCV()">Completar</button>
+</div>

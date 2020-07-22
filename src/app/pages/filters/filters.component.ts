@@ -9,20 +9,32 @@ import { ActivatedRoute } from "@angular/router";
 })
 export class FiltersComponent implements OnInit {
   product: any = {};
+  sugerencias: any = [];
   imageObject: any[];
-  imageShow: any
+  imageShow: any;
+  categoriaOtros: string;
+  titleExclude : string;
   
   constructor(private ProductService: ProductApiService,  private route : ActivatedRoute) { 
-    this.loadProduct();
+    // this.loadProduct();
   }
 
   ngOnInit(): void {
+    this.route.params
+       .subscribe(params => {
+         console.log('Esto significa que cambió la categoría')
+         const id = params['id'];
+         this.loadProduct(id)
+       });
   }
 
-  async loadProduct() {
-    const id = this.route.snapshot.paramMap.get('id');
-    console.log(id);
+  async loadProduct(id) {
     this.product= await this.ProductService.getApiProductById(id);
+    this.categoriaOtros = this.product.category;
+    this.titleExclude = this.product.title
+    this.sugerencias = await this.ProductService.getApiProductsCategory(this.categoriaOtros, null, null, null, null, null, null, null, this.titleExclude);
+    console.log(this.sugerencias);
+    console.log(this.categoriaOtros);
     this.imageObject = this.product.thumbnailURL;
     this.imageShow= this.product.thumbnailURL[0].image;
     console.log(this.imageObject);
@@ -36,12 +48,4 @@ export class FiltersComponent implements OnInit {
   
     console.log(event)
   }
-
-    //   // this.products.forEach(product => {
-  //   //   if (product.title.toLowerCase().includes(this.busqueda.toLocaleLowerCase()) === true){
-  //   //     this.show.push(product);
-  //   //   }
-      
-  //   // });
-
 }
