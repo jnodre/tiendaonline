@@ -1,11 +1,11 @@
 <div class="container">
     <div class="filter">
-        <h3>Precio</h3>
+        <h3 class="titleCategory">Precio</h3>
         <ng5-slider [(value)]="value" [(highValue)]="highValue" [options]="options" [routerLink]="['/search', busquedaSave.busqueda]" 
         [queryParams]="{minPrice: value, maxPrice: highValue, categoria1: categoria1, categoria2: categoria2, categoria3: categoria3, categoria4: categoria4,
             categoria5: categoria5, marca1: marca1, marca2: marca2, marca3: marca3, marca4: marca4, marca5: marca5 }" ></ng5-slider>
         <div class="filter-categories">
-                <h3>Categorías</h3>
+                <h3 class="titleCategory">Categorías</h3>
                 <div *ngFor="let s of suggestions" [ngClass]="isSelected(s) ? 'selected-suggestion' : ''" (click)="selectSuggestion(s)">{{ s.name }}</div>
                 <button class="button" [routerLink]="['/search', busquedaSave.busqueda]"
                 [queryParams]="{minPrice: value, maxPrice: highValue, categoria1: categoria1, categoria2: categoria2, categoria3: categoria3, categoria4: categoria4,
@@ -13,9 +13,9 @@
         </div>
             
         <div class="filter-marcas">
-            <h3>Marcas</h3>
+            <h3 class="titleCategory">Marcas</h3>
               <div *ngFor="let s of marcas" [ngClass]="isSelected2(s) ? 'selected-suggestion' : ''" (click)="selectMarca(s)">{{ s.name }}</div>        
-                <button class="button1" [routerLink]="['/search', busquedaSave.busqueda]"
+                <button class="button" [routerLink]="['/search', busquedaSave.busqueda]"
                 [queryParams]="{minPrice: value, maxPrice: highValue, categoria1: categoria1, categoria2: categoria2, categoria3: categoria3, categoria4: categoria4,
                 categoria5: categoria5, marca1: marca1, marca2: marca2, marca3: marca3, marca4: marca4, marca5: marca5 }"> Filtrar Marcas</button>
         </div>
@@ -33,5 +33,4 @@
             <p routerLink="" class="errorLink">◀ ¿Quiere volver al inicio?</p>
         </div>
     </div>
-
 </div>
