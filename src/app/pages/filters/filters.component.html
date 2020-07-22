@@ -1,22 +1,111 @@
-<div class="container">
-    <div>
-        <div (click)="MostrarFiltroPrecio()" ><h2>Precio (€)</h2></div>
-        <div *ngIf="showPrecio == true">
-            <ng5-slider [(value)]="value" [(highValue)]="highValue" [options]="options" ></ng5-slider>
+<div>
+    <div class="container">
+        <div>
+            <div><img [src]="imageShow" style="width: 640px"></div> 
+            <div style="width: 640px; height: 200px; text-align:center;margin:0; padding:0;">
+                <ng-image-slider #nav
+                  [images]="imageObject"
+                  [imagePopup]="false"
+                  [infinite]="false"
+                  [autoSlide]="1"
+                  [imageSize]="{width: '20%', height: '100px', space: 4}"
+                  slideImage="1"
+                  (imageClick)="showImage($event)"></ng-image-slider>
+            </div> 
         </div>
-        <div (click)="MostrarFiltroCategoria()" ><h2>Categoria</h2></div>
-        <div *ngIf="showCategoria == true">
-          <!-- Investigar como hacer que este input simplemente haga un routerLink a donde ya estamos pero con un queryParam nuevo -->
-            <input [routerLink]="" [queryParams]="{}" type="checkbox"/> <label >Sobremesas </label>
-            <input type="checkbox" [(ngModel)]="checkPortatiles"/> <label routerLink="/searching/Portátiles"  >Portátiles </label>
-            <input type="checkbox" [(ngModel)]="checkTelevisores"/> <label routerLink="/searching/Televisores"  >Televisores </label>
-        </div>
-        <div (click)="MostrarFiltroNewCategoria()" ><h2>Categoria</h2></div>
-        <div *ngIf="showNewCategoria == true">
-                <select name="miselect" [(ngModel)]="seleccionado">
-                <option [value]="item" *ngFor="let item of listaCategorias">{{item}}</option>
-                </select>
-        </div>
-        <button (click)="filtrarPrecio()">Filtrar</button>
+        
+        <div class="container-mainContent">
+            <div>
+                <div><h1>{{product.title}}</h1></div>
+            </div>
+            <div>
+                <div>Descripción</div>
+                <div>{{product.description}}</div>
+            </div>
+            <div>
+                <div>Precio</div>
+                <div>{{product.priceHR}}</div>
+            </div>
+        </div>        
+    </div>
+    
+    <li *ngIf="product.tipoDeDispositivo">Tipo de Dispositivo: {{product.tipoDeDispositivo}}</li> 
+    <li *ngIf="product.motherboard">Motherboard: {{product.motherboard}}</li>
+    <li *ngIf="product.capacidadMemoria">Capacidad Memoria: {{product.capacidadMemoria}}</li>
+    <li *ngIf="product.capacidad">Capacidad: {{product.capacidad}}</li>
+    <li *ngIf="product.potenciaDeSalida">Potencia de Salida: {{product.potenciaDeSalida}}</li>
+    <li *ngIf="product.claseDeVelocidad">Clase de Velocidad: {{product.claseDeVelocidad}}</li>
+    <li *ngIf="product.velocidadDeLectura">Velocidad de Lectura: {{product.velocidadDeLectura}}</li>
+    <li *ngIf="product.adaptadorSD">Adaptador SD: {{product.adaptadorSD}}</li>
+    <li *ngIf="product.streamingDeMusica">Streaming de Musica: {{product.streamingDeMusica}}</li>
+    <li *ngIf="product.potenciaTotal">Potencia Total: {{product.potenciaTotal}}</li>
+    <li *ngIf="product.subwoofer">Subwoofer: {{product.subwoofer}}</li>
+    <li *ngIf="product.potenciaRMS">Potencia RMS: {{product.potenciaRMS}}</li>
+    <li *ngIf="product.asistenteDeVozIntegrado">Asistente de Voz Integrado: {{product.asistenteDeVozIntegrado}}</li>
+    <li *ngIf="product.compatiblecon">Compatible con: {{product.compatiblecon}}</li>
+    <li *ngIf="product.wiFi">Wi-Fi: {{product.wiFi}}</li>
+    <li *ngIf="product.reproduccionPor">Reproducción por: {{product.reproduccionPor}}</li>
+    <li *ngIf="product.sensibilidad">sensibilidad: {{product.sensibilidad}}</li>
+    <li *ngIf="product.alcanceInalambrico">Alcance Inalámbrico: {{product.alcanceInalambrico}}</li>
+    <li *ngIf="product.memoriaRAM">Memoria: {{product.memoriaRAM}}</li>
+    <li *ngIf="product.memoriaYAlmacenamiento">Memoria y Almacenamiento: {{product.memoriaYAlmacenamiento}}</li>
+    <li *ngIf="product.almacenamientoInterno">Almacenamiento Interno: {{product.almacenamientoInterno}}</li>
+    <li *ngIf="product.tamanoPantalla">Tamaño de la Pantalla (cm/pulg): {{product.tamanoPantalla}}</li>
+    <li *ngIf="product.tipoDePantalla">Tipo de Pantalla: {{product.tipoDePantalla}}</li>
+    <li *ngIf="product.resolucionDePantalla">Resolución de Pantalla: {{product.resolucionDePantalla}}</li>
+    <li *ngIf="product.caracteristicasPantalla">Caracteristicas Pantalla: {{product.caracteristicasPantalla}}</li>
+    <li *ngIf="product.calidadDeImagen">Calidad de Imagen: {{product.calidadDeImagen}}</li>
+    <li *ngIf="product.disenoDePantalla">Diseno de Pantalla: {{product.disenoDePantalla}}</li>
+    <li *ngIf="product.smartTV">Smart TV: {{product.smartTV}}</li>
+    <li *ngIf="product.potenciaMusical">Potencia Musical: {{product.potenciaMusical}}</li>
+    <li *ngIf="product.contenido">Contenido: {{product.contenido}}</li>
+    <li *ngIf="product.controlPorVoz">Control por Voz: {{product.controlPorVoz}}</li>
+    <li *ngIf="product.tipoDeProcesador">Tipo de Procesador: {{product.tipoDeProcesador}}</li>
+    <li *ngIf="product.procesador">Procesador: {{product.procesador}}</li>
+    <li *ngIf="product.modeloDelProcesador">Modelo del Procesador: {{product.modeloDelProcesador}}</li>
+    <li *ngIf="product.familiaDeProcesador">Familia de Procesador: {{product.familiaDeProcesador}}</li>
+    <li *ngIf="product.velocidadDeProcesador">Velocidad de Procesador: {{product.velocidadDeProcesador}}</li>
+    <li *ngIf="product.graficos">Gráficos: {{product.graficos}}</li>
+    <li *ngIf="product.tarjetaGrafica">Tarjeta Gráfica: {{product.tarjetaGrafica}}</li>
+    <li *ngIf="product.puertos">Puertos: {{product.puertos}}</li>
+    <li *ngIf="product.interfazDeRed">Interfaz de Red: {{product.interfazDeRed}}</li>
+    <li *ngIf="product.elementosInalambricos">Elementos Inalámbricos: {{product.elementosInalambricos}}</li>
+    <li *ngIf="product.unidadOptica">Unidad Óptica: {{product.unidadOptica}}</li>
+    <li *ngIf="product.dispositivoDeTarjetaDeMemoria">Dispositivo de Tarjeta de Memoria: {{product.dispositivoDeTarjetaDeMemoria}}</li>
+    <li *ngIf="product.dimensiones">Dimensiones: {{product.dimensiones}}</li>
+    <li *ngIf="product.peso">Peso: {{product.peso}}</li>
+    <li *ngIf="product.colores">Colores: {{product.colores}}</li>
+    <li *ngIf="product.tipoDeFuenteDeAlimentacion">Tipo de Fuente de Alimentación: {{product.tipoDeFuenteDeAlimentacion}}</li>
+    <li *ngIf="product.teclado">Teclado: {{product.teclado}}</li>
+    <li *ngIf="product.inputDevicesMouse">Input Devices-Mouse: {{product.inputDevicesMouse}}</li>
+    <li *ngIf="product.camaraWeb">Camara Web: {{product.camaraWeb}}</li>
+    <li *ngIf="product.hPApps">HP Apps: {{product.hPApps}}</li>
+    <li *ngIf="product.softwareIncluido">Software Incluido: {{product.softwareIncluido}}</li>
+    <li *ngIf="product.sistemaOperativo">Sistema Operativo: {{product.sistemaOperativo}}</li>
+    <li *ngIf="product.touchpad">Touchpad: {{product.touchpad}}</li>
+    <li *ngIf="product.transmision">Transmisión: {{product.transmision}}</li>
+    <li *ngIf="product.reduccionDeRuido">Reducción de Ruido: {{product.reduccionDeRuido}}</li>
+    <li *ngIf="product.controlDeVolumen">Control de Volumen: {{product.controlDeVolumen}}</li>
+    <li *ngIf="product.bluetooth">Bluetooth: {{product.bluetooth}}</li>
+    <li *ngIf="product.autonomia">Autonomia: {{product.autonomia}}</li>
+    <li *ngIf="product.diseno">Diseno: {{product.diseno}}</li>
+    <li *ngIf="product.caracteristicasEspeciales">Caracteristicas Especiales: {{product.caracteristicasEspeciales}}</li>
+    <li *ngIf="product.anchura">Anchura: {{product.anchura}}</li>
+    <li *ngIf="product.altura">Altura: {{product.altura}}</li>
+    <li *ngIf="product.profundidad">Profundidad: {{product.profundidad}}</li>
+    <li *ngIf="product.sistemaDeSonido">Sistema de Sonido: {{product.sistemaDeSonido}}</li>
+    <li *ngIf="product.conversionDigitalAnalogico">Conversión Digital-Analógico: {{product.conversionDigitalAnalogico}}</li>
+    <li *ngIf="product.chipDeTarjetaGrafica">Chip de Tarjeta Gráfica: {{product.chipDeTarjetaGrafica}}</li> 
+    <li *ngIf="product.memoriaGraficaTotal">Memoria Gráfica Total: {{product.memoriaGraficaTotal}}</li>
+    <li *ngIf="product.tipoDeMemoriaGrafica">Tipo de Memoria Gráfica: {{product.tipoDeMemoriaGrafica}}</li>    
+
+</div>
+<h1>También podría interesar</h1>
+<div  fxLayout="row wrap" fxLayoutAlign="center center">
+    <div  fxLayout="column wrap" fxLayoutAlign="space-between center" class="products"
+     *ngFor = "let product of sugerencias" [routerLink]="['/products', product.id]">
+    <li class="name">{{product.title}}</li>
+    <li><img [src]="product.thumbnailURL[0].image"></li>
+    <li class="price">{{product.priceHR}}</li>
     </div>
 </div>

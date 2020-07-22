@@ -11,6 +11,8 @@ import { ProductsComponent } from './pages/products/products.component';
 import { FeaturedComponent } from './pages/featured/featured.component';
 import { Ng5SliderModule } from 'ng5-slider';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgImageSliderModule } from 'ng-image-slider';
+import { TrabajaComponent } from './pages/trabaja/trabaja.component';
 
 
 @NgModule({
@@ -19,7 +21,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MainComponent,
     FiltersComponent,
     ProductsComponent,
-    FeaturedComponent 
+    FeaturedComponent,
+    TrabajaComponent 
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FlexLayoutModule,
     Ng5SliderModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+    NgImageSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

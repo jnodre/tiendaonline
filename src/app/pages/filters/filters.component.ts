@@ -1,5 +1,6 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Options } from 'ng5-slider';
+import { Component, OnInit } from '@angular/core';
+import { ProductApiService } from '../../product-api.service';
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-filters',
@@ -7,66 +8,44 @@ import { Options } from 'ng5-slider';
   styleUrls: ['./filters.component.css']
 })
 export class FiltersComponent implements OnInit {
-  @Output() event = new EventEmitter<any>();
-  showCategoria: boolean = false;
-  showNewCategoria: boolean = false;
-  showPrecio: boolean = false;
-  filtro: {
-    value: number,
-    highValue: number,
-    searching: boolean,
-    filtering: boolean,
-    showCategoria: boolean,
-    showPrecio: boolean,
-    showNewCategoria: boolean,
-    checkSobremesas: boolean,
-    checkPortatiles: boolean,
-    checkTelevisores: boolean,
-    seleccionado: string
+  product: any = {};
+  sugerencias: any = [];
+  imageObject: any[];
+  imageShow: any;
+  categoriaOtros: string;
+  titleExclude : string;
+  
+  constructor(private ProductService: ProductApiService,  private route : ActivatedRoute) { 
+    // this.loadProduct();
   }
-  value: number = 500;
-  highValue: number = 2000;
-  options: Options = {
-    floor: 0,
-    ceil: 3000
-  };
-  checkSobremesas: boolean = false;
-  checkPortatiles: boolean = false;
-  checkTelevisores: boolean = false;
-
-  listaCategorias: string[] = ["Sobremesas", "Portátiles", "Televisores", "Smartphones", "Auriculares", "Accesorios Smartphones", "Auriculares", "Altavoces", "Componentes"];
-  seleccionado: string;
-
-  constructor() { }
 
   ngOnInit(): void {
+    this.route.params
+       .subscribe(params => {
+         console.log('Esto significa que cambió la categoría')
+         const id = params['id'];
+         this.loadProduct(id)
+       });
   }
 
-
-  filtrarPrecio(){
-    this.event.emit({value: this.value, 
-                    highValue: this.highValue,
-                    searching: false, 
-                    filtering: true, 
-                    showCategoria: this.showCategoria,
-                    showNewCategoria: this.showNewCategoria,
-                    showPrecio: this.showPrecio,
-                    checkSobremesas: this.checkSobremesas,
-                    checkPortatiles: this.checkPortatiles,
-                    checkTelevisores: this.checkTelevisores,
-                    seleccionado: this.seleccionado});
+  async loadProduct(id) {
+    this.product= await this.ProductService.getApiProductById(id);
+    this.categoriaOtros = this.product.category;
+    this.titleExclude = this.product.title
+    this.sugerencias = await this.ProductService.getApiProductsCategory(this.categoriaOtros, null, null, null, null, null, null, null, this.titleExclude);
+    console.log(this.sugerencias);
+    console.log(this.categoriaOtros);
+    this.imageObject = this.product.thumbnailURL;
+    this.imageShow= this.product.thumbnailURL[0].image;
+    console.log(this.imageObject);
+    console.log(this.product);
   }
 
-  MostrarFiltroPrecio() {
-    this.showPrecio = !this.showPrecio;
-  }
-
-  MostrarFiltroCategoria() {
-    this.showCategoria = !this.showCategoria;
-  }
+  showImage(event){
+    const index = event;
+    this.imageShow = this.imageObject[index].image;
+    console.log(this.imageShow)
   
-  MostrarFiltroNewCategoria() {
-    this.showNewCategoria = !this.showNewCategoria;
+    console.log(event)
   }
-
 }

@@ -1,5 +1,9 @@
 import { Injectable } from '@angular/core';
 import axios from "axios";
+export type User = {
+  name: string,
+  lastname: string
+}
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +17,17 @@ export class ProductApiService {
     if (seleccionadoPage) {
       url += '_page=' + seleccionadoPage + '&_limit=12';
     }
+    return axios.get(url)
+      .then (response => {
+        return response.data;
+      })
+      .catch (error => {
+        console.log("Se ha producido el error" ,error);
+      })
+  }
+
+  getApiProductById(id: string) {
+    let url = 'http://localhost:3000/products/' + id;
     return axios.get(url)
       .then (response => {
         return response.data;
@@ -37,7 +52,7 @@ export class ProductApiService {
       })
   }
 
-  getApiProductsSearch(busqueda:string, minPrice?: number, maxPrice?: number, category1?:string, category2?:string, category3?:string, category4?:string, category5?:string ){
+  getApiProductsSearch(busqueda:string, minPrice?: number, maxPrice?: number, category1?:string, category2?:string, category3?:string, category4?:string, category5?:string, marca1?: string, marca2?: string, marca3?: string, marca4?: string, marca5?: string ){
     let url = `http://localhost:3000/products?`;
     if (busqueda) {
       url += `title_like=` + busqueda;
@@ -63,6 +78,21 @@ export class ProductApiService {
     if (category5) {
       url += `&category=` + category5;
     }
+    if (marca1) {
+      url += `&marca=` + marca1;
+    }
+    if (marca2) {
+      url += `&marca=` + marca2;
+    }
+    if (marca3) {
+      url += `&marca=` + marca3;
+    }
+    if (marca4) {
+      url += `&marca=` + marca4;
+    }
+    if (marca5) {
+      url += `&marca=` + marca5;
+    }
     return axios.get(url)
       .then (response => {
         return response.data;
@@ -72,7 +102,7 @@ export class ProductApiService {
       })
   }
 
-  getApiProductsCategory(selectedCategory:string, minPrice : number= 0, maxPrice: number = 2500  ){
+  getApiProductsCategory(selectedCategory:string, minPrice : number= 0, maxPrice: number = 2500, marca1?: string, marca2?: string, marca3?: string, marca4?: string, marca5?: string, exclude?: string ){
     let url = 'http://localhost:3000/products?'
 
     if (selectedCategory) {
@@ -85,6 +115,24 @@ export class ProductApiService {
     if (maxPrice) {
       url += '&price_lte=' + maxPrice;
     }
+    if (marca1) {
+      url += `&marca=` + marca1;
+    }
+    if (marca2) {
+      url += `&marca=` + marca2;
+    }
+    if (marca3) {
+      url += `&marca=` + marca3;
+    }
+    if (marca4) {
+      url += `&marca=` + marca4;
+    }
+    if (marca5) {
+      url += `&marca=` + marca5;
+    }
+    if (exclude) {
+      url += `&title_ne=` + exclude;
+    }
     return axios.get(url)
       .then (response => {
         return response.data;
@@ -93,6 +141,16 @@ export class ProductApiService {
         console.log("Se ha producido el error", error);
       })
   }
+
+  createWorker(user: User) {
+    console.log(user)
+    return axios.post('http://localhost:3000/workers', user)
+      .then (res=> res.data)
+      .catch (error => {
+        console.log("Se ha producido el error", error);
+      })
+  }
+
   // getApiProductsSearch(busqueda:string, value?: number, highValue?: number, selectedCategory?: any){
   //   console.log(busqueda);
   //   let url = `http://localhost:3000/products?`;
@@ -135,7 +193,6 @@ export class ProductApiService {
     }
   }
   putProduct(product) {
-    // Machaco totalmente el objeto anterior en product.id
     if (product && typeof product.id != 'undefined') {
       return axios
       .put(
