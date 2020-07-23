@@ -176,7 +176,6 @@
     padding-left: 0px;
 }
 .nosotros ul li:hover{
-    font-weight: 500;
     cursor: pointer;
 }
 .social ul{
@@ -205,10 +204,6 @@
     cursor: pointer;
     padding:10px;
 }
-.cookiesLinks ul li:hover{
-    font-weight: 500;
-    transition: 0.1s linear;
-}
 .address{
     display: flex;
     flex-direction: row;
@@ -217,16 +212,13 @@
     text-align: center;
     cursor: pointer;
 }
-.j2pkText:hover{
-    font-weight: 500;
-}
 #excel{
     cursor: pointer;
 }
 .button2{
     cursor: pointer;
 }
-@media (max-width: 599px){
+@media (max-width: 899px){
     .header{
         flex-direction: column;
     }
@@ -246,7 +238,10 @@
         flex-direction: column;
         margin-bottom:20px;
     }
-
+    .nosotros{
+        margin-top:10px;
+    }
+    .map{margin:0 auto;}
 }
 
 @media (max-width: 1080px){
