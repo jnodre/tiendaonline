@@ -13,7 +13,7 @@
                     <label class="button2">Actualizar Productos<input id = "excel" type="file" style="visibility:hidden" class ="upload" (change)= "onFileChange($event)" a="Actualizar Productos"></label>
                 </li>
                 <li class="button">
-                    <span (click)="refresh()">Recargar</span>
+                    <span [ngClass]="{show: excelUpdated, hidden: !excelUpdated}" (click)="refresh()">Recargar</span>
                 </li>
 
             </ul>

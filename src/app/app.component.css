@@ -91,6 +91,12 @@
 .searchContainer input:focus::placeholder{
     opacity: 0;
 }
+.hidden{
+    display: none;
+}
+.show{
+    display: block;
+}
 .searchContainer:focus-within{
     transition: 0.2s linear;
     box-shadow: var(--shadow);
