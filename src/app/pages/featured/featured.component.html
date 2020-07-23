@@ -20,17 +20,19 @@
                 categoria5: categoria5, marca1: marca1, marca2: marca2, marca3: marca3, marca4: marca4, marca5: marca5 }"> Filtrar Marcas</button>
         </div>
     </div>
-    <div fxLayout="row wrap" fxLayoutAlign="center center">
-        <div fxLayout="column wrap" fxLayoutAlign="space-between center" class="products" *ngFor = "let item of show" [routerLink]="['/products', item.id]">
-            <li>{{item.title}}</li>
-            <li><img [src]="item.thumbnailURL[0].image"></li>
-            <li class="price">{{item.priceHR}}</li>
+    <div>
+        <div fxLayout="row wrap" fxLayoutAlign="center center">
+            <div fxLayout="column wrap" fxLayoutAlign="space-between center" class="products" *ngFor = "let item of show" [routerLink]="['/products', item.id]">
+                <li>{{item.title}}</li>
+                <li><img [src]="item.thumbnailURL[0].image"></li>
+                <li class="price">{{item.priceHR}}</li>
+            </div>
         </div>
-    </div>
-    <div fxLayout="row wrap" fxLayoutAlign="center center" *ngIf="show.length == 0">
-        <div class="searchError">
-            <p>Ups... Su búsqueda no coincide con ninguno de nuestros productos😅</p>
-            <p routerLink="" class="errorLink">◀ ¿Quiere volver al inicio?</p>
+        <div fxLayout="row wrap" fxLayoutAlign="center center" *ngIf="show.length == 0">
+            <div class="searchError">
+                <p>Ups... Su búsqueda no coincide con ninguno de nuestros productos😅</p>
+                <p routerLink="" class="errorLink">◀ ¿Quiere volver al inicio?</p>
+            </div>
         </div>
     </div>
 </div>
