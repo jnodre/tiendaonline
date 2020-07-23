@@ -32,6 +32,8 @@ export class FeaturedComponent implements OnInit {
   // checkboxAccesorio :boolean = false;
   // checkboxAuricular :boolean = false;
   // checkboxAltavoz :boolean = false;
+  filtersOn : boolean = true;
+  filtersHideText: string = "Ocultar Filtros"; 
   sobremesa : string = null;
   televisor : string;
 
@@ -66,7 +68,7 @@ export class FeaturedComponent implements OnInit {
    marca11: any = null;
 
   constructor(private ProductService: ProductApiService, private route : ActivatedRoute) { }
-
+  
   ngOnInit(): void {
     combineLatest([
       this.route.params,
@@ -110,8 +112,11 @@ export class FeaturedComponent implements OnInit {
           })
       })
   }
-
-
+  changeText(){
+    if (this.filtersOn){
+      return this.filtersHideText = 'Ocultar Filtros';
+    } else return this.filtersHideText = 'Mostrar Filtros' 
+  }
   isSelected(s:any) {
    return this.userSelects.findIndex((item) => item.id === s.id) > -1 ? true : false;
   }

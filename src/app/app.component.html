@@ -10,11 +10,14 @@
                 </ul>
                 </li>
                 <li class="button">
-                    <label class="button2">Actualizar Productos
-                        <input id = "excel" type="file" style="visibility:hidden" class ="upload" (change)= "onFileChange($event)" a="Actualizar Productos">
-                    </label>
+                    <label class="button2">Actualizar Productos<input id = "excel" type="file" style="visibility:hidden" class ="upload" (change)= "onFileChange($event)" a="Actualizar Productos"></label>
                 </li>
+                <li class="button">
+                    <span (click)="refresh()">Recargar</span>
+                </li>
+
             </ul>
+
         </nav>
 
         <div class="searchContainer ">

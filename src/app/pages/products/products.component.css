@@ -66,7 +66,7 @@
     flex-direction: column; 
     height: 100%;
     border-right: 1px solid var(--border-gray);
-    padding:50px;
+    padding:0px 50px;
     min-width: 15vw;
 }
 
@@ -98,6 +98,13 @@
 }
 .button:hover{
     cursor:pointer;
+}
+.show{visibility: visible; transition: 0.1s linear}
+.hide{visibility: hidden !important; display: none !important; transition: 0.1 linear}
+.reduceFilters{
+    border:none;
+    min-width: 5vw;
+    transition: 0.1s linear;
 }
 @media (max-width: 599px){
     .container{

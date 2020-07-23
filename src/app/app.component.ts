@@ -57,7 +57,9 @@ export class AppComponent {
         this.categorias.push(product.category);
       })
   }
-
+  refresh(): void {
+    window.location.reload();
+}
   public onFileChange(event){
     let workBook = null;
     let jsonData = null;
