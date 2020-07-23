@@ -1,0 +1,151 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 0px;
+  margin: 0 auto;
+}
+.img img {
+  width: 600px;
+  height: 600px;
+}
+
+.container-mainContent {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  /* width: 100%; */
+  /* background-color: rgb(3, 81, 83); */
+}
+.container-mainContent h1 {
+  font-weight: 500;
+}
+.products {
+  list-style: none;
+  text-align: center;
+  padding: 2vw;
+  width: 19vw;
+  margin: 0px 20px 20px 20px;
+  border: 1px solid var(--border-gray);
+  min-width: 300px;
+  transition: 0.5s linear;
+  height: 400px;
+  box-sizing: content-box;
+  border-radius: 5px;
+}
+.products:hover {
+  transition: 0.3s linear;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--darker-border-gray);
+}
+.interes {
+  text-align: center;
+}
+.products img {
+  width: 250px;
+}
+.articulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0px 50px;
+  margin-bottom: 20px;
+  width: 30vw;
+  text-align: justify;
+  justify-self: center;
+}
+.title {
+  text-align: center;
+}
+.name {
+  font-size: 1.4em;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.price {
+  color: #07ad73;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.caracteristicas ul {
+  padding-left: 0px;
+}
+.caracteristicas ul li {
+  list-style: none;
+}
+.slider {
+  width: 640px;
+  height: 200px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 599px) {
+  .container {
+    flex-direction: column;
+  }
+  .img {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .img img {
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+  }
+  .slider {
+    width: 300px;
+  }
+  .articulo{  
+    margin-bottom: 20px;
+    width: 80vw;
+    text-align: justify;
+    border:none;
+    height: 900px;
+  }
+
+}
+@media (max-width: 1440px) {
+    .container {
+        flex-direction: column;
+      }
+      .img img {
+        margin: 0 auto;
+        width: 500px;
+        height: 500px;
+      }
+      .articulo{  
+        margin-bottom: 20px;
+        width: 60vw;
+        text-align: justify;
+        border:none;
+      }
+}
+@media (max-width: 1080px) {
+    .container {
+        flex-direction: column;
+      }
+      .img {
+        margin: 0 auto;
+        text-align: center;
+      }
+      .img img {
+        margin: 0 auto;
+        width: 360px;
+        height: 360px;
+      }
+      .slider {
+        width: 300px;
+      }
+      .articulo{  
+        margin-bottom: 20px;
+        width: 80vw;
+        text-align: justify;
+        border:none;
+      }
+    
+    }
+

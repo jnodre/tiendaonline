@@ -38,7 +38,7 @@ export class AppComponent {
   category : boolean = false;
   categorias : string[] =[];
   selectedCategory: string = "";
-
+  excelUpdated: boolean = false;
   constructor ( private ProductService: ProductApiService, public router: Router){
     this.getProducts2();
     this.getCategory();
@@ -57,7 +57,9 @@ export class AppComponent {
         this.categorias.push(product.category);
       })
   }
-
+  refresh(): void {
+    window.location.reload();
+}
   public onFileChange(event){
     let workBook = null;
     let jsonData = null;
@@ -79,6 +81,7 @@ export class AppComponent {
       this.ProductService.updateProduct(product);
     });
       console.log("its updated")
+      return this.excelUpdated = true;
     }
   }
 

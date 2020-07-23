@@ -1,17 +1,22 @@
 <div class="mainContainer">
-<div class="container">
-    <div>
-        <div><h2>Precio</h2></div>
-        <div>
-            <ng5-slider [(value)]="value" [(highValue)]="highValue" [options]="options" [routerLink]="['/categoria', selectedCategory.categoria]" [queryParams]="{minPrice: value, maxPrice: highValue}"></ng5-slider>
+    <div [ngClass]="{normalFilters: filtersOn, reduceFilters: !filtersOn}"  class="container">
+    <button class="button" (click)="filtersOn = !filtersOn" (click)="changeText()">{{filtersHideText}}</button>
+    <div [ngClass]="{show: filtersOn, hide: !filtersOn}">
+        <h3 class="titleCategory">Precio</h3>
+        <ng5-slider [(value)]="value" [(highValue)]="highValue" [options]="options" [routerLink]="['/categoria', selectedCategory.categoria]" [queryParams]="{minPrice: value, maxPrice: highValue}"></ng5-slider>
+        <div class="filter-marcas">
+            <h3 class="titleCategory">Marcas</h3>
+              <div *ngFor="let s of marcas" [ngClass]="isSelected2(s) ? 'selected-suggestion' : ''" (click)="selectMarca(s)">{{ s.name }}</div>        
+                <button class="button" [routerLink]="['/categoria', selectedCategory.categoria]"
+                [queryParams]="{minPrice: value, maxPrice: highValue, marca1: marca1, marca2: marca2, marca3: marca3, marca4: marca4, marca5: marca5 }"> Filtrar Marcas</button>
         </div>
     </div>
-</div>
+    </div>
 <div  fxLayout="row wrap" fxLayoutAlign="center center">
 
-    <div  fxLayout="column wrap" fxLayoutAlign="space-between center" class="products" *ngFor = "let product of productsCategory">
+    <div  fxLayout="column wrap" fxLayoutAlign="space-between center" class="products" *ngFor = "let product of productsCategory" [routerLink]="['/products', product.id]">
     <li >{{product.title}}</li>
-    <li><img [src]="product.thumbnailURL"></li>
+    <li><img [src]="product.thumbnailURL[0].image"></li>
     <li class="price">{{product.priceHR}}</li>
     </div>
 </div>
