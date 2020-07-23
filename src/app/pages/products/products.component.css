@@ -95,6 +95,8 @@
     padding: 10px;
     border-radius: 5px;
     margin: 10px 0px;
+    max-width: 150px;
+    align-self: center;
 }
 .button:hover{
     cursor:pointer;

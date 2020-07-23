@@ -3,7 +3,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 100%;
   width: 80%;
   margin: 0px;
   margin: 0 auto;
@@ -55,7 +54,7 @@
   margin-bottom: 20px;
   width: 30vw;
   text-align: justify;
-  height: 700px;
+  justify-self: center;
 }
 .title {
   text-align: center;
@@ -123,7 +122,6 @@
         width: 60vw;
         text-align: justify;
         border:none;
-        height: 600px;
       }
 }
 @media (max-width: 1080px) {
@@ -147,7 +145,6 @@
         width: 80vw;
         text-align: justify;
         border:none;
-        height: 900px;
       }
     
     }
